@@ -38,11 +38,48 @@ Submit Buttons -
 
 ## Welcome Back!
 
-CPP 527 is the second course in the Foundations of Data Science sequence. This semester extends work done in CPP 526 by introducing programming topics like control structures, loops, and regular expressions that are necessary for building simulations and specialized applications in R. We will also cover the foundations of document design using both GitHub pages (free websites like this one) and customized RMD templates so that you can begin developing custom reporting formats so that enable you to better structure results from analytical projects or automate tasks. 
+CPP 528 is the third course in the Foundations of Data Science sequence. This semester synthesizes and extends work from 526 and 527 by introducing a project management framework. 
+
 
 <br>
 <br>
 
+
+
+
+### Low Income Housing Tax Credits
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DdUcOFRdyTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+### New Market Tax Credits
+
+Watch three case studies on the impact of New Market Tax Credits: 
+
+[NMTC Case Studies](https://www.cohnreznick.com/nmtc-map)
+
+
+### Challenges of Implementing Tax Credits
+
+FRONTLINE and NPR investigate the billions spent on affordable housing, and why so few get the help they need.
+
+[Frontline Episode: Poverty, Politics and Profit](https://www.pbs.org/wgbh/frontline/film/poverty-politics-and-profit/)
+
+*Make sure to watch Chap 3 on Low Income Housing Tax Credits - it start at 19:00.*
+
+
+### Are 
+
+
+
+
+
+## Data
+
+Harmonized Census Tracts: 
+
+[Longitudinal Tracts Data Base](https://s4.ad.brown.edu/projects/diversity/Researcher/Bridging.htm)
 
 
 *** { @unit = "", @title = "Getting Help", @assignment, @foldout  }
