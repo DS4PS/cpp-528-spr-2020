@@ -14,13 +14,13 @@ info:
  course_number: CPP 527 
  course_level: Graduate 
  course_website: 'https://canvas.asu.edu/courses/41575'
- course_start_end_dates: Jan 13th to March 02, 2020
+ course_start_end_dates: March 16 to May 01, 2020
  course_prerequisites:  
  class_meets_when:  Asynchronous  
- class_meets_where:  'https://asu.zoom.us/j/944016877'
+ class_meets_where:  'https://asu.zoom.us/j/557182841'
  review_sessions_when: TBD 
  review_sessions_where: Zoom
- discussion_board_url: 'https://ds4ps.org/cpp-527-spr-2020/help/'
+ discussion_board_url: 'https://ds4ps.org/cpp-528-spr-2020/help/'
 
 instructor:
 -  name: Cristian E. Nuno
@@ -33,7 +33,7 @@ instructor:
    scholar_url: 
    linked_in_url: 'https://www.linkedin.com/in/cristiannuno/'
    office_hours_time: By appointment (see appointment app)
-   office_hours_location:  'https://asu.zoom.us/j/557182841?pwd=MzFmWDlvWUVLOWRmTGdPUXV5cmNPZz09'
+   office_hours_location:  'https://asu.zoom.us/j/557182841'
    office_hours_app_url: 'https://calendar.google.com/calendar/selfsched?sstoken=UUhwWDQ3dVdHQmp1fGRlZmF1bHR8OGM4MmYwNzBmMmMwYTRmY2UyODI2MzliNGNiNzFkODg'
    
 
