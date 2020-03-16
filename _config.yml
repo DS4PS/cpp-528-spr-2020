@@ -19,7 +19,7 @@ calendly:  'https://calendly.com/lecy/15min'
 
 # COURSE INFO:
 
-description:        Introduction to Data Science Part II
+description:        Introduction to Data Science Part III
 
 # Header text at the top left of the website
 
@@ -52,15 +52,15 @@ header:
 # GITHUB CONFIGURATIONS 
 
 url :               "https://ds4ps.github.io"
-baseurl:            "/cpp-527-spr-2020"
-course_url:         "http://ds4ps.org/cpp-527-spr-2020/"
+baseurl:            "/cpp-528-spr-2020"
+course_url:         "http://ds4ps.org/cpp-528-spr-2020/"
 title:              DS4PS # don't change this
 
 github_info:
     username:          DS4PS # Github location of the course
     branch:            master
-    website-repo:      cpp-527-spr-2020
-    course-repo:       cpp-527-spr-2020
+    website-repo:      cpp-528-spr-2020
+    course-repo:       cpp-528-spr-2020
 
 
 
