@@ -28,6 +28,78 @@ Submit Buttons -
 
 
 
+** Project Management in Data Science
+
+
+*** { @unit = "", @title = "CRISP-DM",  @foldout   }
+
+<br> 
+
+Our first framework describes the stages of a data-driven project. The work during an analytics-oriented project is broken into six phases with checklists for each in order to help the team anticipate next steps in the process and to assess whether all necessary tasks have been performed at each step. 
+
+
+## CRISP-DM Model
+
+> Cross-industry standard process for data mining (CRISP-DM) in 1996 to standardize a data mining process across industries. It describes six major iterative phases, each with their own defined tasks and set of deliverables such as documentation and reports.
+
+1. Business Understanding: determine business objectives; assess situation; determine data mining goals; produce project plan 
+2. Data Understanding: collect initial data; describe data; explore data; verify data quality 
+3. Data Preparation (generally, the most time-consuming phase): select data; clean data; construct data; integrate data; format data 
+4. Modeling: select modeling technique; generate test design; build model; assess model 
+5. Evaluation: evaluate results; review process; determine next steps 
+6. Deployment: plan deployment; plan monitoring and maintenance; produce final report; review project 
+
+[Citation](http://www.datascience-pm.com/crisp-dm-2/)
+
+Note that the name uses the phrase "for data mining", but it is a general framework for data science projects that was developed when "data mining" was a popular term used to describe an emerging field. In the metaphor the data is the rich medium that analysts mine for insights about business processes. The term has fallen out of favor because mining sounds atheoretical. Computer scientists were criticized for developing algorithms that can detect patterns and make predictions without any understanding of the processes or contexts, often leading to ethically questionable recommendations or problematic recommendations. The phrase "data science" was adopted to convey that there is a method to the madness. The CRISP-DM process applies broadly to most data science projects. 
+
+For a slightly more extensive list of tasks at each phase, see: [A general overview of existing data science methodologies](https://medium.com/datadriveninvestor/data-science-project-management-methodologies-f6913c6b29eb)
+
+[One-Page Visual Overview](https://exde.files.wordpress.com/2009/03/crisp_visualguide.pdf)
+
+[Full Guide](https://inseaddataanalytics.github.io/INSEADAnalytics/CRISP_DM.pdf)
+
+[R Bloggers: CRISP-DM and why you should know about it](https://www.r-bloggers.com/crisp-dm-and-why-you-should-know-about-it/)
+
+## Your Project
+
+The project this semester in relationship to CRISP-DM phases: 
+
+PROJECT STEP  |  CRISP-DM PHASE
+--------------|------------------
+Week 1 - Tax Incentives and Neighborhood Change   |  (1) Business Understanding  
+Week 2 - Developing Community Indices to Measure Change    |  (2) Data Understanding; (3) Data Preparation
+Week 3 – Descriptive Analysis of Community Change   |  (2) Data Understanding; (4) Modeling
+Week 4 – Predictive Analysis of Community Change   |  (4) Modeling 
+Week 5 – Federal Tax Credits as the Treatment   |  (2) Data Understanding; (3) Data Preparation
+Week 6 – Regression Analysis  | (4) Modeling; (5) Evaluation 
+Week 7 - Finalize Models and Report  |  (5) Evaluation; (6) Deployment  
+
+As you can see, the steps are iterative as you start the project with Census data, look at patterns in neighborhood change, model change as a function of community demographic characteristics, then add new data on two tax credit programs (New Market Tax Credits and Low Income Housing Tax Credits). Using the new data you will iterate some more through modeling and evaluation of results. 
+
+In this context Phase (6) Deployment refers to your final report that will be packaged and published using GitHub pages and presented as a reproducible project. You can think about this as a modern form of a deliverable that a consulting firm might create for a government client that has hired the firm to conduct an expert evaluation of a federal program. The deliverable includes the recommendation of the team, as well as all of the data and methods used to produce those recommendations.  
+
+<br>
+
+
+
+*** { @unit = "", @title = "Project Boards with Kanban",  @foldout   }
+
+<br> 
+
+## Kanban
+
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iVaFVa7HYj4?start=115" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Kanban Boards in GitHub
+
+Create a project board to coordinate efforts 
+
+
+
+
 
 ** Welcome
 
