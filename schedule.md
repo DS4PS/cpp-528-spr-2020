@@ -512,7 +512,13 @@ In this context Phase (6) Deployment refers to your final report that will be pa
 
 > Kanban is a visual system for managing work as it moves through a process. Kanban visualizes both the process (the workflow) and the actual work passing through that process. The goal of Kanban is to identify potential bottlenecks in your process and fix them so work can flow through it cost-effectively at an optimal speed or throughput.
 
+> The Kanban Method is an evolutionary improvement process. It helps you adopt small changes and improve gradually at a pace and size that your team can handle easily. It encourages the use of the scientific method – you form a hypothesis, you test it and you make changes depending on the outcome of your test... Your key task is to evaluate your process constantly and improve continuously as needed and as possible.
+
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/236558214" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+[What is Kanban?](https://www.digite.com/kanban/what-is-kanban/)
 
 
 
@@ -750,10 +756,10 @@ One thing that takes practice is breaking complex operations down into discrete 
 
 **Directory Structure**
 
-Your final deliverable will consist of two 10-slide presentations. 
+Your final deliverable will consist of two 10-slide presentations: 
 
-* Present your results determining whether the tax policies are having the intended impact. 
-* Provide an overview to using the repository to replicate your study. 
+1. Results determining whether the tax policies are having the intended impact. 
+2. An guide to using the repository to replicate the study. 
 
 You need to provide careful documentation of how you get from raw data in your project to final results. Think about it as a book where each chapter covers a distinct task: 
 
@@ -777,7 +783,14 @@ https://github.com/jtleek/datasharing
 Your repository will have the following directories: 
 
 * data 
-* 
+  - raw
+  - processed 
+  - final 
+* functions 
+* analysis 
+* docs (website files go here) 
+
+Each 
 
 **Kanban Boards in GitHub**
 
