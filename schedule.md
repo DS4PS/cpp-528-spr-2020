@@ -764,14 +764,13 @@ Consider two neighborhoods. Both are distressed in 2000. Both experience signifi
 For the lab, report the following: 
 
 1.	Select three census variables from the Longitudinal Tracts Data Base that can be used collectively as indicators for gentrification. The variables do not need to be used together an index. 
-
-[ [LTDB CODEBOOK](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB-codebook.pdf) ]
-
 2.	How would you measure each variable to accurately capture gentrification in a city? As a count? A ratio or percentage? A percentile relative to all other tracts in the United States? As a percentile relative to all other tracts in the city? Justify your answer with reasoning about which comparison is important. 
-
 3.	For each variable, explain what you expect to observe in neighborhoods that are gentrifying, and what you expect to observe in neighborhoods that are revitalizing (rates or measures of the variable are increasing or decreasing). 
 
 Submit a word document with your responses to these questions for at least three variables. 
+
+[ [LTDB CODEBOOK](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB-codebook.pdf) ]
+
 
 
 ## Submit Solutions to Canvas:
