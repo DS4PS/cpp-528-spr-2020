@@ -63,7 +63,7 @@ You will be assigned to teams. Each team will work on the class project independ
 
 <br> 
 
-## Greater Need for Project Management Skills 
+## High Demand for Project Management Skills 
 
 Social scientists are not taught how to manage large data projects. It has just been assumed that if you can run models with data, you intuitively know how to manage your data and code. Several things have changed: 
 
@@ -77,7 +77,9 @@ Wuchty, S., Jones, B. F., & Uzzi, B. (2007). The increasing dominance of teams i
 
 <hr>
 
-*Researcher’s from Duke university published a study on using personalized-genomics for patient-specific chemotherapy treatment. Two researchers, Baggerly and Coombes, from MD Anderson requested the data and code. It took many months of back-and-forth (hounding) to actually get the data and code — when they did it was disorganized and poorly documented. Baggerly and Coombes eventually found an error in the code, showing it actually put patients at risk, leading to a major lawsuit and terminated clinical trials.*  ~ From: “The “Gold Standard” for Data Science Project Management”
+*Researcher’s from Duke university published a study on using personalized-genomics for patient-specific chemotherapy treatment. Two researchers, Baggerly and Coombes, from MD Anderson requested the data and code. It took many months of back-and-forth (hounding) to actually get the data and code — when they did it was disorganized and poorly documented. Baggerly and Coombes eventually found an error in the code, showing it actually put patients at risk, leading to a major lawsuit and terminated clinical trials.*  
+
+From: “The “Gold Standard” for Data Science Project Management”
 
 <hr>
 
@@ -203,13 +205,13 @@ Look for the section labeled: "If you want a complete list of projects for the e
 
 Each week you will complete one part of the analysis and submit your results for review. The instructor will play the role of your manager on this project, providing feedback and guidance on how to improve and revise each step to prepare it for the final deliverable
 . 
-•	Week 1: Intro to Project Management & Neighborhood Revitalization 
-•	Week 2: Construct Dataset
-•	Week 3: Descriptive Analysis 
-•	Week 4: Models
-•	Week 5: Reporting Results 
-•	Week 6: Documentation 
-•	Week 7: Revise and Present 
+*	Week 1: Intro to Project Management & Neighborhood Revitalization   
+*	Week 2: Construct Dataset  
+*	Week 3: Descriptive Analysis  
+*	Week 4: Models 
+*	Week 5: Reporting Results  
+*	Week 6: Documentation 
+*	Week 7: Revise and Present  
 
 <br>
 
@@ -261,7 +263,12 @@ For a slightly more extensive list of tasks at each phase, see: [A general overv
 
 ### Stages of CRISP-DM
 
-### Business Understanding
+From [Data Science Project Management Methodologies](https://medium.com/datadriveninvestor/data-science-project-management-methodologies-f6913c6b29eb)
+
+<br> 
+
+
+**Business Understanding**
 
 This stage is aimed toward getting a general understanding of the client’s business. It is crucial in most cases to understand the application of the product to be developed. If it is skipped — you might end up with a large trained neural network, that has to be deployed to a mobile phone and work in realtime.
 
@@ -282,7 +289,10 @@ This stage is aimed toward getting a general understanding of the client’s bus
 - Project Plan
 - Initial Assessment of Tools and Techniques
 
-#### Data Understanding
+<br>
+
+
+**Data Understanding**
 
 The second stage consists of collecting and exploring the input dataset. The set goal might be unsolvable using the input data, you might need to use public datasets, or even create a specific one for the set goal.
 
@@ -295,8 +305,10 @@ The second stage consists of collecting and exploring the input dataset. The set
 1. Verify Data Quality
 - Data Quality Report
 
+<br>
 
-#### Data Preparation
+
+**Data Preparation**
 
 As we all know, bad input inevitably leads to bad output. Therefore no matter what you do in modeling — if you made major mistakes while preparing the data — you will end up returning to this stage and doing it over again.
 
@@ -313,24 +325,29 @@ As we all know, bad input inevitably leads to bad output. Therefore no matter wh
 - Reformatted Data
 1. Dataset Description
 
-#### Modeling
+<br> 
+
+**Modeling**
 
 This stage is an execution of all of your findings from previous stages. You already know the input to the model, you can tell which models are compatible with the target platform. Now is the time to bring it all to life.
 
-Select Modeling Techniques
+1. Select Modeling Techniques
 - Modeling Technique
 - Modeling Assumptions
-Generate Test Design
+1. Generate Test Design
 - Test Design
-Build Model
+1. Build Model
 - Parameter Settings
 - Models
 - Model Descriptions
-Assess Model
+1. Assess Model
 - Model Assessment
 - Revised Parameter Settings
 
-#### Evaluation
+<br> 
+
+
+**Evaluation**
 
 This stage is aimed at the evaluation of the obtained results. We need to check if the business goal was fulfilled and plan further steps of the project.
 
@@ -343,7 +360,10 @@ This stage is aimed at the evaluation of the obtained results. We need to check 
 - List of Possible Actions
 - Decision
 
-#### Deployment of Deliverables 
+<br> 
+
+
+**Deployment of Deliverables** 
 
 If previous stages were successful and there was a decision made to deploy the model — this stage will be activated. You might need to put your model into an existing pipeline, create your own or deploy to cloud computing services.
 
