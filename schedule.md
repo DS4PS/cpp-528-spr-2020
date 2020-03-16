@@ -703,6 +703,8 @@ According to the articles, what are the key components of a good project managem
 2.	[Best Practices for Data Science Project Workflows and File Organization](https://github.com/moldach/project-directory), available on GitHub
 3. [One-Page Visual Guide to CRISP-DM](https://exde.files.wordpress.com/2009/03/crisp_visualguide.pdf)
 
+*NOTE that you will see some conflicting advice on best practices, and some practices that are only appropriate when you are working with large teams or automating things like testing, so not everything will be appropriate for your project this semester. Your first time reading the material just try to get a general sense of the types of project management practices are being prescribed but don't get lost in the details just yet. You can adapt some practices and table others. You will have a rubric for your final project that will help guide which practices are important for this class.*
+
 
 **Background**
 
