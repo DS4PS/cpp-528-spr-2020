@@ -28,111 +28,73 @@ Submit Buttons -
 
 
 
-** Project Management in Data Science
 
 
-*** { @unit = "", @title = "CRISP-DM",  @foldout   }
+<!--- 
+############################################################################
+############################################################################
+############################################################################
+-->
 
-<br> 
+** Course Overview 
 
-Our first framework describes the stages of a data-driven project. The work during an analytics-oriented project is broken into six phases with checklists for each in order to help the team anticipate next steps in the process and to assess whether all necessary tasks have been performed at each step. 
-
-
-## CRISP-DM Model
-
-> Cross-industry standard process for data mining (CRISP-DM) in 1996 to standardize a data mining process across industries. It describes six major iterative phases, each with their own defined tasks and set of deliverables such as documentation and reports.
-
-1. Business Understanding: determine business objectives; assess situation; determine data mining goals; produce project plan 
-2. Data Understanding: collect initial data; describe data; explore data; verify data quality 
-3. Data Preparation (generally, the most time-consuming phase): select data; clean data; construct data; integrate data; format data 
-4. Modeling: select modeling technique; generate test design; build model; assess model 
-5. Evaluation: evaluate results; review process; determine next steps 
-6. Deployment: plan deployment; plan monitoring and maintenance; produce final report; review project 
-
-[Citation](http://www.datascience-pm.com/crisp-dm-2/)
-
-Note that the name uses the phrase "for data mining", but it is a general framework for data science projects that was developed when "data mining" was a popular term used to describe an emerging field. In the metaphor the data is the rich medium that analysts mine for insights about business processes. The term has fallen out of favor because mining sounds atheoretical. Computer scientists were criticized for developing algorithms that can detect patterns and make predictions without any understanding of the processes or contexts, often leading to ethically questionable recommendations or problematic recommendations. The phrase "data science" was adopted to convey that there is a method to the madness. The CRISP-DM process applies broadly to most data science projects. 
-
-For a slightly more extensive list of tasks at each phase, see: [A general overview of existing data science methodologies](https://medium.com/datadriveninvestor/data-science-project-management-methodologies-f6913c6b29eb)
-
-[One-Page Visual Overview](https://exde.files.wordpress.com/2009/03/crisp_visualguide.pdf)
-
-[Full Guide](https://inseaddataanalytics.github.io/INSEADAnalytics/CRISP_DM.pdf)
-
-[R Bloggers: CRISP-DM and why you should know about it](https://www.r-bloggers.com/crisp-dm-and-why-you-should-know-about-it/)
-
-## Your Project
-
-The project this semester in relationship to CRISP-DM phases: 
-
-PROJECT STEP  |  CRISP-DM PHASE
---------------|------------------
-Week 1 - Tax Incentives and Neighborhood Change   |  (1) Business Understanding  
-Week 2 - Developing Community Indices to Measure Change    |  (2) Data Understanding; (3) Data Preparation
-Week 3 – Descriptive Analysis of Community Change   |  (2) Data Understanding; (4) Modeling
-Week 4 – Predictive Analysis of Community Change   |  (4) Modeling 
-Week 5 – Federal Tax Credits as the Treatment   |  (2) Data Understanding; (3) Data Preparation
-Week 6 – Regression Analysis  | (4) Modeling; (5) Evaluation 
-Week 7 - Finalize Models and Report  |  (5) Evaluation; (6) Deployment  
-
-As you can see, the steps are iterative as you start the project with Census data, look at patterns in neighborhood change, model change as a function of community demographic characteristics, then add new data on two tax credit programs (New Market Tax Credits and Low Income Housing Tax Credits). Using the new data you will iterate some more through modeling and evaluation of results. 
-
-In this context Phase (6) Deployment refers to your final report that will be packaged and published using GitHub pages and presented as a reproducible project. You can think about this as a modern form of a deliverable that a consulting firm might create for a government client that has hired the firm to conduct an expert evaluation of a federal program. The deliverable includes the recommendation of the team, as well as all of the data and methods used to produce those recommendations.  
-
-<br>
-
-
-
-*** { @unit = "", @title = "Project Boards with Kanban",  @foldout   }
+*** { @unit = "", @title = "Course Objective",  @foldout   }
 
 <br> 
 
-## Kanban
-
-
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iVaFVa7HYj4?start=115" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Kanban Boards in GitHub
-
-Create a project board to coordinate efforts 
-
-
-
-
-
-** Welcome
-
-
-*** { @unit = "", @title = "Course Overview",  @foldout   }
-
-<br> 
-
-## Welcome Back!
+## CPP 528 - Project Management 
 
 CPP 528 is the third course in the Foundations of Data Science sequence. This semester synthesizes and extends work from 526 and 527 by introducing a project management framework. 
 
+It is designed to teach standard frameworks for organizing large data projects and coordinating team efforts using tools in GitHub and R Studio. 
+
+You will apply this knowledge through an applied data project looking at neighborhood change in US metro areas. The project is designed as if you are being hired by the government to evaluate two large federal programs designed to revitalize distressed communities. Your final deliverable will be a report detailing your conclusions. The report will link to a GitHub repository that provides all of the data and code needed to reproduce the results from your study. 
+
+You will be assigned to teams. Each team will work on the class project independently. The goal of working in a team is to put the project management principles into practice, and to get some experience collaborating on a project that is large enough that tasks must be split between members and redudancy can be used for quality assurance purposes. 
 
 <br>
 <br>
 
 
+<!---     #######################################################       -->
+<!---     #######################################################       -->
 
+*** { @unit = "", @title = "Project Management",  @foldout   }
+
+
+
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
+
+*** { @unit = "", @title = "Course Project",  @foldout   }
+
+## Data Analytics Project 
+
+CPP 528 is organized around a single large project that allows you to revisit and practice skills from 523, 524, 526 and 527. The research question is whether two large federal programs designed to revitalize distressed neighborhoods in US cities have been successful. We will use 2000 to 2010 as the study period and look at broad trends in neighborhood change over this decade, then examine whether neighborhoods targeted by the programs have achieved any more success than they would have without the billion of dollars in federal subsidies. 
+
+For the project, you are being hired by the federal government to provide a rigorous assessment of program impact. You need to compile the data necessary for the analysis, run some models, and provide your client with a final report stating your assessment of program impact. 
+
+## Federal Programs 
 
 ### Low Income Housing Tax Credits
+
+Low Income Housing Tax Credits (LIHTC) are one of the primary policy instruments used to incentivize the construction of new affordable housing units in the United States. Learn about LIHTC:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DdUcOFRdyTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
 ### New Market Tax Credits
 
-Watch three case studies on the impact of New Market Tax Credits: 
+New Market Tax Credits (NMTC) are mechanisms designed to catalyze economic development in distressed communities by attrating investments from private developers. 
+
+Watch case studies on the impact that New Market Tax Credits have achieved in three communities: 
 
 [NMTC Case Studies](https://www.cohnreznick.com/nmtc-map)
 
 
-### Challenges of Implementing Tax Credits
+### Challenges of Catalyzing Change Through Tax Credits
 
 FRONTLINE and NPR investigate the billions spent on affordable housing, and why so few get the help they need.
 
@@ -141,21 +103,62 @@ FRONTLINE and NPR investigate the billions spent on affordable housing, and why 
 *Make sure to watch Chap 3 on Low Income Housing Tax Credits - it start at 19:00.*
 
 
-### Are 
-
-
-
-
 
 ## Data
 
-Harmonized Census Tracts: 
+Project data comes from three sources. 
+
+**Harmonized Census Tracts:** 
 
 [Longitudinal Tracts Data Base](https://s4.ad.brown.edu/projects/diversity/Researcher/Bridging.htm)
 
+[Codebook]
+
+[Variables Constructed from the US Population Samples (long form questions)]()
+
+[Variables Constructed from the Full US Population (short form questions)]()
+
+
+**New Market Tax Credits Database:**
+
+[Program Overview and Tract Eligibility Requirements](https://www.cdfifund.gov/programs-training/Programs/new-markets-tax-credit/Pages/default.aspx)
+
+[Data Download](https://www.cdfifund.gov/awards/state-awards/Pages/default.aspx)
+
+
+**Low Income Housing Tax Credits Database:** 
+
+[Data Download](https://lihtc.huduser.gov/)
+
+Look for the section labeled: "If you want a complete list of projects for the entire U.S., click here to download a ZIP archive of the entire LIHTC Database in dBase format."
+
+
+
+## Project Schedule
+
+Each week you will complete one part of the analysis and submit your results for review. The instructor will play the role of your manager on this project, providing feedback and guidance on how to improve and revise each step to prepare it for the final deliverable
+. 
+•	Week 1: Intro to Project Management & Neighborhood Revitalization 
+•	Week 2: Construct Dataset
+•	Week 3: Descriptive Analysis 
+•	Week 4: Models
+•	Week 5: Reporting Results 
+•	Week 6: Documentation 
+•	Week 7: Revise and Present 
+
+
+
+
+
+
+
+
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
 
 *** { @unit = "", @title = "Getting Help", @assignment, @foldout  }
-
 
 ## Getting Help
 
@@ -199,33 +202,186 @@ b1 = cov(x,y) / var(x)
 
 
 
+<!--- 
+#######################################################
+#######################################################
+#######################################################
+-->
+   
+** Project Management in Data Science
 
 
+*** { @unit = "", @title = "CRISP-DM",  @foldout   }
+
+<br> 
+
+Our first framework describes the stages of a data-driven project. The work during an analytics-oriented project is broken into six phases with checklists for each in order to help the team anticipate next steps in the process and to assess whether all necessary tasks have been performed at each step. 
 
 
-** Week 1 - Control Structures  
+## CRISP-DM Model
 
-*** { @unit = "", @title = "Unit Overview", @foldout  }
+> Cross-industry standard process for data mining (CRISP-DM) in 1996 to standardize a data mining process across industries. It describes six major iterative phases, each with their own defined tasks and set of deliverables such as documentation and reports.
+
+1. Business Understanding: determine business objectives; assess situation; determine data mining goals; produce project plan 
+2. Data Understanding: collect initial data; describe data; explore data; verify data quality 
+3. Data Preparation (generally, the most time-consuming phase): select data; clean data; construct data; integrate data; format data 
+4. Modeling: select modeling technique; generate test design; build model; assess model 
+5. Evaluation: evaluate results; review process; determine next steps 
+6. Deployment: plan deployment; plan monitoring and maintenance; produce final report; review project 
+
+[Citation](http://www.datascience-pm.com/crisp-dm-2/)
+
+Note that the name uses the phrase "for data mining", but it is a general framework for data science projects that was developed when "data mining" was a popular term used to describe an emerging field. In the metaphor the data is the rich medium that analysts mine for insights about business processes. The term has fallen out of favor because mining sounds atheoretical. Computer scientists were criticized for developing algorithms that can detect patterns and make predictions without any understanding of the processes or contexts, often leading to ethically questionable recommendations or problematic recommendations. The phrase "data science" was adopted to convey that there is a method to the madness. The CRISP-DM process applies broadly to most data science projects. 
+
+For a slightly more extensive list of tasks at each phase, see: [A general overview of existing data science methodologies](https://medium.com/datadriveninvestor/data-science-project-management-methodologies-f6913c6b29eb)
+
+[One-Page Visual Overview](https://exde.files.wordpress.com/2009/03/crisp_visualguide.pdf)
+
+[Full Guide](https://inseaddataanalytics.github.io/INSEADAnalytics/CRISP_DM.pdf)
+
+[R Bloggers: CRISP-DM and why you should know about it](https://www.r-bloggers.com/crisp-dm-and-why-you-should-know-about-it/)
 
 
-## Description
+## Your Team Project
 
-This section introduces [control structures](https://intellipaat.com/blog/tutorial/r-programming/decision-making-and-loops/) that serves to incorporate decision-making into computer code. It enables things like *if-then* logic to determine what code should be used based upon specified conditions. 
+The project this semester in relationship to CRISP-DM phases: 
 
+PROJECT STEP  |  CRISP-DM PHASE
+--------------|------------------
+Week 1 - Tax Incentives and Neighborhood Change   |  (1) Business Understanding  
+Week 2 - Developing Community Indices to Measure Change    |  (2) Data Understanding; (3) Data Preparation
+Week 3 – Descriptive Analysis of Community Change   |  (2) Data Understanding; (4) Modeling
+Week 4 – Predictive Analysis of Community Change   |  (4) Modeling 
+Week 5 – Federal Tax Credits as the Treatment   |  (2) Data Understanding; (3) Data Preparation
+Week 6 – Regression Analysis  | (4) Modeling; (5) Evaluation 
+Week 7 - Finalize Models and Report  |  (5) Evaluation; (6) Deployment  
 
-## Learning Objectives
+As you can see, the steps are iterative as you start the project with Census data, look at patterns in neighborhood change, model change as a function of community demographic characteristics, then add new data on two tax credit programs (New Market Tax Credits and Low Income Housing Tax Credits). Using the new data you will iterate some more through modeling and evaluation of results. 
 
-Once you have completed this section you will be able to 
-* implement if-else statements 
-* use while loops 
-* use functions as steps in problem-solving 
-
-## Lab
-
-Your assignment this week will be to design computer code to simulate the steps in the game show Let's Make a Deal. 
+In this context Phase (6) Deployment refers to your final report that will be packaged and published using GitHub pages and presented as a reproducible project. You can think about this as a modern form of a deliverable that a consulting firm might create for a government client that has hired the firm to conduct an expert evaluation of a federal program. The deliverable includes the recommendation of the team, as well as all of the data and methods used to produce those recommendations.  
 
 <br>
+
+
+
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
+
+*** { @unit = "", @title = "Project Boards with Kanban",  @foldout   }
+
+<br> 
+
+## Kanban
+
+> Kanban is a visual system for managing work as it moves through a process. Kanban visualizes both the process (the workflow) and the actual work passing through that process. The goal of Kanban is to identify potential bottlenecks in your process and fix them so work can flow through it cost-effectively at an optimal speed or throughput.
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/236558214" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+[What is Kanban?](https://www.digite.com/kanban/what-is-kanban/)
+
+
+## Kanban Boards in GitHub
+
+Just like GitHub pages are a powerful feature available in each repository, GitHub also has project management tools built right in. 
+
+[Creating a Project Board](https://help.github.com/en/github/managing-your-work-on-github/creating-a-project-board)
+
+1. At the top of your repo, click on **Projects** 
+2. Select **New Project**  
+3. Name and describe your board purpose, and select **Templates**  
+4. Choose the **Basic Kanban** option  
+5. Create four boards: 
+  - **Ideas** 
+  - **To Do** 
+  - **Doing** 
+  - **Done** 
+6. Brainstorm project tasks with your team and add all of the cards to **To Do** 
+7. Assign immediate tasks to each person, add their names to their cards, and move to **Doing**  
+8. Update the board each week with completed tasks, new assignments, and new tasks  
+
+One thing that takes practice is breaking complex operations down into discrete tasks. Think about this like wedding planning - sending out invitations is one task. You might even break it down further - create invite list, acquire addresses, track RSVPs, finalize attendance list. You can create one large task with a check-list of sub-tasks, or as distinct tasks. As a general rule of thumb when using project boards to manage a team, I would only group tasks if they will all be done by the same person. If one person is tasked with sending out invites, and another with collecting RSVPs and collating to the final attendee list, split them up. 
+
+> The Kanban Method is an evolutionary improvement process. It helps you adopt small changes and improve gradually at a pace and size that your team can handle easily. It encourages the use of the scientific method – you form a hypothesis, you test it and you make changes depending on the outcome of your test... Your key task is to evaluate your process constantly and improve continuously as needed and as possible.
+
 <br>
+
+
+
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
+
+*** { @unit = "", @title = "Documentation",  @foldout   }
+
+<br> 
+
+## Documentation
+
+> Nearly everyone knows that that they need good documentation, and most people try to create good documentation.
+> 
+> And most people fail.
+> 
+> Usually, it’s not because they don’t try hard enough. Usually, it’s because they are not doing it the right way.
+> 
+> In this article I will explain how you can make your documentation better, not by working harder at it, but by doing it the right way. The right way is the easier way - easier to write, and easier to maintain.
+> 
+> There are some very simple principles that govern documentation that are very rarely if ever spelled out. They seem to be a secret, though they shouldn’t be.
+
+[What nobody tells you about documentation](https://www.divio.com/blog/documentation/)
+
+<br>
+
+
+
+
+
+
+
+
+
+
+<!--- 
+############################################################################
+############################################################################
+############################################################################
+-->
+
+
+** Week 1 - Introduction 
+
+*** { @unit = "", @title = "Best Practices for Coding in the Social Sciences", @foldout  }
+
+
+From: *Gentzkow, M., & Shapiro, J. M. (2014). Code and data for the social sciences: A practitioner’s guide. Chicago, IL: University of Chicago.*
+
+What does it mean to do empirical social science? Asking good questions. Digging up novel data. Designing statistical analysis. Writing up results. 
+
+For many of us, most of the time, what it means is writing and debugging code. We write code to clean data, to transform data, to scrape data, and to merge data. We write code to execute statistical analyses, to simulate models, to format results, to produce plots. We stare at, puzzle over, fight with, and curse at code that isn’t working the way we expect it to. We dig through old code trying to figure out what we were thinking when we wrote it, or why we’re getting a different result from the one we got the week before. 
+
+Even researchers lucky enough to have graduate students or research assistants who write code for them still spend a significant amount of time reviewing code, instructing on coding style, or fixing broken code. 
+
+Though we all write code for a living, few of the economists, political scientists, psychologists, sociologists, or other empirical researchers we know have any formal training in computer science. Most of them picked up the basics of programming without much effort, and have never given it much thought since. Saying they should spend more time thinking about the way they write code would be like telling a novelist that she should spend more time thinking about how best to use Microsoft Word. Sure, there are people who take whole courses in how to change fonts or do mail merge, but anyone moderately clever just opens the thing up and figures out how it works along the way.
+
+This manual began with a growing sense that our own version of this self-taught seat-of-the-pants approach to computing was hitting its limits. Again and again, we encountered situations like: 
+
+1.	In trying to replicate the estimates from an early draft of a paper, we discover that the code that produced the estimates no longer works because it calls files that have since been moved. When we finally track down the files and get the code running, the results are different from the earlier ones. 
+2.	In the middle of a project we realize that the number of observations in one of our regressions is surprisingly low. After much sleuthing, we find that many observations were dropped in a merge because they had missing values for the county identifier we were merging on. When we correct the mistake and include the dropped observations, the results change dramatically. 
+3.	A referee suggests changing our sample definition. The code that defines the sample has been copied and pasted throughout our project directory, and making the change requires updating dozens of files. In doing this, we realize that we were actually using different definitions in different places, so some of our results are based on inconsistent samples. 
+4.	We are keen to build on work a research assistant did over the summer. We open her directory and discover hundreds of code and data files. Despite the fact that the code is full of long, detailed comments, just figuring out which files to run in which order to reproduce the data and results takes days of work. Updating the code to extend the analysis proves all but impossible. In the end, we give up and rewrite all of the code from scratch.  
+5.	We and our two research assistants all write code that refers to a common set of data files stored on a shared drive. Our work is constantly interrupted because changes one of us makes to the data files causes the others’ code to break. 
+
+At first, we thought of these kinds of problems as more or less inevitable. Any large scale endeavor has a messy underbelly, we figured, and good researchers just keep calm, fight through the frustrations, and make sure the final results are right. But as the projects grew bigger, the problems grew nastier, and our piecemeal efforts at improving matters—writing handbooks and protocols for our RAs, producing larger and larger quantities of comments, notes, and documentation—proved ever more ineffective, we had a growing sense that there must be a way to do better.
+
+In the course of a project involving a really big dataset, we had the chance to work with a computer scientist who had, for many years, taught the course on databases at the University of Chicago. He showed us how we could organize our really big dataset so that it didn’t become impossible to work with. Neat, we thought, and went home. 
+
+Around that time we were in the middle of assembling a small (but to us, very important) dataset of our own. We spent hours debating details of how to organize the files. A few weeks in we realized something. We were solving the same problem the computer scientist had shown us how to solve. Only we were solving it blind, without the advantage of decades of thought about database design. 
+
+**Here is a good rule of thumb: If you are trying to solve a problem, and there are multi-billion dollar firms whose entire business model depends on solving the same problem, and there are whole courses at your university devoted to how to solve that problem, you might want to figure out what the experts do and see if you can’t learn something from it.** 
+
+
 
 
 
