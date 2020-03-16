@@ -884,6 +884,7 @@ Once you have completed this section you will be able to
 
 
 
+<!--- 
 
 *** { @unit = "FRI Mar 27th", @title = "YellowDig Discussion", @assignment }
 
@@ -899,7 +900,7 @@ Share your ideas about these problems with your classmates.
 <br>
 <br>
 
-
+-->
 
 
 
@@ -952,7 +953,7 @@ Share your ideas about these problems with your classmates.
 
 
 
-** Week 4 - Predicting Neighborhood Change  
+** Week 4 - Predictive Analysis of Neighborhood Change  
 
 
 
@@ -987,10 +988,18 @@ Share your ideas about these problems with your classmates.
 
 
 
-** Week 5 - Adding Federal Program Data
+** Week 5 - Federal Program Data
 
 
-*** { @unit = "MON Apr 20th", @title = "Lab 06", @assignment, @foldout  }
+*** { @unit = "", @title = "Unit Overview" }
+
+
+<br>
+
+
+<br>
+
+*** { @unit = "MON Apr 20th", @title = "Lab 05", @assignment  }
 
 
 <br>
