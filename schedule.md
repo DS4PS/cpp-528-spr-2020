@@ -667,14 +667,14 @@ According to the articles, what are the components of a good project management 
 **Required**
 
 1.	[The “Gold Standard” for Data Science Project Management](https://towardsdatascience.com/the-gold-standard-of-data-science-project-management-13d68c9e85d6)
-2.	Best Practices for Data Science Project Workflows and File Organization, available on GitHub at: https://github.com/moldach/project-directory
+2.	[Best Practices for Data Science Project Workflows and File Organization](https://github.com/moldach/project-directory), available on GitHub
 3. [One-Page Visual Guide to CRISP-DM](https://exde.files.wordpress.com/2009/03/crisp_visualguide.pdf)
 
 
 **Background**
 
-1.	Zen And The aRt Of Workflow Maintenance:  https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance
-2.	Cookie Cutter Data Science: https://drivendata.github.io/cookiecutter-data-science/
+1.	[Zen And The aRt Of Workflow Maintenance](https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance)  
+2.	[Cookie Cutter Data Science:](https://drivendata.github.io/cookiecutter-data-science/)
 
 <br>
 
@@ -744,8 +744,8 @@ On the other hand, it is not realistic to assume no population movement in and o
 
 For this lab, skim the following article and blog:
 
-1. Freeman, L. (2005). Displacement or succession? Residential mobility in gentrifying neighborhoods. Urban Affairs Review, 40(4), 463-491.
-2. Macaig (2015): Gentrification in America Report
+1. Freeman, L. (2005). Displacement or succession? Residential mobility in gentrifying neighborhoods. Urban Affairs Review, 40(4), 463-491. [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/gentrification/displacement-or-succession.pdf)
+2. Macaig (2015): Gentrification in America Report [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/gentrification/gentrification-in-america-report.pdf)
 
 Consider two neighborhoods. Both are distressed in 2000. Both experience significant rises in income and increases in high school graduation rates. One is experiencing healthy revitalization for residents, and one is experiencing rapid gentrification. How can we tell these two cases apart? 
 
