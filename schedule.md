@@ -728,11 +728,19 @@ Which community characteristics or conditions best predict revitalization is emm
 2.	New Market Tax Credits Case Studies
 3.	Frontline Episode: Poverty, Politics and Profit - CH3 LIHTC Scandal 
 
+<br>
+<br>
+
+
 **Low Income Housing Tax Credits**
 
 Low Income Housing Tax Credits (LIHTC) are one of the primary policy instruments used to incentivize the construction of new affordable housing units in the United States. Learn about LIHTC:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DdUcOFRdyTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<br>
+<br>
 
 
 **New Market Tax Credits**
@@ -744,6 +752,10 @@ Watch case studies on the impact that New Market Tax Credits have achieved in th
 [NMTC Case Studies](https://www.cohnreznick.com/nmtc-map)
 
 
+<br>
+<br>
+
+
 **Challenges of Catalyzing Change Through Tax Credits**
 
 FRONTLINE and NPR investigate the billions spent on affordable housing, and why so few get the help they need.
@@ -753,6 +765,8 @@ FRONTLINE and NPR investigate the billions spent on affordable housing, and why 
 *Make sure to watch Chap 3 on Low Income Housing Tax Credits - it start at 19:00.*
 
 <br>
+
+
 
 
 
@@ -896,10 +910,10 @@ Just like GitHub pages are a powerful feature available in each repository, GitH
 
 One thing that takes practice is breaking complex operations down into discrete tasks. Think about this like wedding planning - sending out invitations is one task, booking a venue another, etc. But you can break down a task like invitations much further:
 
-- [ ] create invite list  
-- [ ] acquire addresses  
-- [ ] track RSVPs  
-- [ ] finalize attendance list  
+[ ] create invite list  
+[ ] acquire addresses  
+[ ] track RSVPs  
+[ ] finalize attendance list  
 
 
 You can create one large task with a check-list of sub-tasks, or a set of distinct tasks. Both are viable ways to organize the work. 
@@ -911,16 +925,16 @@ As a general rule of thumb when using project boards to manage a team, I would g
 Note a check-box is created like this: 
 
 ````
-- [ ] finalize attendance list  
+[ ] finalize attendance list  
 ````
 
 And to close it add an X to the box: 
 
 ````
-- [X] finalize attendance list  
+[X] finalize attendance list  
 ````
 
-- [X] finalize attendance list 
+[X] finalize attendance list 
 
 
 
