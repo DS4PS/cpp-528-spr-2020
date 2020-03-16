@@ -3,17 +3,17 @@ layout: index
 title: Syllabus
 
 index:
-    title: Foundations of Data Science Part II
+    title: Foundations of Data Science Part III
     image: data-science.png
-    subtitle: This course builds from the foundations in R programming covered in CPP 526 Data Science I. We will learn how to use custom functions to make analysis more efficient, build simulations and animations, create R packages, learn text analysis functions in R, and build a website using the Jekyll framework in GitHub. 
+    subtitle: This course extends work done in CPP 526 and 527 while introducing  
     
 info: 
  program_title: Program Evaluation and Data Analytics
  program_website: https://asuonline.asu.edu/online-degree-programs/graduate/program-evaluation-and-data-analytics-ms/
- course_title: Foundations of Data Science Part II
- course_number: CPP 527 
+ course_title: Foundations of Data Science Part III
+ course_number: CPP 528 
  course_level: Graduate 
- course_website: 'https://canvas.asu.edu/courses/41575'
+ course_website: 'https://canvas.asu.edu/courses/49307'
  course_start_end_dates: March 16 to May 01, 2020
  course_prerequisites:  
  class_meets_when:  Asynchronous  
@@ -66,29 +66,28 @@ textbooks:
 
 The Foundations of Data Science course sequence will cover the fundamentals of data programming – building unique datasets using APIs and custom tools, importing data from the cloud, linking multiple data sources, and wrangling processes to clean, transform, and reshape datasets. Advanced topics will be introduced such as writing functions, running simulations, writing packages for R, and de-bugging techniques. We will spend roughly a third of the units on graphing procedures and reporting packages.
 
-This course, Foundations of Data Science II, will introduce the data preparation cycle: gather, clean, tidy, and wrangle the data to produce a custom research database. 
+This course, Foundations of Data Science III, reviews material from CPP 526 and 527 while emphasizing project management and team work-flow skills. 
 
 After completing the course students will be able to:
 
-* Import data from multiple standard and nonstandard formats and data APIs.
-* Apply string processing and regular expressions to clean data and analyze text. 
-* Generate new variables through transformations and group aggregation techniques.
-* Create an R package
-* Build a website using the Jekyll framework in GitHub 
+* Deploy modern project management frameworks to ensure data projects run efficiently and avoid errors.
+* Package a report using GitHub pages. 
+* Create a fully transparent and reproducible product. 
 
 Course Prerequisites: 	
 
-This course builds upon basic R programming material from CPP 526 Foundations of Data Science I.
+This course builds upon basic R programming material from Data Science I (CPP 526), Data Science II (CPP 527), Program Evaluation I (CPP 523), and Community Analytics (CPP 529). 
 
 # II.	Assessment of Student Learning Performance & Proficiency: Keys to Student Success
 
 Assessment of student performance in this course is based on indications that the course learning objectives stated above have been achieved.  Several areas of measurement will be used to produce a final student performance rating.  These areas of performance assessment include the following:
 
-* Importing data through APIs. 
-* Using text operations to clean datasets. 
-* Creating new variables through transformations or calculations of group statistics.
-* Creating and documenting a new R package. 
-* Building a personal website on GitHub 
+* Building a research database by combining several data sources. 
+* Creating meaningful and reliable metrics from administrative data. 
+* Perform descriptive analysis. 
+* Use regression to make inferences about programs. 
+* Manage a project using versioning. 
+* Providing proper documentation on analysis performed.  
 
 Students will demonstrate competency in understanding, producing and communicating results of their analyses through the following assignments:  
 
@@ -119,20 +118,16 @@ The online discussions are explicitly intended to meet the objectives stated abo
 
 ## B. Assigned Reading Materials
 
-We will use some chapters from the program textbook. 
+All assigned reading material are provided on the Schedule page. 
 
-* [Course Textbook](https://ds4ps.org/dp4ss/)
+There are no required textbooks for this class. 
 
-The following texts are recommended as good reference material for topics covered in this course:
+The following texts are recommended as reference material for this course:
 
 * Wickham, H., &amp; Grolemund, G. (2016). _R for Data Science._ O&#39;Reilly Press_. (free online)_  
-* Teetor, P. (2011). _R Cookbook: Proven recipes for data analysis, statistics, and graphics_. &quot; O&#39;Reilly Media, Inc.&quot;.  
-* Sanchez, G. (2013). _Handling and processing strings in R._ Berkeley: Trowchez Editions. _(free online)_  
 * Peng, R. D., &amp; Matsui, E. (2015). _The Art of Data Science._ _A Guide for Anyone Who Works with Data._ Skybrude Consulting, 200, 162.  
 
 
-
-In addition to the required textbooks, the instructor will supplement the assigned unit readings with various journal articles, policy reports, or other related material.  These will be made available in the course shell in Blackboard.
 
 ## C. Course Grading System for Assigned Work, including Final Project:
 
@@ -151,15 +146,11 @@ Below 80%   |  C, D, F
 
 The assigned work for the term comes in the form of four elements, described below:
 
-- **Weekly Labs (50%):**  Each week you will receive a short lab that will help you synthesize the lectures from the week though exercises that involve data, analysis, and important formulas from the lectures. These labs contain exercises that are similar in form or difficulty to what will be presented on the final exam. **They are graded pass / fail** by the instructors based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection.
+- **Weekly Labs (25%):**  Each week there will be a lab designed to guide you through the project step for the week. They will require data wrangling to build your research database, descriptive analysis, and regression. **They are graded pass / fail** by the instructors based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection. There are six labs total, each worth 5%. You can drop one lab during the term. 
 
-- **R Package (10%):**  Labs 01 and 02 require you to write functions to generate your solution. You will have an additional assignment to build an R package with these functions and make it available for others to use. 
+- **Applied Project Deliverables (65%):**  Your report on the impact of federal tax credit programs designed to stimulate community revitalization will serve as your primary deliverable for the semester. Each week you will be asked to complete new steps on your final project. You may submit them for feedback and guidance, and revise them before the final deadline. Your final grade will be based upon how clearly results are presented and how easy it is for a non-team member to replicate resulst from your study using your GitHub repository. 
 
-- **RMD to Jekyll Project (20%):**  The final project in the course will require you to create a template for automating a report in R. You will publish the report as a Jekyll website. 
-
-- **Explainer Assignment (10%):**  You are invited to pick one topic from the class that you want to learn more about, or that you think might provide value to your classmates. Create a short tutorial to make your topic accessible to your peers. It can be a blog post, a video, a GIF, or a tutorial that explains an important concept from data programming, presents a helpful framework, illustrates a useful R tool or approach to data programming, or introduces classmates to a new package or function. 
-
-- **Yellowdig Practice Problems (10%):**  Each week I will post a list of review questions or brain teasers about the R language. You will be invited to submit solutions or explanations to the problems on Yellowdig and discuss with classmates. The points will be allocated as follows:
+- **Yellowdig Discussions (10%):**  YellowDig will be used this term to guide discussions on the substantive policy issues regarding community revitalization efforts, and on challenges of using administrative data to conduct causal analysis to measure program impact. 
 
   - 5 points for a new pin.
   - 3 points for a comment made to another pin.
@@ -226,17 +217,17 @@ Use the **Schedule** tab on the navigation bar for detailed information each wee
 ## Couse Schedule
 
 
-### Unit 1: Programming Control Structures 
+### Unit 1: Project Management Frameworks 
 
-### Unit 2: Simulation 
+### Unit 2: Neighborhood Health 
  
-### Unit 3: GitHub Pages 
+### Unit 3: Neighborhood Change 
 
-### Unit 4: Regular Expressions 
+### Unit 4: Predicting Change  
 
-### Unit 5: Data APIs 
+### Unit 5: Federal Tax P 
 
-### Unit 6: Tidy Data 
+### Unit 6: Impact Analysis  
 
 ### Unit 7: Customized Reports in RMD 
 
