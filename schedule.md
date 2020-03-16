@@ -854,7 +854,12 @@ As a general rule of thumb when using project boards to manage a team, I would g
 ** Week 2 - Measuring Neighborhood Health 
 
 
-*** { @unit = "", @title = "Unit Overview", @lecture }
+*** { @unit = "", @title = "Unit Overview" }
+
+
+
+
+<!--- 
 
 
 <br>
@@ -884,7 +889,7 @@ Once you have completed this section you will be able to
 
 
 
-<!--- 
+
 
 *** { @unit = "FRI Mar 27th", @title = "YellowDig Discussion", @assignment }
 
@@ -957,7 +962,7 @@ Share your ideas about these problems with your classmates.
 
 
 
-*** { @unit = "", @title = "Unit Overview", @reading }
+*** { @unit = "", @title = "Unit Overview" }
 
 <br>
 
