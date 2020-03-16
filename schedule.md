@@ -271,11 +271,15 @@ Look for the section labeled: "If you want a complete list of projects for the e
 #######################################################
 -->
    
-** Project Management Framework and Processes 
+** Project Management Frameworks
 
 
 
 *** { @unit = "", @title = "A Project Management Framework",  @reading, @foldout   }
+
+<br>
+
+## Project Management Frameworks 
 
 Although we can never fully eliminate errors, we can introduce reasonable quality control processes to ensure that our analysis is (1) as accurate as possible, and (2) transparent enough so that others can review the work directly, and thus are more likely to identify errors.
 
@@ -510,15 +514,22 @@ In this context Phase (6) Deployment refers to your final report that will be pa
 
 ## Kanban
 
-> Kanban is a visual system for managing work as it moves through a process. Kanban visualizes both the process (the workflow) and the actual work passing through that process. The goal of Kanban is to identify potential bottlenecks in your process and fix them so work can flow through it cost-effectively at an optimal speed or throughput.
+*Kanban is a visual system for managing work as it moves through a process. Kanban visualizes both the process (the workflow) and the actual work passing through that process. The goal of Kanban is to identify potential bottlenecks in your process and fix them so work can flow through it cost-effectively at an optimal speed or throughput.*
 
-> The Kanban Method is an evolutionary improvement process. It helps you adopt small changes and improve gradually at a pace and size that your team can handle easily. It encourages the use of the scientific method – you form a hypothesis, you test it and you make changes depending on the outcome of your test... Your key task is to evaluate your process constantly and improve continuously as needed and as possible.
+*The Kanban Method is an evolutionary improvement process. It helps you adopt small changes and improve gradually at a pace and size that your team can handle easily. It encourages the use of the scientific method – you form a hypothesis, you test it and you make changes depending on the outcome of your test... Your key task is to evaluate your process constantly and improve continuously as needed and as possible.*
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/236558214" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+[What is Kanban?](https://www.digite.com/kanban/what-is-kanban/)
 
 <br>
 
-[What is Kanban?](https://www.digite.com/kanban/what-is-kanban/)
+<hr>
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/236558214" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+<hr>
+
+<br>
+
 
 
 
