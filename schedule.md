@@ -569,6 +569,9 @@ The project will be split into the following steps:
 
 ## Federal Programs 
 
+<br>
+<br>
+
 **Low Income Housing Tax Credits**
 
 Low Income Housing Tax Credits (LIHTC) are one of the primary policy instruments used to incentivize the construction of new affordable housing units in the United States. Learn about LIHTC:
@@ -576,7 +579,7 @@ Low Income Housing Tax Credits (LIHTC) are one of the primary policy instruments
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DdUcOFRdyTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
-
+<br>
 
 **New Market Tax Credits**
 
@@ -587,7 +590,7 @@ Watch case studies on the impact that New Market Tax Credits have achieved in th
 [NMTC Case Studies](https://www.cohnreznick.com/nmtc-map)
 
 <br>
-
+<br>
 
 **Challenges of Catalyzing Change Through Tax Credits**
 
@@ -598,7 +601,7 @@ FRONTLINE and NPR investigate the billions spent on affordable housing, and why 
 *Make sure to watch Chap 3 on Low Income Housing Tax Credits - it start at 19:00.*
 
 <br>
-
+<br>
 
 
 ## Data
