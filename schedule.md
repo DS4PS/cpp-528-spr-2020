@@ -3,8 +3,8 @@ layout: schedule
 title: Schedule
 
 canvas: 
-  assignment_url: 'https://canvas.asu.edu/courses/41575/assignments'
-  yellowdig_url: 'https://canvas.asu.edu/courses/41575/assignments/959520'
+  assignment_url: 'https://canvas.asu.edu/courses/49307/assignments'
+  yellowdig_url: 'https://canvas.asu.edu/courses/49307/assignments/1166912'
 ---
  
 <!--- 
@@ -174,13 +174,30 @@ You will be assigned to teams. Each team will work on the class project independ
 
 ## Data Analytics Project 
 
-CPP 528 is organized around a single large project that allows you to revisit and practice skills from 523, 524, 526 and 527. The research question is whether two large federal programs designed to revitalize distressed neighborhoods in US cities have been successful. We will use 2000 to 2010 as the study period and look at broad trends in neighborhood change over this decade, then examine whether neighborhoods targeted by the programs have achieved any more success than they would have without the billion of dollars in federal subsidies. 
+CPP 528 is organized around a single large project that allows you to revisit and practice skills from 523, 524, 526 and 527. The research question is whether two large federal programs designed to revitalize distressed neighborhoods in US cities have been successful. 
 
-For the project, **your team has been hired by the federal government to provide a rigorous assessment of program impact. You need to compile the data necessary for the analysis, run some models, and provide your client with a final report stating your assessment of program impact.**
+We will use 2000 to 2010 as the study period and look at broad trends in neighborhood change over this decade, then examine whether neighborhoods targeted by the programs have achieved any more success than they would have without the billion of dollars in federal subsidies. 
+
+For the project, your team has been hired by the federal government to provide a rigorous assessment of program impact. You need to compile the data necessary for the analysis, run some models, and provide your client with a final report stating your assessment of program impact.
+
+The research question: Has each program been successful? 
+
+**Project Schedule**
+
+Each week you will complete one part of the analysis and submit your results for review. The instructor will play the role of your manager on this project, providing feedback and guidance on how to improve and revise each step to prepare it for the final deliverable
+. 
+*	Week 1: Neighborhood Revitalization Background  
+*	Week 2: Construct Dataset  
+*	Week 3: Descriptive Analysis  
+*	Week 4: Models 
+*	Week 5: Reporting Results  
+*	Week 6: Documentation 
+*	Week 7: Revise and Present  
+
+<br>
 
 
-
-## Federal Programs Being Evaluated
+## Federal Programs 
 
 ### Low Income Housing Tax Credits
 
@@ -238,19 +255,6 @@ Look for the section labeled: "If you want a complete list of projects for the e
 
 
 
-## Project Schedule
-
-Each week you will complete one part of the analysis and submit your results for review. The instructor will play the role of your manager on this project, providing feedback and guidance on how to improve and revise each step to prepare it for the final deliverable
-. 
-*	Week 1: Intro to Project Management & Neighborhood Revitalization   
-*	Week 2: Construct Dataset  
-*	Week 3: Descriptive Analysis  
-*	Week 4: Models 
-*	Week 5: Reporting Results  
-*	Week 6: Documentation 
-*	Week 7: Revise and Present  
-
-<br>
 
 
 
@@ -264,8 +268,56 @@ Each week you will complete one part of the analysis and submit your results for
 #######################################################
 -->
    
-** Project Management Frameworks and Processes 
+** Project Management Framework and Processes 
 
+
+
+*** { @unit = "", @title = "A Project Management Framework",  @reading, @foldout   }
+
+Although we can never fully eliminate errors, we can introduce reasonable quality control processes to ensure that our analysis is (1) as accurate as possible, and (2) transparent enough so that others can review the work directly, and thus are more likely to identify errors.
+
+We typically use data to identify new relationships or patterns (discovery), to present the world at a point in time (descriptive), to tease apart causal effects of specific policies or programs (evaluation), or to use models to predict behavior or events (predictive analysis). All of these tasks require four things:  
+
+**Data**
+-	acquisition
+-	cleaning / recoding / refinement 
+-	wrangling (aggregating across units, merging, filtering)
+
+**Software**
+-	a platform or language (like R)
+-	use of specific packages 
+
+**Code** 
+-	custom functions  
+-	custom tables and graphics 
+-	analysis and models 
+
+**Deliverable (a report in this context)**
+-	data-driven document (code)
+-	templates and styles 
+-	formatting tables and graphics for report
+-	imported content like images and citations 
+
+**Project management in the data science context describes a system for approaching an analytical task that provides methods for writing and testing code to optimize accuracy, and offers a shared framework to make it easier for multiple team members to collaborate.** 
+
+As you know by now, even seemingly simple projects can have a lot of moving parts. The goal of a project management framework is to:
+
+-	Make the process efficient
+-	Avoid introducing errors into data or code 
+-	Utilize transparency to build trust and catch mistakes 
+-	Make the work:
+  -	reproducible (recreation of current results)
+  -	extensible or scalable (use components in future projects) 
+
+The frameworks below introduce popular systems created to organize projects and manage workflow. 
+
+<br>
+
+
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
 
 *** { @unit = "", @title = "CRISP-DM",  @reading, @foldout   }
 
@@ -445,6 +497,7 @@ In this context Phase (6) Deployment refers to your final report that will be pa
 
 
 
+
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
@@ -458,33 +511,11 @@ In this context Phase (6) Deployment refers to your final report that will be pa
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/236558214" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
-[What is Kanban?](https://www.digite.com/kanban/what-is-kanban/)
 
-
-## Kanban Boards in GitHub
-
-Just like GitHub pages are a powerful feature available in each repository, GitHub also has project management tools built right in. 
-
-[Creating a Project Board](https://help.github.com/en/github/managing-your-work-on-github/creating-a-project-board)
-
-1. At the top of your repo, click on **Projects** 
-2. Select **New Project**  
-3. Name and describe your board purpose, and select **Templates**  
-4. Choose the **Basic Kanban** option  
-5. Create four boards: 
-  - **Ideas** 
-  - **To Do** 
-  - **Doing** 
-  - **Done** 
-6. Brainstorm project tasks with your team and add all of the cards to **To Do** 
-7. Assign immediate tasks to each person, add their names to their cards, and move to **Doing**  
-8. Update the board each week with completed tasks, new assignments, and new tasks  
-
-One thing that takes practice is breaking complex operations down into discrete tasks. Think about this like wedding planning - sending out invitations is one task. You might even break it down further - create invite list, acquire addresses, track RSVPs, finalize attendance list. You can create one large task with a check-list of sub-tasks, or as distinct tasks. As a general rule of thumb when using project boards to manage a team, I would only group tasks if they will all be done by the same person. If one person is tasked with sending out invites, and another with collecting RSVPs and collating to the final attendee list, split them up. 
-
-> The Kanban Method is an evolutionary improvement process. It helps you adopt small changes and improve gradually at a pace and size that your team can handle easily. It encourages the use of the scientific method – you form a hypothesis, you test it and you make changes depending on the outcome of your test... Your key task is to evaluate your process constantly and improve continuously as needed and as possible.
 
 <br>
+
+
 
 
 
@@ -504,6 +535,7 @@ One thing that takes practice is breaking complex operations down into discrete 
 [Kanban vs Scrum](https://www.atlassian.com/agile/kanban/kanban-vs-scrum)
 
 <br>
+
 
 
 
@@ -530,6 +562,34 @@ One thing that takes practice is breaking complex operations down into discrete 
 
 
 
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
+
+*** { @unit = "", @title = "Metrics for Success", @reading, @foldout   }
+
+<br>
+
+## Metrics for Success
+
+Some easy heuristics to test whether the project management system is working: 
+
+-	Can you easily reproduce the results from your project working from raw data to final models with a single script? 
+-	Can you identify what changes have been made to your project, by whom, and when? 
+-	Can someone else that was not a member of your team easily use your project? 
+-	Are you building institutional capacity (libraries) to do future projects faster and better? 
+
+**Examples of Project Repositories Built for Reproducibility:**
+
+These GitHub repositories provide a few examples of work that is designed to be reproducible and extensible by providing access to the data and code used for analysis, or in the BBC case generating a set of reporting templates that be re-used and adapted by journalists across the agency to build institutional knowledge to make the organization more efficient. 
+
+- https://chicago.github.io/food-inspections-evaluation/
+- https://github.com/USEPA/LakeTrophicModelling
+- https://bbc.github.io/rcookbook/
+- http://trafficstops.trendct.org/data/
+
+<br>
 
 
 
@@ -579,27 +639,43 @@ Once you have completed this section you will be able to:
 <br>
 <br>
 
-## Assigned Reading
+## Project Management 
 
-Required:
-
-[Quick Reference on Control Structures](https://intellipaat.com/blog/tutorial/r-programming/decision-making-and-loops/) 
-
-[Control Structures in R](https://bookdown.org/rdpeng/rprogdatascience/control-structures.html)
+According to the articles, what are the components of a good project management system in data science? 
 
 
+**Required**
 
-## Recommended Reading 
+1.	[The “Gold Standard” for Data Science Project Management](https://towardsdatascience.com/the-gold-standard-of-data-science-project-management-13d68c9e85d6)
+2.	Best Practices for Data Science Project Workflows and File Organization, available on GitHub at: https://github.com/moldach/project-directory
+3. [One-Page Visual Guide to CRISP-DM](https://exde.files.wordpress.com/2009/03/crisp_visualguide.pdf)
 
-This topic builds off of the use of loops and thus is a little more advanced - we will cover it in CPP 528. It would not hurt to preview the topic now, though. 
 
-[Don't Loop - Apply](https://bookdown.org/rdpeng/rprogdatascience/loop-functions.html)
+**Background**
 
-[Simulation](https://bookdown.org/rdpeng/rprogdatascience/simulation.html) 
-
-[Scope](https://bookdown.org/rdpeng/rprogdatascience/scoping-rules-of-r.html)
+1.	Zen And The aRt Of Workflow Maintenance:  https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance
+2.	Cookie Cutter Data Science: https://drivendata.github.io/cookiecutter-data-science/
 
 <br>
+
+
+## Neighborhood Revitalization
+
+Which community characteristics or conditions best predict revitalization is emminent? 
+
+**Required**
+
+1. Lincoln Institute (2008): People or Place? Revisiting the Who Versus the Where of Urban Development
+2. What Works Collaborative (2012): Building Successful Neighborhoods
+3. Burnette (2017): Predicting Gentrification
+
+**Watch:**
+
+1.	Low Income Housing Tax Credits Overview 
+2.	New Market Tax Credits Case Studies
+3.	Frontline Episode: Poverty, Politics and Profit - CH3 LIHTC Scandal 
+
+
 <br>
 
 
@@ -609,24 +685,134 @@ This topic builds off of the use of loops and thus is a little more advanced - w
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "Due Jan 21th", @title = "Lab 01", @assignment, @foldout  }
+*** { @unit = "Due Mar 23rd", @title = "Lab 01", @assignment, @foldout  }
 
 <br>
 
-## Lab-01 - Control Structures 
+## Lab-01 - Configure Your Project
 
-This lab is based upon the famous [Monty Hall Problem](http://www.montyhallproblem.com/). 
+[What is Kanban?](https://www.digite.com/kanban/what-is-kanban/)
 
-Although there was much debate about the correct solution when it was initially introduced there are many concise explanations of the proper solution:
+> The Kanban Method is an evolutionary improvement process. It helps you adopt small changes and improve gradually at a pace and size that your team can handle easily. It encourages the use of the scientific method – you form a hypothesis, you test it and you make changes depending on the outcome of your test... Your key task is to evaluate your process constantly and improve continuously as needed and as possible.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9vRUxbzJZ9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+**Kanban Boards in GitHub**
 
-The Monty Hall Problem is a great example of a mathematical problem that might be hard to solve using a mathematical proof, but it is fairly easy to solve using simulation. Since it is just a game with simple and explicit rules we can build our own virtual version. Then we can compare how outcomes differ when we deploy the two different strategies for selecting doors. 
+Just like GitHub pages are a powerful feature available in each repository, GitHub also has project management tools built right in. 
 
-In Lab 01 we will use control structures to build a virtual version of the game. In Lab 02 we will use simulation to play the game thousands of times so that we can get stable estimates of the payoff of each strategy. 
+[Creating a Project Board](https://help.github.com/en/github/managing-your-work-on-github/creating-a-project-board)
+
+1. At the top of your repo, click on **Projects** 
+2. Select **New Project**  
+3. Name and describe your board purpose, and select **Templates**  
+4. Choose the **Basic Kanban** option  
+5. Create four boards: 
+  - **Ideas** 
+  - **To Do** 
+  - **Doing** 
+  - **Done** 
+6. Brainstorm project tasks with your team and add all of the cards to **To Do** 
+7. Assign immediate tasks to each person, add their names to their cards, and move to **Doing**  
+8. Update the board each week with completed tasks, new assignments, and new tasks  
+
+One thing that takes practice is breaking complex operations down into discrete tasks. Think about this like wedding planning - sending out invitations is one task. You might even break it down further - create invite list, acquire addresses, track RSVPs, finalize attendance list. You can create one large task with a check-list of sub-tasks, or as distinct tasks. As a general rule of thumb when using project boards to manage a team, I would only group tasks if they will all be done by the same person. If one person is tasked with sending out invites, and another with collecting RSVPs and collating to the final attendee list, split them up. 
+
+
+
+
+
+## Submit Solutions to Canvas:
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
+
+<br>
+<br>
+
+
+
 
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-527-spr-2020/labs/lab-01-instructions.html">LAB-01 Instructions</a>
+
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
+
+*** { @unit = "Due Mar 23rd", @title = "Applied Project Step 01", @assignment, @foldout  }
+
+<br>
+
+## Step 01 - Configure Your Project Repository on GitHub 
+
+
+**Directory Structure**
+
+Your final deliverable will consist of two 10-slide presentations. 
+
+* Present your results determining whether the tax policies are having the intended impact. 
+* Provide an overview to using the repository to replicate your study. 
+
+You need to provide careful documentation of how you get from raw data in your project to final results. Think about it as a book where each chapter covers a distinct task: 
+
+* Creating instruments to measure community health 
+* Identifying indicators of gentrification 
+* Descriptive analysis of neighborhood change 
+* Community demographics that predict revitalization 
+* Impact of federal programs 
+* Packaging of final deliverables
+
+You will activate the GitHub page option for your repository and use the main landing page as the executive summary and index for HTML files that you generate in R Studio from your analysis. 
+
+For example, this was a project students did with the Syracuse Land Bank to help them identify data that could be used to target rehabilitation projects:
+
+https://lecy.github.io/SyracuseLandBank/
+
+And another guide describing how you might document the journey from raw data to the final dataset that you use for your analysis. Every step should be explicit, and you should openly discuss the how and why of data wrangling:
+
+https://github.com/jtleek/datasharing
+
+Your repository will have the following directories: 
+
+* data 
+* 
+
+**Kanban Boards in GitHub**
+
+> The Kanban Method is an evolutionary improvement process. It helps you adopt small changes and improve gradually at a pace and size that your team can handle easily. It encourages the use of the scientific method – you form a hypothesis, you test it and you make changes depending on the outcome of your test... Your key task is to evaluate your process constantly and improve continuously as needed and as possible.
+
+[What is Kanban?](https://www.digite.com/kanban/what-is-kanban/)
+
+Just like GitHub pages are a powerful feature available in each repository, GitHub also has project management tools built right in. 
+
+[Creating a Project Board](https://help.github.com/en/github/managing-your-work-on-github/creating-a-project-board)
+
+1. At the top of your repo, click on **Projects** 
+2. Select **New Project**  
+3. Name and describe your board purpose, and select **Templates**  
+4. Choose the **Basic Kanban** option  
+5. Create four boards: 
+  - **Ideas** 
+  - **To Do** 
+  - **Doing** 
+  - **Done** 
+6. Brainstorm project tasks with your team for the coming week and add all of the cards to **To Do** 
+7. Assign immediate tasks to each person, add their names to their cards, and move to **Doing**  
+8. Update the board each week with completed tasks, new assignments, and new tasks  
+
+One thing that takes practice is breaking complex operations down into discrete tasks. Think about this like wedding planning - sending out invitations is one task, booking a venue another, etc. But you can break down a task like invitations much further:
+
+[] create invite list
+[] acquire addresses
+[] track RSVPs
+[] finalize attendance list
+
+You can create one large task with a check-list of sub-tasks, or a set of distinct tasks. Both are viable ways to organize the work. 
+
+As a general rule of thumb when using project boards to manage a team, I would group tasks only if they will all be done by the same person in the same time period. If one person is tasked with sending out invites, and another with collecting RSVPs and collating to the final attendee list, split them up. 
+
+
+
+
 
 ## Submit Solutions to Canvas:
 
@@ -640,15 +826,7 @@ In Lab 01 we will use control structures to build a virtual version of the game.
 
 
 
-
-
-
-
-
-
-
-
-** Week 2 - Simulations 
+** Week 2 - Measuring Neighborhood Health 
 
 
 *** { @unit = "", @title = "Unit Overview", @lecture, @foldout }
