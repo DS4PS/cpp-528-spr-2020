@@ -685,9 +685,9 @@ Which community characteristics or conditions best predict revitalization is emm
 
 **Required**
 
-1. Lincoln Institute (2008): People or Place? Revisiting the Who Versus the Where of Urban Development
-2. What Works Collaborative (2012): Building Successful Neighborhoods
-3. Burnette (2017): Predicting Gentrification
+1. Lincoln Institute (2008): [People or Place? Revisiting the Who Versus the Where of Urban Development](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/revitalization/people-or-place-revisiting-the-debate.pdf)
+2. What Works Collaborative (2012): [Building Successful Neighborhoods](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/revitalization/building-successful-neighborhoods.pdf)
+3. Burnette (2017): [Predicting Gentrification](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/revitalization/predicting-revitalization.pdf)
 
 **Watch:**
 
@@ -695,6 +695,29 @@ Which community characteristics or conditions best predict revitalization is emm
 2.	New Market Tax Credits Case Studies
 3.	Frontline Episode: Poverty, Politics and Profit - CH3 LIHTC Scandal 
 
+**Low Income Housing Tax Credits**
+
+Low Income Housing Tax Credits (LIHTC) are one of the primary policy instruments used to incentivize the construction of new affordable housing units in the United States. Learn about LIHTC:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DdUcOFRdyTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+**New Market Tax Credits**
+
+New Market Tax Credits (NMTC) are mechanisms designed to catalyze economic development in distressed communities by attrating investments from private developers. 
+
+Watch case studies on the impact that New Market Tax Credits have achieved in three communities: 
+
+[NMTC Case Studies](https://www.cohnreznick.com/nmtc-map)
+
+
+**Challenges of Catalyzing Change Through Tax Credits**
+
+FRONTLINE and NPR investigate the billions spent on affordable housing, and why so few get the help they need.
+
+[Frontline Episode: Poverty, Politics and Profit](https://www.pbs.org/wgbh/frontline/film/poverty-politics-and-profit/)
+
+*Make sure to watch Chap 3 on Low Income Housing Tax Credits - it start at 19:00.*
 
 <br>
 
