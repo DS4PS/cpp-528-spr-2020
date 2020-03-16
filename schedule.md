@@ -910,10 +910,10 @@ Just like GitHub pages are a powerful feature available in each repository, GitH
 
 One thing that takes practice is breaking complex operations down into discrete tasks. Think about this like wedding planning - sending out invitations is one task, booking a venue another, etc. But you can break down a task like invitations much further:
 
-[ ] create invite list  
-[ ] acquire addresses  
-[ ] track RSVPs  
-[ ] finalize attendance list  
+*	[ ] create invite list  
+*	[ ] acquire addresses  
+*	[ ] track RSVPs  
+*	[ ] finalize attendance list  
 
 
 You can create one large task with a check-list of sub-tasks, or a set of distinct tasks. Both are viable ways to organize the work. 
@@ -925,16 +925,16 @@ As a general rule of thumb when using project boards to manage a team, I would g
 Note a check-box is created like this: 
 
 ````
-[ ] finalize attendance list  
+*	[ ] finalize attendance list  
 ````
 
 And to close it add an X to the box: 
 
 ````
-[X] finalize attendance list  
+*	[X] finalize attendance list  
 ````
 
-[X] finalize attendance list 
+  [X] finalize attendance list 
 
 
 
