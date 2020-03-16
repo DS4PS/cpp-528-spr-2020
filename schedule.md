@@ -822,7 +822,9 @@ Your repository will have the following directories:
 * analysis 
 * docs (website files go here) 
 
-Each 
+Each folder should contain it's own README.md file with notes on what the folder contains. 
+
+## Managing Process
 
 **Kanban Boards in GitHub**
 
@@ -849,14 +851,31 @@ Just like GitHub pages are a powerful feature available in each repository, GitH
 
 One thing that takes practice is breaking complex operations down into discrete tasks. Think about this like wedding planning - sending out invitations is one task, booking a venue another, etc. But you can break down a task like invitations much further:
 
-[] create invite list
-[] acquire addresses
-[] track RSVPs
-[] finalize attendance list
+- [ ] create invite list  
+- [ ] acquire addresses  
+- [ ] track RSVPs  
+- [ ] finalize attendance list  
+
 
 You can create one large task with a check-list of sub-tasks, or a set of distinct tasks. Both are viable ways to organize the work. 
 
 As a general rule of thumb when using project boards to manage a team, I would group tasks only if they will all be done by the same person in the same time period. If one person is tasked with sending out invites, and another with collecting RSVPs and collating to the final attendee list, split them up. 
+
+<hr>
+
+Note a check-box is created like this: 
+
+````
+- [ ] finalize attendance list  
+````
+
+And to close it add an X to the box: 
+
+````
+- [X] finalize attendance list  
+````
+
+- [X] finalize attendance list 
 
 
 
