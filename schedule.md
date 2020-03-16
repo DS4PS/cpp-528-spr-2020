@@ -934,7 +934,7 @@ And to close it add an X to the box:
 *	[X] finalize attendance list  
 ````
 
-  [X] finalize attendance list 
+- [X] finalize attendance list 
 
 
 
