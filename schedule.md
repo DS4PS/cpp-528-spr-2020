@@ -166,9 +166,15 @@ You will be assigned to teams. Each team will work on the class project independ
 
 
 
-
+<!--- 
+############################################################################
+############################################################################
+############################################################################
+-->
 
 ** Applied Data Project
+
+
 
 <!---     #######################################################       -->
 <!---     #######################################################       -->
@@ -202,14 +208,16 @@ Each week you will complete one part of the analysis and submit your results for
 
 ## Federal Programs 
 
-### Low Income Housing Tax Credits
+**Low Income Housing Tax Credits**
 
 Low Income Housing Tax Credits (LIHTC) are one of the primary policy instruments used to incentivize the construction of new affordable housing units in the United States. Learn about LIHTC:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DdUcOFRdyTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br>
 
-### New Market Tax Credits
+
+**New Market Tax Credits**
 
 New Market Tax Credits (NMTC) are mechanisms designed to catalyze economic development in distressed communities by attrating investments from private developers. 
 
@@ -217,14 +225,18 @@ Watch case studies on the impact that New Market Tax Credits have achieved in th
 
 [NMTC Case Studies](https://www.cohnreznick.com/nmtc-map)
 
+<br>
 
-### Challenges of Catalyzing Change Through Tax Credits
+
+**Challenges of Catalyzing Change Through Tax Credits**
 
 FRONTLINE and NPR investigate the billions spent on affordable housing, and why so few get the help they need.
 
 [Frontline Episode: Poverty, Politics and Profit](https://www.pbs.org/wgbh/frontline/film/poverty-politics-and-profit/)
 
 *Make sure to watch Chap 3 on Low Income Housing Tax Credits - it start at 19:00.*
+
+<br>
 
 
 
@@ -236,11 +248,11 @@ Project data comes from three sources.
 
 [Longitudinal Tracts Data Base](https://s4.ad.brown.edu/projects/diversity/Researcher/Bridging.htm)
 
-[Codebook]
+[Codebook](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB-codebook.pdf) 
 
-[Variables Constructed from the US Population Samples (long form questions)]()
+[Variables Constructed from the US Population Samples (long form questions)](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_Sample.zip)
 
-[Variables Constructed from the Full US Population (short form questions)]()
+[Variables Constructed from the Full US Population (short form questions)](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_fullcount.zip)
 
 
 **New Market Tax Credits Database:**
