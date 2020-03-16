@@ -326,10 +326,10 @@ The frameworks below introduce popular systems created to organize projects and 
 
 <br> 
 
+## CRISP-DM Model
+
 Our first framework describes the stages of a data-driven project. The work during an analytics-oriented project is broken into six phases with checklists for each in order to help the team anticipate next steps in the process and to assess whether all necessary tasks have been performed at each step. 
 
-
-## CRISP-DM Model
 
 > Cross-industry standard process for data mining (CRISP-DM) in 1996 to standardize a data mining process across industries. It describes six major iterative phases, each with their own defined tasks and set of deliverables such as documentation and reports.
 
@@ -476,7 +476,7 @@ If previous stages were successful and there was a decision made to deploy the m
 <br>
 
 
-## Your Team Project
+## Your Applied Project
 
 The project this semester in relationship to CRISP-DM phases: 
 
