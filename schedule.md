@@ -38,7 +38,7 @@ Submit Buttons -
 
 ** Course Overview 
 
-*** { @unit = "", @title = "Course Objective",  @foldout   }
+*** { @unit = "", @title = "Course Objectives",  @foldout   }
 
 <br> 
 
@@ -59,8 +59,71 @@ You will be assigned to teams. Each team will work on the class project independ
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Project Management",  @foldout   }
+*** { @unit = "", @title = "Motivating the Course",  @foldout   }
 
+<br> 
+
+## Greater Need for Project Management Skills 
+
+Social scientists are not taught how to manage large data projects. It has just been assumed that if you can run models with data, you intuitively know how to manage your data and code. Several things have changed: 
+
+*	Most work is now done by teams, not individuals (Wuchty et al, 2007), adding coordination costs and creating opportunities for project workflow errors (files saved in wrong folders, failing to use the most recent code, no documentation of changes made). 
+*	Most projects use data constructed by combining several sources, adding complexity and opportunities to introduce errors through improper merges or re-coding of data.
+*	The final analysis presented in reports or publications typically consists of thousands of lines of computer code, creating the need for testing and quality control. Even the smartest people in the business make mistakes.  
+
+Wuchty, S., Jones, B. F., & Uzzi, B. (2007). The increasing dominance of teams in production of knowledge. Science, 316(5827), 1036-1039.
+
+## Errors in Data Programming
+
+<hr>
+
+*Researcher’s from Duke university published a study on using personalized-genomics for patient-specific chemotherapy treatment. Two researchers, Baggerly and Coombes, from MD Anderson requested the data and code. It took many months of back-and-forth (hounding) to actually get the data and code — when they did it was disorganized and poorly documented. Baggerly and Coombes eventually found an error in the code, showing it actually put patients at risk, leading to a major lawsuit and terminated clinical trials.*  ~ From: “The “Gold Standard” for Data Science Project Management”
+
+<hr>
+
+Not all errors are equal. The most unethical and egregious involve conscious manipulation of data or results to commit scientific fraud for professional gain (or often just survival in high-pressure jobs and competitive publishing and funding environments). Fortunately, that appears to the be least common type of error. 
+
+There is also a difference between non-reproducible results and erroneous results. There are many factors that can lead to the publication of questionable results. Some come from basic human biases built into how we seek and process information (“confirmation bias”). When you combine these biases with statistical analysis you get p-value hacking. Some reasons are related to biases built into the publication process itself. See the blog, “6 Factors causing the replication crisis in medical research.” And some are due to the complexity of the scientific process that result in perfectly valid results that came from conditions that can be hard to replicate or generalize. 
+
+For example, psychology has received a lot of attention because of some high-profile studies that have been challenged. 
+
+<hr>
+
+Replication crisis. In Wikipedia, The Free Encyclopedia. Retrieved 05:43, March 15, 2020.  
+
+*Several factors have combined to put psychology at the center of the controversy.[10] Much of the focus has been on the area of social psychology,[11] although other areas of psychology such as clinical psychology,[12][13] developmental psychology,[14] and educational research have also been implicated.[15][16] According to a 2018 survey of 200 meta-analyses, "psychological research is, on average, afflicted with low statistical power".[17]*
+
+*Firstly, questionable research practices (QRPs) have been identified as common in the field.[18] Such practices, while not intentionally fraudulent, involve capitalizing on the gray area of acceptable scientific practices or exploiting flexibility in data collection, analysis, and reporting, often in an effort to obtain a desired outcome. Examples of QRPs include selective reporting or partial publication of data (reporting only some of the study conditions or collected dependent measures in a publication), optional stopping (choosing when to stop data collection, often based on statistical significance of tests), p-value rounding (rounding p-values down to 0.05 to suggest statistical significance), file drawer effect (nonpublication of data), post-hoc storytelling (framing exploratory analyses as confirmatory analyses), and manipulation of outliers (either removing outliers or leaving outliers in a dataset to cause a statistical test to be significant).[18][19][20][21] A survey of over 2,000 psychologists indicated that a majority of respondents admitted to using at least one QRP.[18] False positive conclusions, often resulting from the pressure to publish or the author's own confirmation bias, are an inherent hazard in the field, requiring a certain degree of skepticism on the part of readers.[22]*
+
+*Secondly, psychology and social psychology in particular, has found itself at the center of several scandals involving outright fraudulent research, most notably the admitted data fabrication by Diederik Stapel[23] as well as allegations against others. However, most scholars acknowledge that fraud is, perhaps, the lesser contribution to replication crises.*
+
+*Thirdly, several effects in psychological science have been found to be difficult to replicate even before the current replication crisis. For example, the scientific journal Judgment and Decision Making has published several studies over the years that fail to provide support for the unconscious thought theory. Replications appear particularly difficult when research trials are pre-registered and conducted by research groups not highly invested in the theory under questioning.*
+
+<hr>
+
+
+Note that we are using the reproducibility crisis in academic scholarship as an example of the types of issues that arise in any complex data work. Academics is a useful example because the recent crisis has motivated open science advocates to conduct reviews of published research to systematically measure how much error exists in scientific work. Some issues, like biased introduced through peer review, are particular to the field. But many of the issues, especially errors in data and code, are more generally instructive to any work that involves data and analytics. 
+
+Error in research is its own special animal that is unique from most other forms of non-replicability, but it does contribute to it. Error in this context means things like (1) combining datasets in a way that corrupts the relationship between subjects and observations, (2) missing data caused by failed merges or improper filters, (3) incorrectly recoding or transforming variables, (4) mathematical errors or logical errors made with math, or (5) errors in modeling or misinterpretation of models, to name just a few. Notably these are committed unintentionally and unknowingly by analysts, they are mistakes and not assumptions or judgement calls that are up for inspection or debate. Once discovered they are often corrected or retracted, leading to serious loss of credibility by authors, labs, or companies. 
+
+The hard part is that EVERYONE makes mistakes, even the top academics in the world. Steven Levitt, one of the most well-known economists in the world, had one of his most famous publications challenged for a coding error that changed results. 
+
+If you think about your high school math assignments, if you got 19 out of 20 questions correct you earned a 95%, and were probably one of the best students in class. To analyze data and produce substantive results in a professional setting you are often writing thousands of lines of computer code and deploying complicated mathematical models. What are the chances that you are 100% correct? 
+
+The nice thing about mathematical models is that they are easy to communicate in a parsimonious fashion, and issues can often be spotted in statistical models through inconsistencies in commonly-reported descriptive statistics. Data errors, on the other hand, are much harder to detect because data preparation is rarely described in detail and computing errors are not described because authors do not know they exist! More errors likely occur while preparing data for analysis instead of during the analysis. 
+
+
+<hr> 
+
+Brown, A. W., Kaiser, K. A., & Allison, D. B. (2018). Issues with data and analyses: Errors, underlying themes, and potential solutions. Proceedings of the National Academy of Sciences, 115(11), 2563-2570.
+
+*Bad data represent one of the most egregious of themes of errors because there is typically no correct way to analyze bad data, and often no scientifically justifiable conclusions can be reached about the original questions of interest. It also can be one of the more difficult errors to classify, because it may depend on information like the context in which the data are being used and whether they are fit for a particular purpose.*
+
+*Errors of data management tend to be more idiosyncratic than systematic. Errors we have seen (and sometimes made) are the result not of repeating others’ errors, but of constructing bespoke methods of handling, storing, or otherwise managing data. In one case, a group accidentally used reverse-coded variables, making their conclusions the opposite of what the data supported (23). In another case, authors received an incomplete dataset because entire categories of data were missed; when corrected, the qualitative conclusions did not change, but the quantitative conclusions changed by a factor of >7 (24). Such idiosyncratic data management errors can occur in any project, and, like statistical analysis errors, might be corrected by reanalysis of the data. In some cases, idiosyncratic errors may be able to be prevented by adhering to checklists (as proposed in ref. 25).*
+
+*Errors in long-term data storage and sharing can render findings non-confirmable because data are not available to be reanalyzed. Many meta-analysts, including us, have attempted to obtain additional information about a study, but have been unable to because the authors gave no response, could not find data, or were unsure how they calculated their original results. We asked authors once to share data from a publication with implausible baseline imbalances and other potential statistical anomalies; they were unable to produce the data, and the journal retracted the paper (26). We have struggled on occasion to find our own raw data from older studies and welcome advances in data management, data repositories, and data transparency.*
+
+<br> 
 
 
 
@@ -68,15 +131,17 @@ You will be assigned to teams. Each team will work on the class project independ
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Course Project",  @foldout   }
+*** { @unit = "", @title = "Applied Data Project",  @foldout   }
 
 ## Data Analytics Project 
 
 CPP 528 is organized around a single large project that allows you to revisit and practice skills from 523, 524, 526 and 527. The research question is whether two large federal programs designed to revitalize distressed neighborhoods in US cities have been successful. We will use 2000 to 2010 as the study period and look at broad trends in neighborhood change over this decade, then examine whether neighborhoods targeted by the programs have achieved any more success than they would have without the billion of dollars in federal subsidies. 
 
-For the project, you are being hired by the federal government to provide a rigorous assessment of program impact. You need to compile the data necessary for the analysis, run some models, and provide your client with a final report stating your assessment of program impact. 
+For the project, **your team has been hired by the federal government to provide a rigorous assessment of program impact. You need to compile the data necessary for the analysis, run some models, and provide your client with a final report stating your assessment of program impact.**
 
-## Federal Programs 
+
+
+## Federal Programs Being Evaluated
 
 ### Low Income Housing Tax Credits
 
@@ -146,54 +211,6 @@ Each week you will complete one part of the analysis and submit your results for
 •	Week 6: Documentation 
 •	Week 7: Revise and Present 
 
-
-
-
-
-
-
-
-
-
-<!---     #######################################################       -->
-<!---     #######################################################       -->
-
-*** { @unit = "", @title = "Getting Help", @assignment, @foldout  }
-
-## Getting Help
-
-Note that the discussion board is hosted by the GitHub issues feature. It is a great forum because:
-
-* You can format code and math using standard markdown syntax. 
-* You can cut and paste images directly into the message. 
-* You can direction responses using @username mentions. 
-
-Please preview your responses before posting to ensure proper formatting. Note that you format code by placing fences around the code:
-
-````
-```
-# your code here
-lm( y ~ x1 + x2 )
-```
-````
-
-The fences are three back-ticks. These look like quotation marks, but are actually the character at the top left of your keyboard (if you have a US or European keyboard). 
-
-GitHub does not have a native math rendering language (RMD documents, on the other hand, [support formulas](https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html)). So you have two options, type formulas as regular text and use code formatting to make them clear (this option is usually sufficient). Or you can type your formula in a formula editor and copy and paste an image of the nicely-formatted example.  
-
-````
-```
-y = b0 + b1•X1 + b2•X2 + e
-
-b1 = cov(x,y) / var(x)
-```
-````
-
-----
-
-
-
-<br>
 <br>
 
 
@@ -211,7 +228,7 @@ b1 = cov(x,y) / var(x)
 ** Project Management in Data Science
 
 
-*** { @unit = "", @title = "CRISP-DM",  @foldout   }
+*** { @unit = "", @title = "CRISP-DM",  @reading, @foldout   }
 
 <br> 
 
@@ -242,6 +259,111 @@ For a slightly more extensive list of tasks at each phase, see: [A general overv
 [R Bloggers: CRISP-DM and why you should know about it](https://www.r-bloggers.com/crisp-dm-and-why-you-should-know-about-it/)
 
 
+### Stages of CRISP-DM
+
+### Business Understanding
+
+This stage is aimed toward getting a general understanding of the client’s business. It is crucial in most cases to understand the application of the product to be developed. If it is skipped — you might end up with a large trained neural network, that has to be deployed to a mobile phone and work in realtime.
+
+1. Determine Business Objectives
+- Background
+- Business Objectives
+- Business Success Criteria
+1. Assess the Situation
+- Inventory of Resources
+- Requirements, Assumptions, and Constraints
+- Risks and Contingencies
+- Terminology
+- Costs and Benefits
+1. Determine Goals
+- Data Mining Goals
+- Data Mining Success Criteria
+1. Produce Project Plan
+- Project Plan
+- Initial Assessment of Tools and Techniques
+
+#### Data Understanding
+
+The second stage consists of collecting and exploring the input dataset. The set goal might be unsolvable using the input data, you might need to use public datasets, or even create a specific one for the set goal.
+
+1. Collect Initial Data
+- Initial Data Collection Report
+1. Describe Data
+- Data Description Report
+1. Explore Data
+- Data Exploration Report
+1. Verify Data Quality
+- Data Quality Report
+
+
+#### Data Preparation
+
+As we all know, bad input inevitably leads to bad output. Therefore no matter what you do in modeling — if you made major mistakes while preparing the data — you will end up returning to this stage and doing it over again.
+
+1. Select Data
+- The rationale for Inclusion/Exclusion
+1. Clean Data
+- Data Cleaning Report
+1. Construct Data
+- Derived Attributes
+- Generated Records
+1. Integrate Data
+- Merged Data
+1. Format Data
+- Reformatted Data
+1. Dataset Description
+
+#### Modeling
+
+This stage is an execution of all of your findings from previous stages. You already know the input to the model, you can tell which models are compatible with the target platform. Now is the time to bring it all to life.
+
+Select Modeling Techniques
+- Modeling Technique
+- Modeling Assumptions
+Generate Test Design
+- Test Design
+Build Model
+- Parameter Settings
+- Models
+- Model Descriptions
+Assess Model
+- Model Assessment
+- Revised Parameter Settings
+
+#### Evaluation
+
+This stage is aimed at the evaluation of the obtained results. We need to check if the business goal was fulfilled and plan further steps of the project.
+
+1. Evaluate Results
+- Assessment of Data Mining Results w.r.t. Business Success Criteria
+- Approved Models
+1. Review Process
+- Review of Process
+1. Determine Next Steps
+- List of Possible Actions
+- Decision
+
+#### Deployment of Deliverables 
+
+If previous stages were successful and there was a decision made to deploy the model — this stage will be activated. You might need to put your model into an existing pipeline, create your own or deploy to cloud computing services.
+
+1. Plan Deployment
+- Deployment Plan
+1. Plan Monitoring and Maintenance
+- Monitoring and Maintenance Plan
+1. Produce Final Report
+- Final Report
+- Final Presentation
+1. Review Project
+- Experience Documentation
+
+<br> 
+
+<hr>
+
+<br>
+
+
 ## Your Team Project
 
 The project this semester in relationship to CRISP-DM phases: 
@@ -269,7 +391,7 @@ In this context Phase (6) Deployment refers to your final report that will be pa
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Project Boards with Kanban",  @foldout   }
+*** { @unit = "", @title = "Project Boards with Kanban",  @reading, @foldout   }
 
 <br> 
 
@@ -307,6 +429,24 @@ One thing that takes practice is breaking complex operations down into discrete 
 
 <br>
 
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
+
+*** { @unit = "", @title = "Agile Management with Scrum", @reading, @foldout   }
+
+<br> 
+
+## Scrum
+
+> Scrum divides the larger project into a series of mini-projects, each of a consistent and fixed length ranging from one week to one month. Each mini-project cycle, called a sprint, kicks off at a meeting called sprint planning where the product owner defines and explains the top feature priorities. The development team forecasts what increments they can deliver by the end of the sprint and then makes a sprint plan to develop these increments. During the sprint, they coordinate closely and develop daily plans at daily standups. At the end of the sprint, the team demonstrates the increments to stakeholders and solicit feedback during sprint review. These increments should be potentially releasable and meet the pre-defined definition of done. To close a sprint, the team inspects itself and plans for how it can improve in the next sprint during the sprint retrospective (Sutherland & Schwaber, 2017).
+
+[Scrum Overview](http://www.datascience-pm.com/scrum/)
+
+[Kanban vs Scrum](https://www.atlassian.com/agile/kanban/kanban-vs-scrum)
+
+<br>
 
 
 
@@ -350,11 +490,31 @@ One thing that takes practice is breaking complex operations down into discrete 
 -->
 
 
-** Week 1 - Introduction 
+** Week 1 - Introduction to Project Management  
+
+
+
+*** { @unit = "", @title = "Unit Overview", @lecture, @foldout }
+
+<br>
+
+## Description
+
+This section introduces project management frameworks for data science. 
+
+## Learning Objectives
+
+Once you have completed this section you will be able to:
+* describe principles of project management in the data science context 
+* 
+
+<br>
+<br>
+
 
 *** { @unit = "", @title = "Best Practices for Coding in the Social Sciences", @foldout  }
 
-
+<br> 
 From: *Gentzkow, M., & Shapiro, J. M. (2014). Code and data for the social sciences: A practitioner’s guide. Chicago, IL: University of Chicago.*
 
 What does it mean to do empirical social science? Asking good questions. Digging up novel data. Designing statistical analysis. Writing up results. 
@@ -381,21 +541,19 @@ Around that time we were in the middle of assembling a small (but to us, very im
 
 **Here is a good rule of thumb: If you are trying to solve a problem, and there are multi-billion dollar firms whose entire business model depends on solving the same problem, and there are whole courses at your university devoted to how to solve that problem, you might want to figure out what the experts do and see if you can’t learn something from it.** 
 
+<br>
 
 
 
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
 
 *** { @unit = "", @title = "Readings", @reading, @foldout  }
 
 <br>
 <br>
-
-## Review
-
-Please revisit the following chapter from last semester:
-
-[Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html)
-
 
 ## Assigned Reading
 
@@ -423,104 +581,9 @@ This topic builds off of the use of loops and thus is a little more advanced - w
 
 
 
-*** { @unit = "", @title = "Psuedo-Code", @lecture, @foldout  }
 
-<br>
-
-## Planning Your Code with Pseudo-Code
-
-Typically as you start a specific task in programming there are two things to consider. 
-
-(1) What are the steps needed to complete the task? 
-(2) How do I implement each step? How do I translate them into the appropriate functions and syntax? 
-
-It will save you a huge amount of time if you separate these tasks. First, take a step back from the problem that think about the steps. Write down each step in order. Make some notes about what data is needed from the previous step, and what the return result will be from the current step. 
-
-Think back to the cooking example. If we are going to bake cookies our pseudo-code would look something like this: 
-
-1. Preheat the oven. 
-2. In a large bowl, mix butter with the sugars until well-combined. 
-3. Stir in vanilla and egg until incorporated. 
-4. Addflour, baking soda, and salt.  
-5. Stir in chocolate chips. 
-6. Bake. 
-
-Note that it lacks many necessary details. How much of each ingredient? What temperature does the oven need to be? How long do we bake for? 
-
-Once we have the big picture down and are comfortable with the process then we can start to fill in these details:
-
-
-1. Preheat the oven. 
-  - Preheat to 375 degrees 
-  
-2. In a large bowl, mix butter with the sugars until well-combined. 
-  - 1/3 cup butter    
-  - 1/2 cup sugar    
-  - 1/4 cup brown sugar   
-  - mix until the consistency of wet sand 
- 
-Note that in computer programming terms butter, sugar, and brown sugar are the inputs or **arguments** needed for a function. The wet sand mixture is the **return value** of the process. 
-
-In the final step, we will begin to implement code. 
-
-```r
-# 1. Preheat the oven. 
-#    - preheat to 375 degrees 
-
-preheat_oven <- function( temp=375 )
-{
-   start_oven( temp )
-   return( NULL )
-}
-
-
-# 2. In a large bowl, mix butter with the sugars until well-combined. 
-#    - 1/3 cup butter    
-#    - 1/2 cup sugar    
-#    - 1/4 cup brown sugar   
-#    - mix until the consistency of wet sand 
-
-mix_sugar <- function( butter=0.33, sugar=0.5, brown.sugar=0.25 )
-{
-   sugar.mixture <- mix( butter, sugar, brown.sugar )
-   return( sugar.mixture )
-}
-
-
-# 3. Stir in vanilla and egg until incorporated. 
-#    - add to sugar mixture 
-#    - mix until consistency of jelly 
-
-add_wet_ingredients <- function( sugar=sugar.mixture, eggs=2, vanilla=2 )
-{
-   # note that the results from the previous step are the inputs into this step
-}
-```
-
-We are describing here the process of writing pseudo-code. It it the practice of:
-
-1. Breaking an analytical task into discrete steps. 
-2. Noting the inputs and logic needed at each step. 
-3. Implementing code last. 
-
-Pseudo-code helps you start the process and work incrementally. It is important because the part of your brain that does general problem-solving (creating the basic recipe) is different than the part that drafts specific syntax in a langauge and de-bugs the code. If you jump right into the code it is easy to get lost or derailed.  
-
-More importantly, pseudo-code captures the problem logic, and thus it is independet of any specific computer language. When collaborating on projects one person might generate the system logic, and another might implement. So it is important to practice developing a general overview of your task at hand. 
-
-Here are some helpful examples: 
-
-* [Pseudocode guide](https://www.vikingcodeschool.com/software-engineering-basics/what-is-pseudo-coding)
-* [Khan Academy video](https://www.khanacademy.org/computing/computer-programming/programming/good-practices/pt/planning-with-pseudo-code) 
-
-
-<br>
-<br>
-
-
-
-
-
-
+<!---     #######################################################       -->
+<!---     #######################################################       -->
 
 *** { @unit = "Due Jan 21th", @title = "Lab 01", @assignment, @foldout  }
 
