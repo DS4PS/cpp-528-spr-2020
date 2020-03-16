@@ -44,7 +44,7 @@ Submit Buttons -
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Motivating the Course",  @reading, @foldout   }
+*** { @unit = "", @title = "Motivating the Course", @foldout   }
 
 <br> 
 
@@ -113,7 +113,7 @@ From: Brown, A. W., Kaiser, K. A., & Allison, D. B. (2018). Issues with data and
 
 
 
-*** { @unit = "", @title = "Best Practices for Coding in the Social Sciences", @reading, @foldout  }
+*** { @unit = "", @title = "Best Practices for Coding in the Social Sciences", @foldout  }
 
 <br> 
 From: *Gentzkow, M., & Shapiro, J. M. (2014). Code and data for the social sciences: A practitioner’s guide. Chicago, IL: University of Chicago.*
@@ -146,7 +146,7 @@ Around that time we were in the middle of assembling a small (but to us, very im
 
 
 
-*** { @unit = "", @title = "Course Objectives",  @reading, @foldout   }
+*** { @unit = "", @title = "Course Objectives",  @foldout   }
 
 <br> 
 
@@ -166,108 +166,6 @@ You will be assigned to teams. Each team will work on the class project independ
 
 
 
-<!--- 
-############################################################################
-############################################################################
-############################################################################
--->
-
-** Applied Data Project
-
-
-
-<!---     #######################################################       -->
-<!---     #######################################################       -->
-
-*** { @unit = "", @title = "Evaluating Federal Programs", @reading,  @foldout   }
-
-## Data Analytics Project 
-
-CPP 528 is organized around a single large project that allows you to revisit and practice skills from 523, 524, 526 and 527. The research question is whether two large federal programs designed to revitalize distressed neighborhoods in US cities have been successful. 
-
-We will use 2000 to 2010 as the study period and look at broad trends in neighborhood change over this decade, then examine whether neighborhoods targeted by the programs have achieved any more success than they would have without the billion of dollars in federal subsidies. 
-
-For the project, your team has been hired by the federal government to provide a rigorous assessment of program impact. You need to compile the data necessary for the analysis, run some models, and provide your client with a final report stating your assessment of program impact.
-
-The research question: Has each federal program been successful? 
-
-The project will be split into the following steps: 
-
-*	Week 1: Neighborhood Revitalization Background  
-*	Week 2: Construct Measures of Neighborhood Stability
-*	Week 3: Descriptive Analysis  
-*	Week 4: Predictive Analysis 
-*	Week 5: Merge Program Data 
-*	Week 6: Estimate Program Impact  
-*	Week 7: Finalize Deliverables 
- 
-
-<br>
-
-
-## Federal Programs 
-
-**Low Income Housing Tax Credits**
-
-Low Income Housing Tax Credits (LIHTC) are one of the primary policy instruments used to incentivize the construction of new affordable housing units in the United States. Learn about LIHTC:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DdUcOFRdyTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-
-**New Market Tax Credits**
-
-New Market Tax Credits (NMTC) are mechanisms designed to catalyze economic development in distressed communities by attrating investments from private developers. 
-
-Watch case studies on the impact that New Market Tax Credits have achieved in three communities: 
-
-[NMTC Case Studies](https://www.cohnreznick.com/nmtc-map)
-
-<br>
-
-
-**Challenges of Catalyzing Change Through Tax Credits**
-
-FRONTLINE and NPR investigate the billions spent on affordable housing, and why so few get the help they need.
-
-[Frontline Episode: Poverty, Politics and Profit](https://www.pbs.org/wgbh/frontline/film/poverty-politics-and-profit/)
-
-*Make sure to watch Chap 3 on Low Income Housing Tax Credits - it start at 19:00.*
-
-<br>
-
-
-
-## Data
-
-Project data comes from three sources. 
-
-**Harmonized Census Tracts:** 
-
-[Longitudinal Tracts Data Base](https://s4.ad.brown.edu/projects/diversity/Researcher/Bridging.htm)
-
-[Codebook](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB-codebook.pdf) 
-
-[Variables Constructed from the US Population Samples (long form questions)](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_Sample.zip)
-
-[Variables Constructed from the Full US Population (short form questions)](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_fullcount.zip)
-
-
-**New Market Tax Credits Database:**
-
-[Program Overview and Tract Eligibility Requirements](https://www.cdfifund.gov/programs-training/Programs/new-markets-tax-credit/Pages/default.aspx)
-
-[Data Download](https://www.cdfifund.gov/awards/state-awards/Pages/default.aspx)
-
-
-**Low Income Housing Tax Credits Database:** 
-
-[Data Download](https://lihtc.huduser.gov/)
-
-Look for the section labeled: "If you want a complete list of projects for the entire U.S., click here to download a ZIP archive of the entire LIHTC Database in dBase format."
-
-
 
 
 
@@ -277,16 +175,18 @@ Look for the section labeled: "If you want a complete list of projects for the e
 
 
 <!--- 
-#######################################################
-#######################################################
-#######################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
 -->
    
 ** Project Management Frameworks
 
 
 
-*** { @unit = "", @title = "A Project Management Framework",  @reading, @foldout   }
+*** { @unit = "", @title = "A Project Management Framework",  @foldout   }
 
 <br>
 
@@ -337,7 +237,7 @@ The frameworks below introduce popular systems created to organize projects and 
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "CRISP-DM",  @reading, @foldout   }
+*** { @unit = "", @title = "CRISP-DM",  @foldout   }
 
 <br> 
 
@@ -519,7 +419,7 @@ In this context Phase (6) Deployment refers to your final report that will be pa
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Project Boards with Kanban",  @reading, @foldout   }
+*** { @unit = "", @title = "Project Boards with Kanban",  @foldout   }
 
 <br> 
 
@@ -553,7 +453,7 @@ In this context Phase (6) Deployment refers to your final report that will be pa
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Agile Management with Scrum", @reading, @foldout   }
+*** { @unit = "", @title = "Agile Management with Scrum", @foldout   }
 
 <br> 
 
@@ -574,7 +474,7 @@ In this context Phase (6) Deployment refers to your final report that will be pa
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Documentation", @reading, @foldout   }
+*** { @unit = "", @title = "Documentation", @foldout   }
 
 <br> 
 
@@ -598,7 +498,7 @@ In this context Phase (6) Deployment refers to your final report that will be pa
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Metrics for Success", @reading, @foldout   }
+*** { @unit = "", @title = "Metrics for Success", @foldout   }
 
 <br>
 
@@ -621,6 +521,115 @@ These GitHub repositories provide a few examples of work that is designed to be 
 - http://trafficstops.trendct.org/data/
 
 <br>
+
+
+
+
+
+
+<!--- 
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+-->
+
+
+
+** Applied Data Project
+
+
+
+*** { @unit = "", @title = "Evaluating Federal Programs", @reading,  @foldout   }
+
+## Data Analytics Project 
+
+CPP 528 is organized around a single large project that allows you to revisit and practice skills from 523, 524, 526 and 527. The research question is whether two large federal programs designed to revitalize distressed neighborhoods in US cities have been successful. 
+
+We will use 2000 to 2010 as the study period and look at broad trends in neighborhood change over this decade, then examine whether neighborhoods targeted by the programs have achieved any more success than they would have without the billion of dollars in federal subsidies. 
+
+For the project, your team has been hired by the federal government to provide a rigorous assessment of program impact. You need to compile the data necessary for the analysis, run some models, and provide your client with a final report stating your assessment of program impact.
+
+The research question: Has each federal program been successful? 
+
+The project will be split into the following steps: 
+
+*	Week 1: Neighborhood Revitalization Background  
+*	Week 2: Construct Measures of Neighborhood Stability
+*	Week 3: Descriptive Analysis  
+*	Week 4: Predictive Analysis 
+*	Week 5: Merge Program Data 
+*	Week 6: Estimate Program Impact  
+*	Week 7: Finalize Deliverables 
+ 
+
+<br>
+
+
+## Federal Programs 
+
+**Low Income Housing Tax Credits**
+
+Low Income Housing Tax Credits (LIHTC) are one of the primary policy instruments used to incentivize the construction of new affordable housing units in the United States. Learn about LIHTC:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DdUcOFRdyTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+
+**New Market Tax Credits**
+
+New Market Tax Credits (NMTC) are mechanisms designed to catalyze economic development in distressed communities by attrating investments from private developers. 
+
+Watch case studies on the impact that New Market Tax Credits have achieved in three communities: 
+
+[NMTC Case Studies](https://www.cohnreznick.com/nmtc-map)
+
+<br>
+
+
+**Challenges of Catalyzing Change Through Tax Credits**
+
+FRONTLINE and NPR investigate the billions spent on affordable housing, and why so few get the help they need.
+
+[Frontline Episode: Poverty, Politics and Profit](https://www.pbs.org/wgbh/frontline/film/poverty-politics-and-profit/)
+
+*Make sure to watch Chap 3 on Low Income Housing Tax Credits - it start at 19:00.*
+
+<br>
+
+
+
+## Data
+
+Project data comes from three sources. 
+
+**Harmonized Census Tracts:** 
+
+[Longitudinal Tracts Data Base](https://s4.ad.brown.edu/projects/diversity/Researcher/Bridging.htm)
+
+[Codebook](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB-codebook.pdf) 
+
+[Variables Constructed from the US Population Samples (long form questions)](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_Sample.zip)
+
+[Variables Constructed from the Full US Population (short form questions)](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_fullcount.zip)
+
+
+**New Market Tax Credits Database:**
+
+[Program Overview and Tract Eligibility Requirements](https://www.cdfifund.gov/programs-training/Programs/new-markets-tax-credit/Pages/default.aspx)
+
+[Data Download](https://www.cdfifund.gov/awards/state-awards/Pages/default.aspx)
+
+
+**Low Income Housing Tax Credits Database:** 
+
+[Data Download](https://lihtc.huduser.gov/)
+
+Look for the section labeled: "If you want a complete list of projects for the entire U.S., click here to download a ZIP archive of the entire LIHTC Database in dBase format."
+
+
 
 
 
