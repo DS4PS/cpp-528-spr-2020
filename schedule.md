@@ -44,7 +44,7 @@ Submit Buttons -
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Motivating the Course",  @foldout   }
+*** { @unit = "", @title = "Motivating the Course",  @reading, @foldout   }
 
 <br> 
 
@@ -113,7 +113,7 @@ From: Brown, A. W., Kaiser, K. A., & Allison, D. B. (2018). Issues with data and
 
 
 
-*** { @unit = "", @title = "Best Practices for Coding in the Social Sciences", @foldout  }
+*** { @unit = "", @title = "Best Practices for Coding in the Social Sciences", @reading, @foldout  }
 
 <br> 
 From: *Gentzkow, M., & Shapiro, J. M. (2014). Code and data for the social sciences: A practitioner’s guide. Chicago, IL: University of Chicago.*
@@ -146,7 +146,7 @@ Around that time we were in the middle of assembling a small (but to us, very im
 
 
 
-*** { @unit = "", @title = "Course Objectives",  @foldout   }
+*** { @unit = "", @title = "Course Objectives",  @reading, @foldout   }
 
 <br> 
 
@@ -179,7 +179,7 @@ You will be assigned to teams. Each team will work on the class project independ
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "", @title = "Evaluating Federal Programs",  @foldout   }
+*** { @unit = "", @title = "Evaluating Federal Programs", @reading,  @foldout   }
 
 ## Data Analytics Project 
 
@@ -189,19 +189,18 @@ We will use 2000 to 2010 as the study period and look at broad trends in neighbo
 
 For the project, your team has been hired by the federal government to provide a rigorous assessment of program impact. You need to compile the data necessary for the analysis, run some models, and provide your client with a final report stating your assessment of program impact.
 
-The research question: Has each program been successful? 
+The research question: Has each federal program been successful? 
 
-**Project Schedule**
+The project will be split into the following steps: 
 
-Each week you will complete one part of the analysis and submit your results for review. The instructor will play the role of your manager on this project, providing feedback and guidance on how to improve and revise each step to prepare it for the final deliverable
-. 
 *	Week 1: Neighborhood Revitalization Background  
-*	Week 2: Construct Dataset  
+*	Week 2: Construct Measures of Neighborhood Stability
 *	Week 3: Descriptive Analysis  
-*	Week 4: Models 
-*	Week 5: Reporting Results  
-*	Week 6: Documentation 
-*	Week 7: Revise and Present  
+*	Week 4: Predictive Analysis 
+*	Week 5: Merge Program Data 
+*	Week 6: Estimate Program Impact  
+*	Week 7: Finalize Deliverables 
+ 
 
 <br>
 
@@ -629,9 +628,11 @@ These GitHub repositories provide a few examples of work that is designed to be 
 
 
 <!--- 
-############################################################################
-############################################################################
-############################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
 -->
 
 
@@ -647,10 +648,18 @@ These GitHub repositories provide a few examples of work that is designed to be 
 
 This section introduces project management frameworks for data science. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u77n2nKmIP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 ## Learning Objectives
 
 Once you have completed this section you will be able to:
-* describe principles of project management in the data science context 
+
+* list key principles of project management in the data science context 
+* identify popular project management systems like Kanban and CRISP-DS
+* apply key principles of the Kanban task system 
+* begin building a repository optimized for effect project management 
 
 
 <br>
@@ -673,7 +682,7 @@ Once you have completed this section you will be able to:
 
 ## Project Management 
 
-According to the articles, what are the components of a good project management system in data science? 
+According to the articles, what are the key components of a good project management system in data science? 
 
 
 **Required**
@@ -748,6 +757,18 @@ FRONTLINE and NPR investigate the billions spent on affordable housing, and why 
 
 Over the next seven weeks you will be analyzing community revitalization efforts, and federal programs designed to channel private sector capital into distressed neighborhoods. 
 
+**Project Schedule**
+
+Each week you will complete one part of the analysis and submit your results for review. The instructor will play the role of your manager on this project, providing feedback and guidance on how to improve and revise each step to prepare it for the final deliverables.
+
+*	Week 1: Neighborhood Revitalization Background  
+*	Week 2: Construct Measures of Neighborhood Stability
+*	Week 3: Descriptive Analysis  
+*	Week 4: Predictive Analysis 
+*	Week 5: Merge Program Data 
+*	Week 6: Estimate Program Impact  
+*	Week 7: Finalize Deliverables 
+
 It’s important to start with a strong mental model of how communities change during revitalization efforts, and establish your own criteria for what successful revitalization looks like. Is it just about place? Just about people? Or some mix of the two? 
 
 The main challenge with many place-based efforts is that the easiest way to achieve success if you are not careful about what you are measuring is to move all of the poor people out of the neighborhood and move middle-class families into the neighborhood. Education test scores immediately rise. Unemployment rates drop. Income increases. But note that all of this impact can be achieved without actually raising anyone’s income, improving schools, or reducing unemployment if we are just shifting wealthy people to distressed neighborhoods and moving poor people out. 
@@ -817,11 +838,12 @@ You will activate the GitHub page option for your repository and use the main la
 
 For example, this was a project students did with the Syracuse Land Bank to help them identify data that could be used to target rehabilitation projects:
 
-https://lecy.github.io/SyracuseLandBank/
+[https://lecy.github.io/SyracuseLandBank/](
+https://lecy.github.io/SyracuseLandBank/)
 
 And another guide describing how you might document the journey from raw data to the final dataset that you use for your analysis. Every step should be explicit, and you should openly discuss the how and why of data wrangling:
 
-https://github.com/jtleek/datasharing
+[https://github.com/jtleek/datasharing](https://github.com/jtleek/datasharing)
 
 Your repository will have the following directories: 
 
@@ -891,17 +913,22 @@ And to close it add an X to the box:
 
 
 
-
-## Submit Solutions to Canvas:
-
-<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
-
 <br>
 <br>
 
 
 
 
+
+
+
+<!--- 
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+-->
 
 
 ** Week 2 - Measuring Neighborhood Health 
@@ -985,7 +1012,13 @@ Share your ideas about these problems with your classmates.
 
 
 
-
+<!--- 
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+-->
 
 ** Week 3 - Descriptive Analysis of Neighborhood Change
 
@@ -1010,6 +1043,16 @@ Share your ideas about these problems with your classmates.
 
 
 
+
+
+
+<!--- 
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+-->
 
 ** Week 4 - Predictive Analysis of Neighborhood Change  
 
