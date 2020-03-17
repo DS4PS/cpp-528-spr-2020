@@ -950,7 +950,7 @@ You do not have to submit something for this step, but let the instructor know w
 <!---     #######################################################       -->
 <!---     #######################################################       -->
 
-*** { @unit = "Due Mar 20th", @title = "YellowDig Topic", @assignment, @foldout  }
+*** { @unit = "", @title = "YellowDig Topic", @assignment, @foldout  }
 
 <br>
 
