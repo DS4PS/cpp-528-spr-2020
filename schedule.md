@@ -978,7 +978,7 @@ After reading a little about the programs, what are your views on the mechanisms
 
 What is your instinctive response after learning some of the details of how they operate? 
 
-Do you think they will work? 
+Before we explore the data, what is your apriori hypothesis? Do you think they work? 
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
