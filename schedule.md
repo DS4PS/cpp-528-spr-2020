@@ -938,12 +938,51 @@ And to close it add an X to the box:
 
 - [X] finalize attendance list 
 
-
+You do not have to submit something for this step, but let the instructor know when you have your Kanban board set up on GitHub for inspection. 
 
 
 <br>
 <br>
 
+
+
+
+<!---     #######################################################       -->
+<!---     #######################################################       -->
+
+*** { @unit = "Due Mar 20th", @title = "YellowDig Topic", @assignment, @foldout  }
+
+<br>
+
+## Can Tax Credits Be An Effective Mechanism for Neighborhood Revitalization? 
+
+At some point in this project you might pause and wonder, of [all of the possible mechanisms for catalyzing economic development](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/revitalization/Revitalizing_Inner_City_Neighborhoods.pdf), why are we using tax credits, and do they really work? 
+
+Even more weird, the money does not even go to the neighborhoods in need. The credits are claimed by intermediaries, whose job is then to convince others to invest in the neighborhoods. 
+
+One convincing argument is that if cities tried to directly invest in distressed neighborhoods they would likely run out of resources before achieving impact. Alternatively, if tax credits are structured correctly every one dollar the government spends can bring five or ten dollars of private investement to a community. That doesn't guarantee the investments are going to the right projects or benefitting the people in need, but it is at least a provacative story proponents can tell. 
+
+The mystery is what makes this case study so interesting. Tax credits have potential to make a big impact, or the potential to waste a lot of money. 
+
+For your topic this week, reflect on the idea of using tax credits as a mechanisms to catalyze development. How might these policy tools go wrong? The biggest criticism against a lot of these programs is that you cannot determine which investors would have invested in the neighborhood without the tax credits, so even when we see a lot of private investment it is hard to tell how much was caused by the tax credit. This is the primary selection problem that makes research challenging in this space. 
+
+But it's not the only issue. Consider the Frontline news story on some recent fraud tha was uncovered. It's not surprising that when there are billions of dollars at stake the program invites corruption. 
+
+[Frontline Episode: Poverty, Politics and Profit](https://www.pbs.org/wgbh/frontline/film/poverty-politics-and-profit/)
+
+*Chap 3 on Low Income Housing Tax Credits - it start at 19:00.*
+
+<hr> 
+
+After reading a little about the programs, what are your views on the mechanisms? 
+
+What is your instinctive response after learning some of the details of how they operate? 
+
+Do you think they will work? 
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+
+<br>
 
 
 
