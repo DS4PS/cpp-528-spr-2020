@@ -25,7 +25,7 @@ info:
 instructor:
 -  name: Cristian E. Nuno
    title: Data Analyst / Faculty Associate
-   email: cenuo@asu.edu   
+   email: cenuno@asu.edu   
    office_location: virtual
    website_url: 
    github_url: 'https://github.com/cenuno' 
