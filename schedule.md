@@ -261,13 +261,17 @@ Our first framework describes the stages of a data-driven project. The work duri
 
 Note that the name uses the phrase "for data mining", but it is a general framework for data science projects that was developed when "data mining" was a popular term used to describe an emerging field. In the metaphor the data is the rich medium that analysts mine for insights about business processes. The term has fallen out of favor because mining sounds atheoretical. Computer scientists were criticized for developing algorithms that can detect patterns and make predictions without any understanding of the processes or contexts, often leading to ethically questionable recommendations or problematic recommendations. The phrase "data science" was adopted to convey that there is a method to the madness. The CRISP-DM process applies broadly to most data science projects. 
 
-For a slightly more extensive list of tasks at each phase, see: [A general overview of existing data science methodologies](https://medium.com/datadriveninvestor/data-science-project-management-methodologies-f6913c6b29eb)
+For a slightly more extensive list of tasks at each phase, see: 
 
-[One-Page Visual Overview](https://exde.files.wordpress.com/2009/03/crisp_visualguide.pdf)
+* [A general overview of existing data science methodologies](https://medium.com/datadriveninvestor/data-science-project-management-methodologies-f6913c6b29eb)
+* [One-Page Visual Overview](https://exde.files.wordpress.com/2009/03/crisp_visualguide.pdf)
+* [Full Guide](https://inseaddataanalytics.github.io/INSEADAnalytics/CRISP_DM.pdf)
 
-[Full Guide](https://inseaddataanalytics.github.io/INSEADAnalytics/CRISP_DM.pdf)
+**R Integration:**
 
-[R Bloggers: CRISP-DM and why you should know about it](https://www.r-bloggers.com/crisp-dm-and-why-you-should-know-about-it/)
+* [R Bloggers: CRISP-DM and why you should know about it](https://www.r-bloggers.com/crisp-dm-and-why-you-should-know-about-it/)  
+* [Useful R Packages That Align with CRISP-DM](https://www.datasciencecentral.com/profiles/blogs/userful-r-packages-that-aligns-with-the-crisp-dm-methodology)  
+
 
 
 ### Stages of CRISP-DM
