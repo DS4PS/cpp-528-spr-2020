@@ -1048,7 +1048,7 @@ Once you have completed this section you will be able to
 
 
 
-*** { @unit = "FRI Mar 27th", @title = "YellowDig Discussion", @assignment }
+*** { @unit = "FRI Mar 27th", @title = "YellowDig Discussion", @assignment, @foldout }
 
 <br>
 
@@ -1066,16 +1066,84 @@ Share your ideas about these problems with your classmates.
 
 
 
-*** { @unit = "MON Mar 30th", @title = "Lab 02", @assignment }
+*** { @unit = "MON Mar 30th", @title = "Lab 02", @assignment, @foldout }
 
 <br>
 
 
+## Week 2 – Developing Community Indices to Measure Change 
+
+We are going to look at how distressed urban communities change between 2000 and 2010. Median home value with be one of the primary variables we will use in the model since it captures a lot of information about the ‘neighborhood’ (census tract). But we will also utilize some neighborhood health metrics as predictors and outcomes. 
+
+### Part 1:
+
+We would like to understand some general dimensions of community health (or vulnerability) in order to measure the initial conditions of communities in 2000. Your task this week will be to develop and report **three reliable instruments** describing your community, each using at least three independent variables (by independent I mean you can’t use things like median household income and per capita income, or percent white and percent non-white, as separate variables since those are two measures of the same underlying constructs). Each of your indices needs to achieve a Conbach’s alpha reliability score of at least 0.70. 
+
+I would suggest a measure of economic strength of the community, a measure of vulnerability of the community, and another measure of your choice. You might think in terms of human capital, social capital, financial capital, or population demographics and diversity. Review your labs from CPP 529 for some ideas. 
+
+Report the following: 
+
+* Your three instruments
+* The latent constructs that you believe they measure
+* The summary statistics for urban census tracts (min, 25th percentile, median, mean, 75th percentile, max) 
+* Reliability scores for each instrument 
+
+To test the reliability of your instrument you first need to transform each raw variable into a meaningful metric. For example, many of the census variables will be reported as raw counts of people or households within the census tract. You might divide by the tract population for each to change them into percentages before comparison since census tracts are difference sizes (for example, percentage of households that are white in a tract, a percentage foreign born, and percentage of people over the age of 65). 
+
+In many cases translating variables into Z scores can make the data easier to use and is necessary before aggregating individual variables into an index to avoid over-weighting one variable. A z-score normalizes a variable by making the mean for each measure zero, and the standard deviation one. In doing so you can now add three variables together that are measured on very different scales. This step is only appropriate when working with continous data. 
+
+```r
+# pseudo-code only
+Z1 <- standardize( X1 )
+Z2 <- standardize( X2 )
+Z3 <- standardize (X3 )
+calculate_alpha( Z1, Z2, Z3 )
+```
+
+Note that we are comparing neighborhoods (census tracts) within cities, so comparisons with rural areas are not very meaningful. Before you begin your analysis drop all of the rural tracts located outside of metropolitan areas. 
+
+Also note that the cost of living in cities varies a tremendous amount. The median value of a home in a poor neighborhood in San Francisco or New York might still be higher than most median home values in Iowa. So it is important to think through your comparisons, especially when calculating Z-scores (standard normal scores) for each variable. Should the reference point be all other census tracts located in cities in the US? Or should it be all other census tracts in the same city? 
+
+In most cases within-city comparisons will be more meaningful than across city comparisons, especially when calculating things like percentiles and Z-scores. This is because the measures capture opportunities and opportunity costs primarily within the same metro area. If a census tract in a rust-belt city has high school graduation rates that are low compared to national norms, but still relatively high compared to other tracts in the city, it will still be a desirable neighborhood since it is one of the best options in the city. The relative comparison to other local tracts better captures the way information will be used by citizens when making decisions like where to purchase their next home. 
+
+### Part 2:
+
+In addition to your new indices report descriptive statistics on the gentrification variables you have identified for the time period 2000 to 2010. Similar to above, filter out all rural tracts. The variable should measure changes between 2000 and 2010 since that is how we measure gentrification. Report the descriptive statistics for these as well. 
+
+Note that you will have to think carefully about whether to standardize some of these metrics, and if you do whether to standardize them relative to local tracts or to national averages. For example, if you are measuring improvements in high school graduation rates and rates changed very little for one city since gentrification was not prevalent in that city. A comparison of percentage point change across neighborhoods is meaningful. If you standardize the variable first by comparing all tracts within a metro area then you are converting cities with large improvements in education to the exact same scale as cities with small improvements. The data is now harder to interpret that if it was just increase or decrease in graduation rates across all of the communities, and definitions of gentrification would be easier to operationalize as well. 
+
+Use common sense when constructing your metrics, and be sure to describe your methodology using R Markdown documents, showing your code for all of the steps. 
+
+
+
+<hr> 
+
+The following articles provide examples of studies that have utilized neighborhood quality indices: 
+
+**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [ pdf ]
+
+> We use data on intergenerational social mobility by neighborhood to examine how social and physical environments beyond concentrated poverty predict children’s long-term well-being. First, we examine neighborhoods that are harsh on children’s development: those characterized by high levels of violence, incarceration, and lead exposure….Our explanatory variables are constructed from the Community Survey of the PHDCN, which interviewed a representative sample of Chicago residents about their neighborhood social environments in 1995 and 2002 (combined N of ∼12,000); violent crime rates per 100,000 population from 1995 to 2000, derived from offenses reported by citizens to the police; incarceration rates per population from 1995 to 2000, derived from prison admission data; and lead exposure among children from 1995 to 1997, derived from more than 150,000 blood-level tests conducted by Chicago’s health department.
+
+**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.** 
+
+> Excerpt from NPR: “A Look At The Wealth And Income Gap, By ZIP Code”: "The United States is still a land of opportunity for many. But when it comes to life outcomes, geography is too often destiny," says a report from the Economic Innovation Group, a research organization. Despite the economic recovery, the report says, life for those in the most distressed ZIP codes looks "much more like an ongoing downturn. Large swaths of the country are indeed being left behind by economic growth and change." The report calculates what it calls a "distressed community index" using seven metrics: housing vacancy rates, the number of adults working, the poverty rate, median income, the number of people with high school degrees, the change in employment and the rate of business formation.
+
+
 <br>
 
-<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-527-spr-2020/labs/lab-02-instructions.html">LAB-02 Instructions</a>
+<a class="uk-button uk-button-default" href="">LAB-02 Instructions</a>
 
-## Submit Solutions to Canvas:
+## Lab 02 Deliverables:
+
+This section will become the first chapter in the methodology section of your final report. Draft the section as if you are explaining the methodologies to someone that is not on your team and unfamiliar with the background literature. Make sure you document the reasoning behind each step. 
+
+It should be split into three sections. 
+
+1. The first will describe and justify the selection of the gentrification metrics. 
+2. The second will describe the construction of your three neighborhood health indices and their reliability scores. 
+3. The third will present descriptive statistics on all of the metrics for all urban census tracts. 
+
+Write up your results as an R Markdown document and submit your RMD file and the knitted HML version. 
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
 
@@ -1083,6 +1151,154 @@ Share your ideas about these problems with your classmates.
 <br>
 
 
+
+
+*** { @unit = "", @title = "Final Project Data Steps", @assignment, @foldout }
+
+<br>
+
+## Set Up Your Data Directory
+
+While working on Lab-02 start building out your **data** directory for your project. 
+
+````
+project (main github folder)
+|-- data (folder)
+|   |-- data-raw (folder for original datasets)
+|   |-- data-wrangling (folder for data steps)
+|   |-- data-rodeo (folder for data used in models)
+|   |-- README.md (documentation for what data folder contains)
+````
+
+You can do this locally on your computer. Create a folder called LABS, and add the following: 
+
+````
+LABS
+|-- labs
+|   |-- lab-02.rmd
+|-- data (folder)
+|   |-- data-raw (folder for original data)
+|   |-- data-wrangling (folder for data steps)
+|   |-- data-rodeo (folder for data used in models)
+````
+
+Now you can read the data into your lab using a relative reference: 
+
+```
+dat <- read.csv( "../data/raw-data/file-name.csv", stringsAsFactors=F )
+```
+
+The two periods tells R to go up one level in the directory structure, then back down into the data folder. 
+
+This will mirror your final project directory structure, but your RMD files will be in the **analysis** folder instead of **labs**. 
+
+````
+gropu project
+|-- analysis
+|   |-- step-01.rmd
+|-- data (folder)
+|   |-- data-raw (folder for original data)
+|   |-- data-wrangling (folder for data steps)
+|   |-- data-rodeo (folder for data used in models)
+````
+
+
+## Documenting Your Data Steps
+
+Start creating a guide to use of the data in this project. 
+
+**Raw Files**
+
+All of the raw data files will go in the raw folder. By "raw" we mean the data as it arrived from whatever site we retrieved it from, or the file exactly how it was exported from a custom data collection tool like an online survey program. 
+
+**Anything that documents the data collection process lives here.** This folder also contain scripts used to download data from APIs or scripts that scrape data from websites. Also include any documentation of source data files like data dictionaries or guides to use. 
+
+If you are using data from third-party sources make sure you document retrieval dates, URLs, and to the extent possible any parameters that were used when downloading the data. Scripts are preferable because the arguments are then documented and the behavior can be replicated. If you have to manually enter a bunch of parameters in a data download GUI on the website then if there are questions about the raw data it is never possible to fully replicate the process. It will be unclear whether the provide updated the database and the data files changed, or whether the user incorrectly entered some parameters. 
+
+Common errors at the download step include things like making an error on a Census variable name (easy to do since the raw names are things like _*B19013*_). Or alternatively, incorrectly applying a filter like geography or time-period during a download. 
+
+Depending on how many unique data sources you use, you may want to include subdirectories for each unique source. 
+
+**Data Wrangling**
+
+This folder documents the process of converting raw data into the "rodeo" dataset you use for your models and descriptive statistics. Data steps include: 
+
+* Data cleaning 
+* Recoding
+* Variable transformations 
+* Data aggregation 
+* Merging files 
+* Filters 
+* Conversion from long to wide formats or vice-versa 
+
+Data aggregation typically means changing the unit of analysis. If you have a database of all crimes in a city for a given year but the rest of your data is at the census tract level, you can aggregate up from individual crimes to a count by census tract so that you can add the measure to your dataset. 
+
+There are many ways that you can introduce errors while preparing your data, but be extra careful when merging ("joining") or filtering datasets. These are steps where you can easily drop lots of observations without realizing it and introduce bias into your models through a hidden selection process. 
+
+For example, when applying filters always check to make sure data has been standardized. For example, are all city names written the same? "New York" vs "New York City" vs "NYC" could cause problems. What happens in a filter if a name is typed with an extra space: "NYC "?
+
+Always inspect levels of categorical variables before merges or filters: 
+
+```r
+sort( unique( x ) )    # variable stored as a character vector
+sort( levels( x ) )    # variable stored as a factor 
+```
+
+The final step of the data wrangling scripts should be to save the new data file into the **data-rodeo** folder. 
+
+You might generate several files that are used at the modeling stage. As a rule of thumb, if the file is used to create descriptive statistics or for any models in your analysis it should be saved in the rodeo folder. 
+
+**Rodeo Data**
+
+This folder contains datasets that have been cleaned and processed, and are ready for analysis. Typically in your RMD scripts used to produce all of the results in your reports you will read data primarily from the rodeo folder. 
+
+This allows us to isolate errors made in preparing the data (data wrangling) from errors made during the modeling stages. 
+
+You should not be doing data wrangling in your analytical steps with the exception of variable transformations related to modeling. For example, creating a squared value of a variable X to use in a quadratic model, logging a variable, or dividind by a constant to change the unit of analysis. Since these are steps related directly to the modeling process it is helpful to keep them together. 
+
+<br> 
+
+
+## CRISP-DM Guide to Documenting Data Steps
+
+The following list from the CRISP-DM guide contains suggestions about data steps to consider including in your documentation to fully describe your modeling process: 
+
+**Data Understanding**
+
+The second stage consists of collecting and exploring the input dataset. The set goal might be unsolvable using the input data, you might need to use public datasets, or even create a specific one for the set goal.
+
+1. Collect Initial Data
+- Initial Data Collection Report
+1. Describe Data
+- Data Description Report
+1. Explore Data
+- Data Exploration Report
+1. Verify Data Quality
+- Data Quality Report
+
+<br>
+
+
+**Data Preparation**
+
+As we all know, bad input inevitably leads to bad output. Therefore no matter what you do in modeling — if you made major mistakes while preparing the data — you will end up returning to this stage and doing it over again.
+
+1. Select Data
+- The rationale for Inclusion/Exclusion
+1. Clean Data
+- Data Cleaning Report
+1. Construct Data
+- Derived Attributes
+- Generated Records
+1. Integrate Data
+- Merged Data
+1. Format Data
+- Reformatted Data
+1. Dataset Description
+
+
+<br>
+<br>
 
 
 
