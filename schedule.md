@@ -1115,7 +1115,6 @@ Note that you will have to think carefully about whether to standardize some of 
 Use common sense when constructing your metrics, and be sure to describe your methodology using R Markdown documents, showing your code for all of the steps. 
 
 
-
 <hr> 
 
 The following articles provide examples of studies that have utilized neighborhood quality indices: 
@@ -1130,6 +1129,24 @@ The following articles provide examples of studies that have utilized neighborho
 
 
 <br>
+
+## Data 
+
+You 
+
+[Harmonized Census Data Part-01](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_Sample.zip)
+
+[Harmonized Census Data Part-02](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_fullcount.zip)
+
+[Codebook](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB-codebook.pdf)
+
+Most of the variables you need will come from the first dataset, which is comprised of variables that come from the long-form version of the census (which is only administered to a sample of the population) or variables from the American Community Survey (the annual survey given to a subsample of citizens). 
+
+The second dataset contains only variables that come from the Dicennial Census short form, and thus they are population measures and not sample estimates. 
+
+<br>
+
+
 
 <a class="uk-button uk-button-default" href="">LAB-02 Instructions</a>
 
@@ -1295,6 +1312,9 @@ As we all know, bad input inevitably leads to bad output. Therefore no matter wh
 1. Format Data
 - Reformatted Data
 1. Dataset Description
+
+
+![](https://raw.githubusercontent.com/DS4PS/cpp-528-spr-2020/master/assets/img/crisp-dm-process-diagram.png)
 
 
 <br>
