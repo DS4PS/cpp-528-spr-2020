@@ -1190,6 +1190,8 @@ Write up your results and submit your RMD file and the knitted HML version.
 
 <br>
 
+You can review the final project requirements here: [rubric](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/project/project-rubric.pdf). 
+
 ## Set Up Your Data Directory
 
 While working on Lab-02 start building out your **data** directory for your project. 
@@ -1234,6 +1236,7 @@ gropu project
 |   |-- data-wrangling (folder for data steps)
 |   |-- data-rodeo (folder for data used in models)
 ````
+
 
 
 ## Documenting Your Data Steps
