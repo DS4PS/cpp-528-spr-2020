@@ -1103,7 +1103,7 @@ Report the following:
 
 * Your three instruments
 * The latent constructs that you believe they measure
-* The summary statistics for urban census tracts (min, 25th percentile, median, mean, 75th percentile, max) 
+* The summary statistics for **urban** census tracts (min, 25th percentile, median, mean, 75th percentile, max) 
 * Reliability scores for each instrument 
 
 To test the reliability of your instrument you first need to transform each raw variable into a meaningful metric. For example, many of the census variables will be reported as raw counts of people or households within the census tract. You might divide by the tract population for each to change them into percentages before comparison since census tracts are difference sizes (for example, percentage of households that are white in a tract, a percentage foreign born, and percentage of people over the age of 65). 
@@ -1144,16 +1144,6 @@ Excerpt from NPR: “A Look At The Wealth And Income Gap, By ZIP Code”:
 
 <br>
 
-### Part 2:
-
-In addition to your new indices report descriptive statistics on the gentrification variables you have identified for the time period 2000 to 2010. Similar to above, filter out all rural tracts. The variable should measure changes between 2000 and 2010 since that is how we measure gentrification. Report the descriptive statistics for these as well. 
-
-Note that you will have to think carefully about whether to standardize some of these metrics, and if you do whether to standardize them relative to local tracts or to national averages. For example, if you are measuring improvements in high school graduation rates and rates changed very little for one city since gentrification was not prevalent in that city. A comparison of percentage point change across neighborhoods is meaningful. If you standardize the variable first by comparing all tracts within a metro area then you are converting cities with large improvements in education to the exact same scale as cities with small improvements. The data is now harder to interpret that if it was just increase or decrease in graduation rates across all of the communities, and definitions of gentrification would be easier to operationalize as well. 
-
-Use common sense when constructing your metrics, and be sure to describe your methodology using R Markdown documents, showing your code for all of the steps. 
-
-<br>
-
 ## Data 
 
 You will find the Census Longitudinal Tabulated Database (LTDB) file here: 
@@ -1170,7 +1160,7 @@ The second dataset contains only variables that come from the Dicennial Census s
 
 <br>
 
-<a class="uk-button uk-button-default" href="">Example Variable Construction</a>
+<a class="uk-button uk-button-default" href="">Index Construction Example</a>
 
 <br> 
 
@@ -1184,7 +1174,9 @@ It should be split into three sections.
 2. The second will describe the construction of your three neighborhood health indices and their reliability scores. 
 3. The third will present descriptive statistics on all of the metrics for all urban census tracts. 
 
-Write up your results as an R Markdown document and submit your RMD file and the knitted HML version. 
+Use common sense when constructing your metrics, and be sure to describe your methodology using R Markdown documents, showing your code for all of the steps. 
+
+Write up your results and submit your RMD file and the knitted HML version. 
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
 
