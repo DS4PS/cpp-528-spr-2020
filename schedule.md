@@ -1001,7 +1001,7 @@ After reading a little about the programs, what are your views on the mechanisms
 
 What is your instinctive response after learning some of the details of how they operate? 
 
-Before we explore the data, what is your apriori hypothesis? Do you think they work? 
+Before we explore the data, what is your apriori hypothesis? Do you think they will work as designed? 
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1119,6 +1119,26 @@ Also note that the cost of living in cities varies a tremendous amount. The medi
 
 In most cases within-city comparisons will be more meaningful than across city comparisons, especially when calculating things like percentiles and Z-scores. This is because the measures capture opportunities and opportunity costs primarily within the same metro area. If a census tract in a rust-belt city has high school graduation rates that are low compared to national norms, but still relatively high compared to other tracts in the city, it will still be a desirable neighborhood since it is one of the best options in the city. The relative comparison to other local tracts better captures the way information will be used by citizens when making decisions like where to purchase their next home. 
 
+<hr> 
+
+The following articles provide examples of studies that utilize neighborhood quality indices: 
+
+**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [ pdf ]
+
+*We use data on intergenerational social mobility by neighborhood to examine how social and physical environments beyond concentrated poverty predict children’s long-term well-being. First, we examine neighborhoods that are harsh on children’s development: those characterized by high levels of violence, incarceration, and lead exposure….Our explanatory variables are constructed from the Community Survey of the PHDCN, which interviewed a representative sample of Chicago residents about their neighborhood social environments in 1995 and 2002 (combined N of ∼12,000); violent crime rates per 100,000 population from 1995 to 2000, derived from offenses reported by citizens to the police; incarceration rates per population from 1995 to 2000, derived from prison admission data; and lead exposure among children from 1995 to 1997, derived from more than 150,000 blood-level tests conducted by Chicago’s health department.*
+
+**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.**  [LINK](https://eig.org/dci)
+
+[METHODOLOGY](https://eig.org/dci/methodology)
+
+Excerpt from NPR: “A Look At The Wealth And Income Gap, By ZIP Code”: 
+
+*"The United States is still a land of opportunity for many. But when it comes to life outcomes, geography is too often destiny," says a report from the Economic Innovation Group, a research organization. Despite the economic recovery, the report says, life for those in the most distressed ZIP codes looks "much more like an ongoing downturn. Large swaths of the country are indeed being left behind by economic growth and change." The report calculates what it calls a "distressed community index" using seven metrics: housing vacancy rates, the number of adults working, the poverty rate, median income, the number of people with high school degrees, the change in employment and the rate of business formation.*
+
+<hr> 
+
+<br>
+
 ### Part 2:
 
 In addition to your new indices report descriptive statistics on the gentrification variables you have identified for the time period 2000 to 2010. Similar to above, filter out all rural tracts. The variable should measure changes between 2000 and 2010 since that is how we measure gentrification. Report the descriptive statistics for these as well. 
@@ -1127,25 +1147,11 @@ Note that you will have to think carefully about whether to standardize some of 
 
 Use common sense when constructing your metrics, and be sure to describe your methodology using R Markdown documents, showing your code for all of the steps. 
 
-
-<hr> 
-
-The following articles provide examples of studies that have utilized neighborhood quality indices: 
-
-**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [ pdf ]
-
-> We use data on intergenerational social mobility by neighborhood to examine how social and physical environments beyond concentrated poverty predict children’s long-term well-being. First, we examine neighborhoods that are harsh on children’s development: those characterized by high levels of violence, incarceration, and lead exposure….Our explanatory variables are constructed from the Community Survey of the PHDCN, which interviewed a representative sample of Chicago residents about their neighborhood social environments in 1995 and 2002 (combined N of ∼12,000); violent crime rates per 100,000 population from 1995 to 2000, derived from offenses reported by citizens to the police; incarceration rates per population from 1995 to 2000, derived from prison admission data; and lead exposure among children from 1995 to 1997, derived from more than 150,000 blood-level tests conducted by Chicago’s health department.
-
-**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.** 
-
-> Excerpt from NPR: “A Look At The Wealth And Income Gap, By ZIP Code”: "The United States is still a land of opportunity for many. But when it comes to life outcomes, geography is too often destiny," says a report from the Economic Innovation Group, a research organization. Despite the economic recovery, the report says, life for those in the most distressed ZIP codes looks "much more like an ongoing downturn. Large swaths of the country are indeed being left behind by economic growth and change." The report calculates what it calls a "distressed community index" using seven metrics: housing vacancy rates, the number of adults working, the poverty rate, median income, the number of people with high school degrees, the change in employment and the rate of business formation.
-
-
 <br>
 
 ## Data 
 
-You 
+You will find the Census Longitudinal Tabulated Database (LTDB) file here: 
 
 [Harmonized Census Data Part-01](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_Sample.zip)
 
@@ -1159,9 +1165,9 @@ The second dataset contains only variables that come from the Dicennial Census s
 
 <br>
 
+<a class="uk-button uk-button-default" href="">Example Variable Construction</a>
 
-
-<a class="uk-button uk-button-default" href="">LAB-02 Instructions</a>
+<br> 
 
 ## Lab 02 Deliverables:
 
