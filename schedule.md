@@ -1024,58 +1024,63 @@ Before we explore the data, what is your apriori hypothesis? Do you think they w
 ** Week 2 - Measuring Neighborhood Health 
 
 
-*** { @unit = "", @title = "Unit Overview" }
-
-
-
-
-<!--- 
-
+*** { @unit = "", @title = "Unit Overview", @foldout }
 
 <br>
 
 ## Description
 
-This section 
-## Learning Objectives
+This week you will practice variable transformations by creating indices or scales of community health from census data. This exercise is an extension of work you have done in CPP 529. 
 
-Once you have completed this section you will be able to 
-
+It is also recommended that you begin organize your data step folders on GitHub as part of your final project. See below for some detailed instructions. 
 
 <br>
 <br>
 
 
-*** { @unit = "", @title = "Readings", @reading }
-
-<br>
-<br>
-
-## Assigned Reading
-
-
-<br>
-<br>
-
-
-
-
-
-*** { @unit = "FRI Mar 27th", @title = "YellowDig Discussion", @assignment, @foldout }
+*** { @unit = "", @title = "Readings", @reading, @foldout }
 
 <br>
 
-
-**Post your ideas or solutions on YellowDig:**
-
-Share your ideas about these problems with your classmates.
-
-<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+There are no assigned readings for this week, but the following resources are provided for examples of studies that have created community health indices, and reference material on creating reliable instruments or scales. 
 
 <br>
-<br>
 
--->
+## Background Reading 
+
+**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/community-index/toxic-neighborhoods-and-social-mobility.pdf)
+
+*We use data on intergenerational social mobility by neighborhood to examine how social and physical environments beyond concentrated poverty predict children’s long-term well-being. First, we examine neighborhoods that are harsh on children’s development: those characterized by high levels of violence, incarceration, and lead exposure….Our explanatory variables are constructed from the Community Survey of the PHDCN, which interviewed a representative sample of Chicago residents about their neighborhood social environments in 1995 and 2002 (combined N of ∼12,000); violent crime rates per 100,000 population from 1995 to 2000, derived from offenses reported by citizens to the police; incarceration rates per population from 1995 to 2000, derived from prison admission data; and lead exposure among children from 1995 to 1997, derived from more than 150,000 blood-level tests conducted by Chicago’s health department.*
+
+**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.**  [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/community-index/distressed-communities-index-report.pdf) [WEBSITE](https://eig.org/dci)
+
+[METHODOLOGY](https://eig.org/dci/methodology)
+
+Excerpt from NPR: “A Look At The Wealth And Income Gap, By ZIP Code”: 
+
+*"The United States is still a land of opportunity for many. But when it comes to life outcomes, geography is too often destiny," says a report from the Economic Innovation Group, a research organization. Despite the economic recovery, the report says, life for those in the most distressed ZIP codes looks "much more like an ongoing downturn. Large swaths of the country are indeed being left behind by economic growth and change." The report calculates what it calls a "distressed community index" using seven metrics: housing vacancy rates, the number of adults working, the poverty rate, median income, the number of people with high school degrees, the change in employment and the rate of business formation.*
+
+**Ellen, I. G., & Turner, M. A. (1997). Does neighborhood matter? Assessing recent evidence. Housing Policy Debate, 8(4), 833-866.** [ [PDF](https://github.com/DS4PS/cpp-529-master/raw/master/articles/social-mobility/does-neighborhood-matter-assessing-recent-evidence.pdf) ]
+
+## Reference Material on Reliability 
+
+This section introduces the field of measurement theory in psychology and social sciences, which is used to create scales or indices that allow us to observe and document things that are not easy to measure. 
+
+> Many variables studied by psychologists are straightforward and simple to measure. These include sex, age, height, weight, and birth order. You can often tell whether someone is male or female just by looking. You can ask people how old they are and be reasonably sure that they know and will tell you. Although people might not know or want to tell you how much they weigh, you can have them step onto a bathroom scale. Other variables studied by psychologists—perhaps the majority—are not so straightforward or simple to measure. We cannot accurately assess people’s level of intelligence by looking at them, and we certainly cannot put their self-esteem on a bathroom scale. **These kinds of variables are called latent CONSTRUCTS** (pronounced CON-structs) and include personality traits (e.g., extraversion), emotional states (e.g., fear), attitudes (e.g., toward taxes), and abilities (e.g., athleticism). [ [Understanding Psychological Measurement](https://opentextbc.ca/researchmethods/chapter/understanding-psychological-measurement/) ]
+
+We are less interested in psychological measures as in constructs of neighborhood quality. But we will use some of the tools developed in psychometrics to help us develop a reliable measure of neighborhood quality. 
+
+Schäffer, U. (2007). Management accounting & control scales handbook. Springer Science & Business Media. [ [2-page PDF](https://github.com/DS4PS/cpp-529-master/raw/master/articles/measurement/introduction-to-construct-measurement.pdf) ] 
+
+*Pitkin, B. (2001). Theories of neighborhood change: Implications for community development policy and practice. UCLA Advanced Policy Institute, 28.* [ [pdf](https://github.com/DS4PS/cpp-529-master/raw/master/articles/neighborhood-change-theories/theories-of-neighborhood-change.pdf) ]
+
+*Measurement Theory and Practice, from: Smith, F. (2002). Research methods in pharmacy practice. Pharmaceutical Press.* [ [pdf](https://github.com/DS4PS/cpp-529-master/raw/master/articles/measurement/measurement-theory-and-practice.pdf) ]
+
+*Schäffer, U. (2007). Management accounting & control scales handbook. Springer Science & Business Media.* [ [full text](https://github.com/DS4PS/cpp-529-master/raw/master/articles/measurement/Management-Accounting-and-Control-Scales-Handbook.pdf) ]
+
+*MacKenzie, S. B., Podsakoff, P. M., & Podsakoff, N. P. (2011). Construct measurement and validation procedures in MIS and behavioral research: Integrating new and existing techniques. MIS quarterly, 35(2), 293-334.* [ [pdf](https://github.com/DS4PS/cpp-529-master/raw/master/articles/measurement/construct-measurement-and-validation-in-behavioral-research.pdf) ]
+<br>
+<br>
 
 
 
@@ -1123,11 +1128,11 @@ In most cases within-city comparisons will be more meaningful than across city c
 
 The following articles provide examples of studies that utilize neighborhood quality indices: 
 
-**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [ pdf ]
+**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/community-index/toxic-neighborhoods-and-social-mobility.pdf)
 
 *We use data on intergenerational social mobility by neighborhood to examine how social and physical environments beyond concentrated poverty predict children’s long-term well-being. First, we examine neighborhoods that are harsh on children’s development: those characterized by high levels of violence, incarceration, and lead exposure….Our explanatory variables are constructed from the Community Survey of the PHDCN, which interviewed a representative sample of Chicago residents about their neighborhood social environments in 1995 and 2002 (combined N of ∼12,000); violent crime rates per 100,000 population from 1995 to 2000, derived from offenses reported by citizens to the police; incarceration rates per population from 1995 to 2000, derived from prison admission data; and lead exposure among children from 1995 to 1997, derived from more than 150,000 blood-level tests conducted by Chicago’s health department.*
 
-**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.**  [LINK](https://eig.org/dci)
+**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.**  [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/community-index/distressed-communities-index-report.pdf) [WEBSITE](https://eig.org/dci)
 
 [METHODOLOGY](https://eig.org/dci/methodology)
 
@@ -1338,6 +1343,27 @@ As we all know, bad input inevitably leads to bad output. Therefore no matter wh
 
 <br>
 <br>
+
+
+
+
+*** { @unit = "FRI Mar 27th", @title = "YellowDig Discussion", @assignment }
+
+<br>
+
+
+**Post your reflection YellowDig:**
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+
+<br>
+<br>
+
+
+<!---
+
+-->
+
 
 
 
