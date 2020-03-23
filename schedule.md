@@ -547,6 +547,8 @@ These GitHub repositories provide a few examples of work that is designed to be 
 
 
 
+
+
 *** { @unit = "", @title = "Evaluating Federal Programs", @reading,  @foldout   }
 
 ## Data Analytics Project 
@@ -639,6 +641,17 @@ Project data comes from three sources.
 Look for the section labeled: "If you want a complete list of projects for the entire U.S., click here to download a ZIP archive of the entire LIHTC Database in dBase format."
 
 
+*** { @unit = "", @title = "Grading Rubric", @assignment, @foldout   }
+
+<br>
+
+## Grading Rubric
+
+You will find the rubric used to grade the final project here: 
+
+[RUBRIC](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/project/project-rubric.pdf)
+
+<br>
 
 
 
