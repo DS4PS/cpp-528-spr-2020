@@ -1160,7 +1160,7 @@ The second dataset contains only variables that come from the Dicennial Census s
 
 <br>
 
-<a class="uk-button uk-button-default" href="">Index Construction Example</a>
+<a class="uk-button uk-button-default" href="https://greatcities.uic.edu/wp-content/uploads/2016/07/GCI-Hardship-Index-Fact-SheetV2.pdf">Index Construction Example</a>
 
 <br> 
 
