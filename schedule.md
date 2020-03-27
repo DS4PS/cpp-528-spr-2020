@@ -1192,6 +1192,8 @@ Write up your results and submit your RMD file and the knitted HML version.
 
 You can review the final project requirements here: [rubric](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/project/project-rubric.pdf). 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8cbcs87VHP8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Set Up Your Data Directory
 
 While working on Lab-02 start building out your **data** directory for your project. 
