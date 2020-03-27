@@ -521,10 +521,10 @@ Some easy heuristics to test whether the project management system is working:
 
 These GitHub repositories provide a few examples of work that is designed to be reproducible and extensible by providing access to the data and code used for analysis, or in the BBC case generating a set of reporting templates that be re-used and adapted by journalists across the agency to build institutional knowledge to make the organization more efficient. 
 
-- https://chicago.github.io/food-inspections-evaluation/
-- https://github.com/USEPA/LakeTrophicModelling
-- https://bbc.github.io/rcookbook/
-- http://trafficstops.trendct.org/data/
+- [City of Chicago Food Inspection Evaluation](https://chicago.github.io/food-inspections-evaluation/)
+- [US EPA Modeling Lake Trophic State](https://github.com/USEPA/LakeTrophicModelling)
+- [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
+- [Traffic Stops Across Connecticut](http://trafficstops.trendct.org/data/)
 
 <br>
 
@@ -620,11 +620,11 @@ Project data comes from three sources.
 
 [Longitudinal Tracts Data Base](https://s4.ad.brown.edu/projects/diversity/Researcher/Bridging.htm)
 
-[Codebook](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB-codebook.pdf) 
+[Codebook](data/LTDB-codebook.pdf) 
 
-[Variables Constructed from the US Population Samples (long form questions)](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_Sample.zip)
+[Variables Constructed from the US Population Samples (long form questions)](data/LTDB_Std_All_Sample.zip)
 
-[Variables Constructed from the Full US Population (short form questions)](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_fullcount.zip)
+[Variables Constructed from the Full US Population (short form questions)](data/LTDB_Std_All_fullcount.zip)
 
 
 **New Market Tax Credits Database:**
@@ -649,7 +649,7 @@ Look for the section labeled: "If you want a complete list of projects for the e
 
 You will find the rubric used to grade the final project here: 
 
-[RUBRIC](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/project/project-rubric.pdf)
+[[RUBRIC](project/project-rubric.pdf)]
 
 <br>
 
@@ -739,9 +739,9 @@ Which community characteristics or conditions best predict revitalization is emm
 
 **Required**
 
-1. Lincoln Institute (2008): [People or Place? Revisiting the Who Versus the Where of Urban Development](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/revitalization/people-or-place-revisiting-the-debate.pdf)
-2. What Works Collaborative (2012): [Building Successful Neighborhoods](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/revitalization/building-successful-neighborhoods.pdf)
-3. Burnette (2017): [Predicting Gentrification](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/revitalization/predicting-revitalization.pdf)
+1. Lincoln Institute (2008): [People or Place? Revisiting the Who Versus the Where of Urban Development](articles/revitalization/people-or-place-revisiting-the-debate.pdf)
+2. What Works Collaborative (2012): [Building Successful Neighborhoods](articles/revitalization/building-successful-neighborhoods.pdf)
+3. Burnette (2017): [Predicting Gentrification](articles/revitalization/predicting-revitalization.pdf)
 
 **Watch:**
 
@@ -824,8 +824,8 @@ On the other hand, it is not realistic to assume no population movement in and o
 
 For this lab, skim the following article and blog:
 
-1. Freeman, L. (2005). Displacement or succession? Residential mobility in gentrifying neighborhoods. Urban Affairs Review, 40(4), 463-491. [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/gentrification/displacement-or-succession.pdf)
-2. Macaig (2015): Gentrification in America Report [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/gentrification/gentrification-in-america-report.pdf)
+1. Freeman, L. (2005). Displacement or succession? Residential mobility in gentrifying neighborhoods. Urban Affairs Review, 40(4), 463-491. [[PDF](articles/gentrification/displacement-or-succession.pdf)]
+2. Macaig (2015): Gentrification in America Report [[PDF](articles/gentrification/gentrification-in-america-report.pdf)]
 
 Consider two neighborhoods. Both are distressed in 2000. Both experience significant rises in income and increases in high school graduation rates. One is experiencing healthy revitalization for residents, and one is experiencing rapid gentrification. How can we tell these two cases apart? 
 
@@ -837,7 +837,7 @@ For the lab, report the following:
 
 Submit a word document with your responses to these questions for at least three variables. 
 
-[ [LTDB CODEBOOK](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB-codebook.pdf) ]
+[ [LTDB CODEBOOK](data/LTDB-codebook.pdf) ]
 
 
 
@@ -979,7 +979,7 @@ You do not have to submit something for this step, but let the instructor know w
 
 ## Can Tax Credits Be An Effective Mechanism for Neighborhood Revitalization? 
 
-At some point in this project you might pause and wonder, of [all of the possible mechanisms for catalyzing economic development](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/revitalization/Revitalizing_Inner_City_Neighborhoods.pdf), why are we using tax credits, and do they really work? 
+At some point in this project you might pause and wonder, of [all of the possible mechanisms for catalyzing economic development](articles/revitalization/Revitalizing_Inner_City_Neighborhoods.pdf), why are we using tax credits, and do they really work? 
 
 Even more weird, the money does not even go to the neighborhoods in need. The credits are claimed by intermediaries, whose job is then to convince others to invest in the neighborhoods. 
 
@@ -1048,11 +1048,11 @@ There are no assigned readings for this week, but the following resources are pr
 
 ## Background Reading 
 
-**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/community-index/toxic-neighborhoods-and-social-mobility.pdf)
+**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [[PDF](articles/community-index/toxic-neighborhoods-and-social-mobility.pdf)]
 
 *We use data on intergenerational social mobility by neighborhood to examine how social and physical environments beyond concentrated poverty predict children’s long-term well-being. First, we examine neighborhoods that are harsh on children’s development: those characterized by high levels of violence, incarceration, and lead exposure….Our explanatory variables are constructed from the Community Survey of the PHDCN, which interviewed a representative sample of Chicago residents about their neighborhood social environments in 1995 and 2002 (combined N of ∼12,000); violent crime rates per 100,000 population from 1995 to 2000, derived from offenses reported by citizens to the police; incarceration rates per population from 1995 to 2000, derived from prison admission data; and lead exposure among children from 1995 to 1997, derived from more than 150,000 blood-level tests conducted by Chicago’s health department.*
 
-**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.**  [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/community-index/distressed-communities-index-report.pdf) [WEBSITE](https://eig.org/dci)
+**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.**  [[PDF](articles/community-index/distressed-communities-index-report.pdf)] [[WEBSITE](https://eig.org/dci)]
 
 [METHODOLOGY](https://eig.org/dci/methodology)
 
@@ -1060,25 +1060,25 @@ Excerpt from NPR: “A Look At The Wealth And Income Gap, By ZIP Code”:
 
 *"The United States is still a land of opportunity for many. But when it comes to life outcomes, geography is too often destiny," says a report from the Economic Innovation Group, a research organization. Despite the economic recovery, the report says, life for those in the most distressed ZIP codes looks "much more like an ongoing downturn. Large swaths of the country are indeed being left behind by economic growth and change." The report calculates what it calls a "distressed community index" using seven metrics: housing vacancy rates, the number of adults working, the poverty rate, median income, the number of people with high school degrees, the change in employment and the rate of business formation.*
 
-**Ellen, I. G., & Turner, M. A. (1997). Does neighborhood matter? Assessing recent evidence. Housing Policy Debate, 8(4), 833-866.** [ [PDF](https://github.com/DS4PS/cpp-529-master/raw/master/articles/social-mobility/does-neighborhood-matter-assessing-recent-evidence.pdf) ]
+**Ellen, I. G., & Turner, M. A. (1997). Does neighborhood matter? Assessing recent evidence. Housing Policy Debate, 8(4), 833-866.** [[PDF](https://github.com/DS4PS/cpp-529-master/blob/master/articles/social-mobility/does-neighborhood-matter-assessing-recent-evidence.pdf)]
 
 ## Reference Material on Reliability 
 
 This section introduces the field of measurement theory in psychology and social sciences, which is used to create scales or indices that allow us to observe and document things that are not easy to measure. 
 
-> Many variables studied by psychologists are straightforward and simple to measure. These include sex, age, height, weight, and birth order. You can often tell whether someone is male or female just by looking. You can ask people how old they are and be reasonably sure that they know and will tell you. Although people might not know or want to tell you how much they weigh, you can have them step onto a bathroom scale. Other variables studied by psychologists—perhaps the majority—are not so straightforward or simple to measure. We cannot accurately assess people’s level of intelligence by looking at them, and we certainly cannot put their self-esteem on a bathroom scale. **These kinds of variables are called latent CONSTRUCTS** (pronounced CON-structs) and include personality traits (e.g., extraversion), emotional states (e.g., fear), attitudes (e.g., toward taxes), and abilities (e.g., athleticism). [ [Understanding Psychological Measurement](https://opentextbc.ca/researchmethods/chapter/understanding-psychological-measurement/) ]
+> Many variables studied by psychologists are straightforward and simple to measure. These include sex, age, height, weight, and birth order. You can often tell whether someone is male or female just by looking. You can ask people how old they are and be reasonably sure that they know and will tell you. Although people might not know or want to tell you how much they weigh, you can have them step onto a bathroom scale. Other variables studied by psychologists—perhaps the majority—are not so straightforward or simple to measure. We cannot accurately assess people’s level of intelligence by looking at them, and we certainly cannot put their self-esteem on a bathroom scale. **These kinds of variables are called latent CONSTRUCTS** (pronounced CON-structs) and include personality traits (e.g., extraversion), emotional states (e.g., fear), attitudes (e.g., toward taxes), and abilities (e.g., athleticism). [[Understanding Psychological Measurement](https://opentextbc.ca/researchmethods/chapter/understanding-psychological-measurement/)]
 
 We are less interested in psychological measures as in constructs of neighborhood quality. But we will use some of the tools developed in psychometrics to help us develop a reliable measure of neighborhood quality. 
 
 Schäffer, U. (2007). Management accounting & control scales handbook. Springer Science & Business Media. [ [2-page PDF](https://github.com/DS4PS/cpp-529-master/raw/master/articles/measurement/introduction-to-construct-measurement.pdf) ] 
 
-*Pitkin, B. (2001). Theories of neighborhood change: Implications for community development policy and practice. UCLA Advanced Policy Institute, 28.* [ [pdf](https://github.com/DS4PS/cpp-529-master/raw/master/articles/neighborhood-change-theories/theories-of-neighborhood-change.pdf) ]
+*Pitkin, B. (2001). Theories of neighborhood change: Implications for community development policy and practice. UCLA Advanced Policy Institute, 28.* [[PDF](articles/neighborhood-change-theories/theories-of-neighborhood-change.pdf)]
 
-*Measurement Theory and Practice, from: Smith, F. (2002). Research methods in pharmacy practice. Pharmaceutical Press.* [ [pdf](https://github.com/DS4PS/cpp-529-master/raw/master/articles/measurement/measurement-theory-and-practice.pdf) ]
+*Measurement Theory and Practice, from: Smith, F. (2002). Research methods in pharmacy practice. Pharmaceutical Press.* [ [PDF](articles/measurement/measurement-theory-and-practice.pdf) ]
 
-*Schäffer, U. (2007). Management accounting & control scales handbook. Springer Science & Business Media.* [ [full text](https://github.com/DS4PS/cpp-529-master/raw/master/articles/measurement/Management-Accounting-and-Control-Scales-Handbook.pdf) ]
+*Schäffer, U. (2007). Management accounting & control scales handbook. Springer Science & Business Media.* [ [full text](articles/measurement/Management-Accounting-and-Control-Scales-Handbook.pdf) ]
 
-*MacKenzie, S. B., Podsakoff, P. M., & Podsakoff, N. P. (2011). Construct measurement and validation procedures in MIS and behavioral research: Integrating new and existing techniques. MIS quarterly, 35(2), 293-334.* [ [pdf](https://github.com/DS4PS/cpp-529-master/raw/master/articles/measurement/construct-measurement-and-validation-in-behavioral-research.pdf) ]
+*MacKenzie, S. B., Podsakoff, P. M., & Podsakoff, N. P. (2011). Construct measurement and validation procedures in MIS and behavioral research: Integrating new and existing techniques. MIS quarterly, 35(2), 293-334.* [ [PDF](articles/measurement/construct-measurement-and-validation-in-behavioral-research.pdf) ]
 <br>
 <br>
 
@@ -1128,11 +1128,11 @@ In most cases within-city comparisons will be more meaningful than across city c
 
 The following articles provide examples of studies that utilize neighborhood quality indices: 
 
-**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/community-index/toxic-neighborhoods-and-social-mobility.pdf)
+**Manduca, R., & Sampson, R. J. (2019). Punishing and toxic neighborhood environments independently predict the intergenerational social mobility of black and white children. Proceedings of the National Academy of Sciences, 116(16), 7772-7777.** [PDF](articles/community-index/toxic-neighborhoods-and-social-mobility.pdf)
 
 *We use data on intergenerational social mobility by neighborhood to examine how social and physical environments beyond concentrated poverty predict children’s long-term well-being. First, we examine neighborhoods that are harsh on children’s development: those characterized by high levels of violence, incarceration, and lead exposure….Our explanatory variables are constructed from the Community Survey of the PHDCN, which interviewed a representative sample of Chicago residents about their neighborhood social environments in 1995 and 2002 (combined N of ∼12,000); violent crime rates per 100,000 population from 1995 to 2000, derived from offenses reported by citizens to the police; incarceration rates per population from 1995 to 2000, derived from prison admission data; and lead exposure among children from 1995 to 1997, derived from more than 150,000 blood-level tests conducted by Chicago’s health department.*
 
-**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.**  [PDF](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/community-index/distressed-communities-index-report.pdf) [WEBSITE](https://eig.org/dci)
+**Economic Innovation Group. (2016). The 2016 distressed communities index: An analysis of community well-being across the United States.**  [PDF](articles/community-index/distressed-communities-index-report.pdf) [WEBSITE](https://eig.org/dci)
 
 [METHODOLOGY](https://eig.org/dci/methodology)
 
@@ -1148,11 +1148,11 @@ Excerpt from NPR: “A Look At The Wealth And Income Gap, By ZIP Code”:
 
 You will find the Census Longitudinal Tabulated Database (LTDB) file here: 
 
-[Harmonized Census Data Part-01](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_Sample.zip)
+[Harmonized Census Data Part-01](data/LTDB_Std_All_Sample.zip)
 
-[Harmonized Census Data Part-02](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB_Std_All_fullcount.zip)
+[Harmonized Census Data Part-02](data/LTDB_Std_All_fullcount.zip)
 
-[Codebook](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/data/LTDB-codebook.pdf)
+[Codebook](data/LTDB-codebook.pdf)
 
 Most of the variables you need will come from the first dataset, which is comprised of variables that come from the long-form version of the census (which is only administered to a sample of the population) or variables from the American Community Survey (the annual survey given to a subsample of citizens). 
 
@@ -1160,7 +1160,7 @@ The second dataset contains only variables that come from the Dicennial Census s
 
 <br>
 
-<a class="uk-button uk-button-default" href="">Index Construction Example</a>
+<a class="uk-button uk-button-default" href="https://eig.org/dci/methodology">Index Construction Example</a>
 
 <br> 
 
@@ -1190,7 +1190,7 @@ Write up your results and submit your RMD file and the knitted HML version.
 
 <br>
 
-You can review the final project requirements here: [rubric](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/project/project-rubric.pdf). 
+You can review the final project requirements here: [rubric](project/project-rubric.pdf). 
 
 ## Set Up Your Data Directory
 
@@ -1333,7 +1333,7 @@ As we all know, bad input inevitably leads to bad output. Therefore no matter wh
 1. Dataset Description
 
 
-![](https://raw.githubusercontent.com/DS4PS/cpp-528-spr-2020/master/assets/img/crisp-dm-process-diagram.png)
+![](assets/img/crisp-dm-process-diagram.png)
 
 
 <br>
