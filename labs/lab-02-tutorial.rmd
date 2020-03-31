@@ -18,7 +18,7 @@ You have been asked to a create a scale or an index that combines several measur
 
 These sorts of scales can be useful for a variety of purposes. For example:
 
-*Miles, J. N., Weden, M. M., Lavery, D., Escarce, J. J., Cagney, K. A., & Shih, R. A. (2016). Constructing a time-invariant measure of the socio-economic status of US census tracts. Journal of Urban Health, 93(1), 213-232.* [link](https://link.springer.com/article/10.1007/s11524-015-9959-y)
+*Miles, J. N., Weden, M. M., Lavery, D., Escarce, J. J., Cagney, K. A., & Shih, R. A. (2016). Constructing a time-invariant measure of the socio-economic status of US census tracts. Journal of Urban Health, 93(1), 213-232.* [ [pdf](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/community-index/constructing-time-stable-measure-of-socio-economic-status.pdf) ]
 
 > A well-established literature documents that the **socio-economic characteristics of the places in which we live influence our health and wellbeing.** For example, neighborhood socio-economic status (NSES), over and above individual socio-economic status, can have lasting effects on outcomes ranging from hypertension, to allostatic load, disability, and depression. 
 > 
