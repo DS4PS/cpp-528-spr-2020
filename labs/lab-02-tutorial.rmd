@@ -217,7 +217,7 @@ If we simply add them together the measures with a greater range and variance wi
 
 Before and after standardizing: 
 
-```{r, echo=F}
+```{r, echo=F, fig.height=3, fig.width=8}
 ggplot( gather( df, cols, value), aes(x = value)) + 
         geom_histogram( binwidth = 5 ) + facet_grid(.~cols)
 
@@ -323,7 +323,21 @@ pairs( df2, lower.panel=panel.smooth, upper.panel=panel.cor )
 
 ## Impact of Outliers
 
-Just like regression, outliers can skew a scale. You might check for some extreme outliers and consider truncating values if they are compressing most of your data into a small range. Or do a log transformation before rescaling. 
+Just like regression, outliers can heavily skew a scale. 
+
+```{r}
+x <- df$`Life Exp`   # range of 67 to 73
+x.scaled <- scales::rescale( x, to=c(0,100) )
+hist( x.scaled, col="gray30", breaks=50, border="white", xlim=c(0,100) )
+
+# add an outlier
+
+x <- c( x, 150 )
+x.scaled <- scales::rescale( x, to=c(0,100) )
+hist( x.scaled, col="gray30", breaks=50, border="white", xlim=c(0,100) )
+```
+
+You might check for some extreme outliers and consider truncating values if they are compressing most of your data into a small range. Or do a log transformation before rescaling. 
 
 ```{r}
 par( mfrow=c(2,2) )
@@ -335,6 +349,16 @@ hist( y, col="gray30", border="white" )
 
 
 
+You can top-code outliers to see if it has a big impact, but be sure to note ways you change the original data in your data manifest and include tables showing results with and without truncation if you are altering valid data points to minimize the influence of outliers. If the data is an entry error it is sufficient to note the fix. 
+
+```{r}
+# top-coding outliers
+# any values above 75 recoded as 75
+
+x[ x > 75 ] <- 75
+x.scaled <- scales::rescale( x, to=c(0,100) )
+hist( x.scaled, col="gray30", breaks=50, border="white", xlim=c(0,100) )
+```
 
 
 
