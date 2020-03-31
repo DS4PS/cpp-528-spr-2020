@@ -1495,6 +1495,27 @@ As we all know, bad input inevitably leads to bad output. Therefore no matter wh
 
 <br>
 
+![](https://raw.githubusercontent.com/DS4PS/cpp-528-spr-2020/master/assets/img/median-home-value-change-2000-to-2010.png)
+
+
+Week 3 – Descriptive Analysis of Community Change 
+
+•	Calculate change in MHV variable 1990-2000, 2000-2010
+o	Describe patterns across all tracts – change in value in $s
+o	Compare patterns across all tracts – change in within-metro percentile 
+
+•	Describe gentrification 2000-2010 
+
+•	Describe community health indices
+o	Compare city averages 
+o	Change 2000-2010
+
+•	Pick a city and create a dorling cartogram 
+o	Create maps 2000, 2010, and change for each var
+o	Include baseline descriptives that are useful 
+
+•	DISCUSSION – people versus places 
+
 
 <br>
 
