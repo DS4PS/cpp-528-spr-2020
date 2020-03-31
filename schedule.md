@@ -1110,6 +1110,10 @@ Report the following:
 * The summary statistics for **urban** census tracts (min, 25th percentile, median, mean, 75th percentile, max) 
 * Reliability scores for each instrument 
 
+
+
+### Reliability
+
 To test the reliability of your instrument you first need to transform each raw variable into a meaningful metric. For example, many of the census variables will be reported as raw counts of people or households within the census tract. You might divide by the tract population for each to change them into percentages before comparison since census tracts are difference sizes (for example, percentage of households that are white in a tract, a percentage foreign born, and percentage of people over the age of 65). 
 
 In many cases translating variables into Z scores can make the data easier to use and is necessary before aggregating individual variables into an index to avoid over-weighting one variable. A z-score normalizes a variable by making the mean for each measure zero, and the standard deviation one. In doing so you can now add three variables together that are measured on very different scales. This step is only appropriate when working with continous data. 
@@ -1122,11 +1126,110 @@ Z3 <- standardize (X3 )
 calculate_alpha( Z1, Z2, Z3 )
 ```
 
+### Identifying Urban Counties and 
+
 Note that we are comparing neighborhoods (census tracts) within cities, so comparisons with rural areas are not very meaningful. Before you begin your analysis drop all of the rural tracts located outside of metropolitan areas. 
 
 Also note that the cost of living in cities varies a tremendous amount. The median value of a home in a poor neighborhood in San Francisco or New York might still be higher than most median home values in Iowa. So it is important to think through your comparisons, especially when calculating Z-scores (standard normal scores) for each variable. Should the reference point be all other census tracts located in cities in the US? Or should it be all other census tracts in the same city? 
 
 In most cases within-city comparisons will be more meaningful than across city comparisons, especially when calculating things like percentiles and Z-scores. This is because the measures capture opportunities and opportunity costs primarily within the same metro area. If a census tract in a rust-belt city has high school graduation rates that are low compared to national norms, but still relatively high compared to other tracts in the city, it will still be a desirable neighborhood since it is one of the best options in the city. The relative comparison to other local tracts better captures the way information will be used by citizens when making decisions like where to purchase their next home. 
+
+If the LTDB does not have sufficient info on urban versus rural tracts, or metro area traits, you will need to find this meta-data elsewhere. You can try the NBER: Combined MSA CBSA FIPS County Crosswalk 2005, 2011-2017: [CSV DOWNLOAD](https://data.nber.org/cbsa-msa-fips-ssa-county-crosswalk/cbsatocountycrosswalk.csv)
+
+https://data.nber.org/data/cbsa-msa-fips-ssa-county-crosswalk.html
+
+And note in the data dictionary for CBSA Name (copied below): "blanks are rural"
+
+You can add metro attributes and urban / rural status by merging the crosswalk data using county FIPS codes. 
+
+```r
+URL <- "https://data.nber.org/cbsa-msa-fips-ssa-county-crosswalk/cbsatocountycrosswalk.csv"
+crosswalk <- read.csv( URL, stringsAsFactors=F )
+
+# all metro areas in the country
+sort( unique( crosswalk$cbsaname ) )
+
+crosswalk$urban <- ifelse( crosswalk$cbsaname == "", "rural", "urban" )
+
+keep.these <- c( "countyname","state","fipscounty", 
+                 "msa","msaname", 
+                 "cbsa","cbsaname",
+                 "urban" )
+
+cw <- dplyr::select( crosswalk, keep.these )
+
+# merge into census data by county FIPS
+# watch the leading zeros problem
+```
+
+And the data dictionary for the file: 
+
+```
+_dta:
+  1.  cbsatocountycrosswalk2005 set up by Jean Roth , jroth@nber.org , 20 Dec 2016
+  2.  Source: fr05_cbsa_msa_xwalk_pub.txt
+  3.  NBER URL: http://www.nber.org/data/cbsa-msa-fips-ssa-county-crosswalk.html
+  4.  Source Page: http://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/Acute-Inpatient-Files-for-Download-Items/CMS022637.html
+  5.  Source File URL: http://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/Downloads/fr05_cbsa_msa_xwalk_pub.zip
+  6.  by Jean Roth , jroth@nber.org , 28 Nov 2016
+
+ssacounty:
+  1.  Los Angeles FIPS 06037 can have two SSA county codes: 05210 and 05200
+
+  obs:         3,293                          
+ vars:            21                          20 Dec 2016 11:41
+ size:       757,390                          (_dta has notes)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+              storage   display    value
+variable name   type    format     label      variable label
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+countyname      str26   %26s                  County Name
+state           str2    %9s                   State
+ssacounty       str5    %9s                 * SSA County Code
+fipscounty      str5    %9s                   FIPS County Code
+msa             str6    %9s                   Old MSA
+l               str1    %9s                   Lugar
+msaname         str48   %48s                  Old MSA Name
+cbsa            str5    %9s                   CBSA - if blank then rural area (set equal to first 2 digits of ssa code)
+cbsaname        str50   %50s                  CBSA Name
+cbsaold         long    %12.0g                 (Blanks are Rural)
+cbsanameold     str42   %42s                   (Blanks are Rural)
+ssast           str2    %9s                   SSA State code
+fipst           str2    %9s                   FIPS State code
+y2005           float   %9.0g                 Present in 2005 source file
+y2011           float   %9.0g                 Present in 2011 source file
+y2012           float   %9.0g                 Present in 2012 source file
+y2013           float   %9.0g                 Present in 2013 source file
+y2014           float   %9.0g                 Present in 2014 source file
+y2015           float   %9.0g                 Present in 2015 source file
+y2016           float   %9.0g                 Present in 2016 source file
+y2017           float   %9.0g                 Present in 2017 source file
+                                            * indicated variables have notes
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sorted by: fipscounty  ssacounty
+```
+
+Note that you might need to construct a new FIPS code from existing FIPS codes. Recall they all have the structure:
+
+```r
+# S - state (2)
+# C - county (3)
+# T - census tract (6)
+
+SS-CCC-TTTTTT
+
+county.fips <- paste0( st.fips, ct.fips )
+```
+
+But beware of the leading zeros problem if your data is numeric! You might need to add zeros: 
+
+```r
+st.fips <- state + 10000
+st.fips <- substr( st.fips, 4, 5 )  # extract last two numbers 
+ct.fips <- county + 10000
+ct.fips <- substr( ct.fips, 3, 5 )  # extract last three numbers 
+county.fips <- paste0( st.fips, ct.fips )
+```
 
 <hr> 
 
