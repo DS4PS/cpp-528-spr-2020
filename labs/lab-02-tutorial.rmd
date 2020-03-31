@@ -134,9 +134,9 @@ Cronbach was one of the first to develop and popularize the use of a relability 
 
 You have three variables that you will use to create a scale. Some of the variance for each variable captures the construct of interest, and some of the variance does not. 
 
-X1 = a1 + e1
-X2 = a2 + e2
-X3 = a3 + e3
+X1 = a1 + e1  
+X2 = a2 + e2  
+X3 = a3 + e3  
 
 When you combine the three variables X1 to X3 into a common scale you will have a component that represents a stable measure of the construct: **A = ( a1 + a2 + a3 ) / 3**
 
