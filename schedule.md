@@ -1451,9 +1451,23 @@ As we all know, bad input inevitably leads to bad output. Therefore no matter wh
 
 
 
-*** { @unit = "FRI Mar 27th", @title = "YellowDig Discussion", @assignment }
+*** { @unit = "FRI Apr 3rd", @title = "YellowDig Discussion", @assignment }
 
 <br>
+
+
+### Subsidies distort incentives 
+
+US healthcare is so expensive relative to other countries because health insurance distorts incentives. If you have insurance then the marginal cost of selecting premium care over basic or preventative care is very low. If you are a doctor practicing medicine in a system where hospitals are frequently sued then any time you have to make a decision involving a treatment that probably won't help but likely won't hurt you will take the safe option and prescribe more procedures and name-brand drugs to protect yourself. As a result neither patients nor doctors have any incentive to control costs.
+
+Similarly, economic development policy that was designed to help communities can actually hurt them. Development is capital-intensive, which means most poor communities do not have the resources needed to catalyze their own growth. So state and federal programs have been created to cover infrastructure costs and programs to attract or expand companies. But they are problematic in that they pay 
+
+https://www.strongtowns.org/journal/2018/8/22/the-more-we-grow-the-poorer-we-become-td9nw
+
+
+https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.html
+
+
 
 
 **Post your reflection YellowDig:**
@@ -1462,11 +1476,6 @@ As we all know, bad input inevitably leads to bad output. Therefore no matter wh
 
 <br>
 <br>
-
-
-<!---
-
--->
 
 
 
@@ -1523,9 +1532,6 @@ o	Include baseline descriptives that are useful
 
 
 
-
-
-
 *** { @unit = "MON Apr 6th", @title = "Lab 03", @assignment }
 
 <br>
@@ -1533,6 +1539,37 @@ o	Include baseline descriptives that are useful
 
 
 
+
+*** { @unit = "FRI Apr 10th", @title = "YellowDig Discussion", @assignment }
+
+<br>
+
+
+### Subsidies distort incentives 
+
+US healthcare is so expensive relative to other countries because health insurance distorts incentives. If you have insurance then the marginal cost of selecting premium care over basic or preventative care is very low. If you are a doctor practicing medicine in a system where hospitals are frequently sued then any time you have to make a decision involving a treatment that probably won't help but likely won't hurt you will take the safe option and prescribe more procedures and name-brand drugs to protect yourself. As a result neither patients nor doctors have any incentive to control costs.
+
+Similarly, economic development policy that was designed to help communities can actually hurt them. Development is capital-intensive, which means most poor communities do not have the resources needed to catalyze their own growth. So state and federal programs have been created to cover infrastructure costs and programs to attract or expand companies. But they are problematic in that they pay 
+
+https://www.strongtowns.org/journal/2018/8/22/the-more-we-grow-the-poorer-we-become-td9nw
+
+
+https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.html
+
+
+
+
+**Post your reflection YellowDig:**
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+
+<br>
+<br>
+
+
+<!---
+
+-->
 
 
 
@@ -1591,6 +1628,37 @@ Since we are using the median home value variable which represents an entire cen
 
 
 
+*** { @unit = "FRI Apr 17thth", @title = "YellowDig Discussion", @assignment }
+
+<br>
+
+
+### Subsidies distort incentives 
+
+US healthcare is so expensive relative to other countries because health insurance distorts incentives. If you have insurance then the marginal cost of selecting premium care over basic or preventative care is very low. If you are a doctor practicing medicine in a system where hospitals are frequently sued then any time you have to make a decision involving a treatment that probably won't help but likely won't hurt you will take the safe option and prescribe more procedures and name-brand drugs to protect yourself. As a result neither patients nor doctors have any incentive to control costs.
+
+Similarly, economic development policy that was designed to help communities can actually hurt them. Development is capital-intensive, which means most poor communities do not have the resources needed to catalyze their own growth. So state and federal programs have been created to cover infrastructure costs and programs to attract or expand companies. But they are problematic in that they pay 
+
+https://www.strongtowns.org/journal/2018/8/22/the-more-we-grow-the-poorer-we-become-td9nw
+
+
+https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.html
+
+
+
+
+**Post your reflection YellowDig:**
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+
+<br>
+<br>
+
+
+<!---
+
+-->
+
 
 
 
@@ -1629,6 +1697,37 @@ Since we are using the median home value variable which represents an entire cen
 <br>
 
 
+*** { @unit = "FRI Apr 24th", @title = "YellowDig Discussion", @assignment }
+
+<br>
+
+
+### Subsidies distort incentives 
+
+US healthcare is so expensive relative to other countries because health insurance distorts incentives. If you have insurance then the marginal cost of selecting premium care over basic or preventative care is very low. If you are a doctor practicing medicine in a system where hospitals are frequently sued then any time you have to make a decision involving a treatment that probably won't help but likely won't hurt you will take the safe option and prescribe more procedures and name-brand drugs to protect yourself. As a result neither patients nor doctors have any incentive to control costs.
+
+Similarly, economic development policy that was designed to help communities can actually hurt them. Development is capital-intensive, which means most poor communities do not have the resources needed to catalyze their own growth. So state and federal programs have been created to cover infrastructure costs and programs to attract or expand companies. But they are problematic in that they pay 
+
+https://www.strongtowns.org/journal/2018/8/22/the-more-we-grow-the-poorer-we-become-td9nw
+
+
+https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.html
+
+
+
+
+**Post your reflection YellowDig:**
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+
+<br>
+<br>
+
+
+<!---
+
+-->
+
 
 
 
@@ -1662,6 +1761,8 @@ Since we are using the median home value variable which represents an entire cen
 
 <br>
 <br>
+
+
 
 
 
