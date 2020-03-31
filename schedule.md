@@ -1160,7 +1160,7 @@ The second dataset contains only variables that come from the Dicennial Census s
 
 <br>
 
-<a class="uk-button uk-button-default" href="">Index Construction Example</a>
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-528-spr-2020/labs/lab-02-tutorial.html">Index Construction Example</a>
 
 <br> 
 
