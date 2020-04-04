@@ -5,6 +5,8 @@ output:
     theme: readable
     df_print: paged
     highlight: tango
+    toc: yes
+    toc_float: no
     css: textbook.css
 ---
 
@@ -22,15 +24,29 @@ library( knitr )
 library( pander )
 library( stargazer )
 library( scales )
+
+# set stargazer type to text for 
+# previewing in RMD docs but
+# convert to type HTML when knitting
+# (next code chunk)
+
+s.type <- "text"  
 ```
 
+
+
 ```{r, echo=F}
-# will run when knitting and 
-# change table formats to html
-s.type <- "text"
-change_stargazer_type <- function()
-{  return("html")  }
-s.type <- change_stargazer_type()
+###################################
+#
+#     STARGAZER SETTINGS
+#
+###################################
+
+# DO NOT RUN CHUNK UNLESS KNITTING:
+# changes table formats to html
+# before rendering RMD docs
+
+s.type <- "html"
 ```
 
 
@@ -46,6 +62,7 @@ For this part of the project you will:
 -	Using 2 of your community health indices, report whether communities changed from 2000 to 2010
 - Pick a city and create a dorling cartogram for demo purposes
 
+This tutorial demonstrates some of the initial steps of variable creation and data exploration for the project. 
 
 
 ## Load Data
@@ -126,7 +143,7 @@ head( vars )
 Create subset for the analysis
 
 ```{r}
-d.full <- d  # keep so don't have to reload 
+d.full <- d  # keep a copy so don't have to reload 
 ```
 
 
@@ -156,8 +173,10 @@ d <-
 
 
 ```{r, results="asis"}
-stargazer( d, type=s.type, digits=0,
-           summary.stat = c("min", "p25","median","mean","p75","max"))
+stargazer( d, 
+           type=s.type, 
+           digits=0,
+           summary.stat = c("min", "p25","median","mean","p75","max") )
 ```
 
 
@@ -178,7 +197,9 @@ df <- data.frame( MedianHomeValue2000=mhv.00,
                   MedianHomeValue2010=mhv.10, 
                   Change.00.to.10=mhv.change )
 
-stargazer( df, type=s.type, digits=0, 
+stargazer( df, 
+           type=s.type, 
+           digits=0, 
            summary.stat = c("min", "p25","median","mean","p75","max") )
 ```
 
@@ -382,8 +403,8 @@ https://ds4ps.org/cpp-529-master/labs/lab-04-instructions.html
 # devtools::install_github( "sjewo/cartogram" )
 # install.packages( "tmap" )
 
-library( geojsonio )
-library( sp )
+library( geojsonio )  # read geoJSON map files from GitHub
+library( sp )         # spatial data class sp for shapefiles
 library( cartogram )  # spatial maps w/ tract size bias reduction
 library( tmap )       # thematic maps
 library( maptools )   # spatial object manipulation 
@@ -400,22 +421,48 @@ plot( phx )
 
 
 ```{r}
-# create small dataframe
-d$mhv.change <- mhv.change 
-d$pct.change <- pct.change
-d$mhv.10 <- mhv.10
-d$mhv.00 <- 
+# create small dataframe for the merge
+df <- data.frame(  tractid=d$tractid, 
+        mhv.00,  mhv.10,  mhv.change,  pct.change  )
 
-# create GEOID that matches their format
-df <- data.frame( tractid=d$tractid, mhv.00, mhv.10, mhv.change, pct.change )
+# create GEOID that matches GIS format
+
 # create a geoID for merging by tract 
-df$GEOID <- substr( df$tractid, 6, 18 )
-df$GEOID <- gsub( "-", "", df$GEOID )
+df$GEOID <- substr( df$tractid, 6, 18 )  # extract codes
+df$GEOID <- gsub( "-", "", df$GEOID )    # remove hyphens
+class( df$GEOID )
+head( df$GEOID )
+```
 
+
+Note the current class of the PHX shapefile IDs:
+
+* **GEOID2** is numeric, has leading zero dropped
+* **GEOID** is a factor that retains leading zeros
+
+You can either convert the data frame ID to numeric to drop the leading zero and merge with GEOID2.
+
+Or keep it as a character vector and merge with GEOID. 
+
+```{r}
+head( phx@data )  # sp class from GIS file, so data frame is located @data
+```
+
+
+```{r}
 # merge census data with dorling map
+
+nrow( phx ) # check dimensions
+
 phx <- merge( phx, df, by.x="GEOID", by.y="GEOID" )
 
+# make sure they have not changed or 
+# you are missing rows in your data frame
+# or merging with the wrong ID
+nrow( phx ) 
 ```
+
+
 
 
 ```{r}
@@ -461,7 +508,7 @@ Or:
 The first criteria is fairly straight-forward except for selecting a poverty measure (see the data dictionary for the difference between dpov and npov before constructing the variable. 
 
 ```{r}
-# urban communities
+# number of urban tracts total
 nrow( d ) 
 
 # proportion of tracts with poverty rate greater than 20%.
@@ -471,15 +518,44 @@ mean( d$pov.rate > 20, na.rm=T )
 
 The second is a little trickier because it is asking not for 80% of the national income (all census tracts), but rather of local poverty rates. This can be operationalized as the metro-level mean instead of the average for the country. Here is where we need the external meta-data on Core Based Statistical Areas (CBSAs), which is how the Census defines cities. 
 
+Note on calculating percentiles or other groups: 
+
+* cut( rank( x ), 100 ) is core R version
+* ntile( x, 100 ) is dplyr version 
+
+```{r}
+# percentiles (100 groups)
+d %>% 
+  mutate( PCT = ntile( hinc00, 100 ), 
+          DEC = ntile( hinc00, 10 ),
+          QRT = ntile( hinc00, 4 ) ) %>%
+  select( hinc00, PCT, DEC, QRT ) %>%
+  head( 10 ) %>%
+  pander()
+```
+
+```{r}
+dat <- d  # save original for code dev
+```
+
 ```{r, eval=F}
 d <- dat
 
 d <-
   d %>%
+  mutate( inc.pct = ntile( hinc00, 100 ), 
+          median.pay = median( hinc00, na.rm=T ) ) %>%
   group_by( cbsaname ) %>%
-  mutate( inc.pctile = percent_rank( hinc00),
-             median.pay = median( hinc00, na.rm=T )  ) %>%
+  mutate( metro.inc.pct = ntile( hinc00, 100 ),
+          metro.median.pay = median( hinc00, na.rm=T )  ) %>%
   ungroup()
+
+# inc.pct - income percentile for all urban tracts
+# metro.inc.pct - income percentile for tracts within each metro
+# median.pay - median income for the country as reference
+# metro.median.pay - median pay per metro 
+
+head( d ) %>% pander()
 ```
 
 
@@ -487,7 +563,7 @@ Meet both criteria:
 
 ```{r}
 pov.line <- d$pov.rate > 20
-inc.line <- d$inc.pctile < 0.8
+inc.line <- d$metro.inc.pct < 80
 
 these <- pov.line & inc.line
 
@@ -496,6 +572,225 @@ mean( these, na.rm=T )
 ```
 
 Overall approximately 19 percent of all census tracts quality for the New Market Tax Credits program.
+
+
+
+# Measuring Gentrification 
+
+The original merged dataset we saved as **d.full** so we don't need to reload it:
+
+```{r}
+d2 <- d.full
+```
+
+
+Recall our data steps thus far: 
+
+```{r}
+# adjust 2000 home values for inflation 
+mhv.00 <- d2$mhmval00 * 1.28855  
+mhv.10 <- d2$mhmval12
+
+mhv.change <- mhv.10 - mhv.00
+
+# small initial values are skewing percentages
+#
+# an average home value below $10k is really low -
+# these must be mostly vacant lots?
+
+mhv.00[ mhv.00 < 1000 ] <- NA
+pct.change <- 100 * ( mhv.change / mhv.00 )
+summary( pct.change )
+
+
+d2$mhv.00 <- mhv.00
+d2$mhv.10 <- mhv.10
+d2$mhv.change <- mhv.change
+d2$pct.change <- pct.change
+```
+
+
+### Select Gentrification Variables
+
+Select variables for operationalizing a definition of gentrification: 
+
+We need to add some variables from 2010:
+
+Recall we created a 2000 to 2010 variable list for reference: 
+
+```{r}
+head( var )
+```
+
+
+
+```{r}
+d2 <- select( d2, 
+             
+             tractid, cbsa, cbsaname,            # ids / units of analysis
+             
+             mhv.00, mhv.10, mhv.change, pct.change,    # home value 
+             
+             hinc00, hu00, own00, rent00,        # ses
+             hinc12, hu10, own10, rent10,
+             
+             empclf00, clf00, unemp00, prof00,   # employment 
+             empclf12, clf12, unemp12, prof12,
+             
+             dpov00, npov00,                     # poverty
+             dpov12, npov12,
+             
+             ag25up00, hs00, col00,              # education 
+             ag25up12, hs12, col12,
+             
+             pop00.x, nhwht00, nhblk00, hisp00, asian00,   # race
+             pop10, nhwht10, nhblk10, hisp10, asian10
+             
+          ) # end mutate
+
+
+d2 <- 
+  d2 %>%
+  mutate( 
+          # 2000 variables
+          p.white.00 = 100 * nhwht00 / pop00.x,
+          p.black.00 = 100 * nhblk00 / pop00.x,
+          p.hisp.00 = 100 * hisp00 / pop00.x, 
+          p.asian.00 = 100 * asian00 / pop00.x,
+          p.hs.edu.00 = 100 * (hs00+col00) / ag25up00,
+          p.col.edu.00 = 100 * col00 / ag25up00,
+          p.prof.00 = 100 * prof00 / empclf00,
+          p.unemp.00 = 100 * unemp00 / clf00,
+          pov.rate.00 = 100 * npov00 / dpov00,
+          
+          # 2010 variables
+          p.white.10 = 100 * nhwht10 / pop10,
+          p.black.10 = 100 * nhblk10 / pop10,
+          p.hisp.10 = 100 * hisp10 / pop10, 
+          p.asian.10 = 100 * asian10 / pop10,
+          p.hs.edu.10 = 100 * (hs12+col12) / ag25up12,
+          p.col.edu.10 = 100 * col12 / ag25up12,
+          p.prof.10 = 100 * prof12 / empclf12,
+          p.unemp.10 = 100 * unemp12 / clf12,
+          pov.rate.10 = 100 * npov12 / dpov12 )
+
+```
+
+
+```{r}
+d2 <-
+  d2 %>%
+  group_by( cbsaname ) %>%
+  mutate( metro.mhv.pct.00 = ntile( mhv.00, 100 ),
+          metro.mhv.pct.10 = ntile( mhv.10, 100 ),
+          metro.median.pay.00 = median( hinc00, na.rm=T ),
+          metro.median.pay.10 = median( hinc12, na.rm=T ),
+          metro.race.rank.00 = ntile( (100-p.white.00), 100 ) ) %>%
+  ungroup() %>%
+  mutate( metro.mhv.pct.change = metro.mhv.pct.10 - metro.mhv.pct.00,
+          pay.change = metro.median.pay.10 - metro.median.pay.00,
+          race.change = p.white.10 - p.white.00,
+          mhv.change = mhv.10 - mhv.00 )
+
+```
+
+
+Descriptive Statistics of Change Variables 
+
+
+```{r}
+d3 <-           
+  d2 %>%
+  select( c( "tractid", "cbsa", "cbsaname",
+             "mhv.00", "mhv.10", "mhv.change","pct.change",
+          "p.white.00", "p.black.00", "p.hisp.00", "p.asian.00", 
+          "p.hs.edu.00", "p.col.edu.00", "p.prof.00",  "p.unemp.00", 
+          "pov.rate.00", "p.white.10", "p.black.10", "p.hisp.10", 
+          "p.asian.10", "p.hs.edu.10", "p.col.edu.10", "p.prof.10", 
+          "p.unemp.10", "pov.rate.10", "metro.mhv.pct.00", 
+          "metro.mhv.pct.10", "metro.median.pay.00", "metro.median.pay.10", 
+          "metro.mhv.pct.change", "pay.change", "race.change",
+          "metro.race.rank.00") ) 
+  
+# head( d3 ) %>% pander()
+```
+
+
+
+```{r, results="asis"}
+d3 <- data.frame(d3)
+stargazer( d3, 
+           type=s.type, 
+           digits=0, 
+           summary.stat = c("min", "p25","median","mean","p75","max") )
+```
+
+### Operationalizing Gentrification 
+
+Which definition did you select for gentrification, and how would you operationalize it? 
+
+```{r}
+# income
+# percent white
+# home values absolute
+# home value relative to metro
+# education stats ?
+# employment stats ?
+# income stats ?
+# growth of pop per tract (density) ?
+
+
+# home value in lower than average home in a metro in 2000
+poor.2000 <- d3$metro.mhv.pct.00 < 50  
+
+# above average diversity for metro
+diverse.2000 <- d3$metro.race.rank.00 > 50 
+
+# home values increased more than overall city gains 
+# change in percentile rank within the metro
+mhv.pct.increase <- d3$metro.mhv.pct.change > 0
+
+# faster than average growth  
+# 25% growth in value is median for the country
+home.val.rise <- d3$pct.change > 25 
+
+# proportion of whites increases by more than 3 percent 
+# measured by increase in white
+loss.diversity <- d3$race.change > 3 
+
+g.flag <- poor.2000 & diverse.2000 & mhv.pct.increase & home.val.rise & loss.diversity
+
+num.candidates <-  sum( poor.2000 & diverse.2000, na.rm=T )
+num.gentrified <- sum( g.flag, na.rm=T )
+
+num.gentrified 
+num.candidates
+
+num.gentrified / num.candidates
+```
+
+
+By this definition only 5.7 percent of urban tracts experience gentrification between 2000 and 2010. 
+
+This might skew numbers?  
+
+```{r}
+# small initial values are skewing percentages
+#
+# an average home value below $10k is really low -
+# these must be mostly vacant lots?
+
+mhv.00[ mhv.00 < 1000 ] <- NA
+pct.change <- 100 * ( mhv.change / mhv.00 )
+summary( pct.change )
+```
+
+
+What do you think? Is that the right way to operationalize it? Do you care about relative diversity (more diverse neighborhood than rest of the city) or absolute (percentage of non-whites regardless of city diversity). 
+
+Do we care about absolute increase in value, or relative to the national average? The national average would include all of the gentrifying tracts, which could skew it upward and thus make it a poor benchmark? Maybe look at the average increase in value for non-gentrification candadidates?  
+
+
 
 
 
