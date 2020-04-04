@@ -1401,6 +1401,20 @@ This allows us to isolate errors made in preparing the data (data wrangling) fro
 
 You should not be doing data wrangling in your analytical steps with the exception of variable transformations related to modeling. For example, creating a squared value of a variable X to use in a quadratic model, logging a variable, or dividind by a constant to change the unit of analysis. Since these are steps related directly to the modeling process it is helpful to keep them together. 
 
+**Working with GitHub Desktop***
+
+The following video showcases how to collaborate on GitHub using GitHub Desktop and RStudio. The video shows how to: 
+
+* clone a repository from GitHub;
+* create a new branch from master;
+* commit your changes;
+* push your changes;
+* submit a pull request;
+* add commits to a branch other than master; and 
+* how to pull in changes from master.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nFPPJHmX7Lc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <br> 
 
 
