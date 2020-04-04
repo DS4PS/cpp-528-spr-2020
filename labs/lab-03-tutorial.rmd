@@ -1,0 +1,524 @@
+---
+title: 'Descriptive Analysis'
+output:
+  html_document:
+    theme: readable
+    df_print: paged
+    highlight: tango
+    css: textbook.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo=TRUE, message=F, warning=F, eval=T, fig.width=10 )
+```
+
+
+
+
+
+```{r}
+library( dplyr )
+library( knitr )
+library( pander )
+library( stargazer )
+library( scales )
+```
+
+```{r, echo=F}
+# will run when knitting and 
+# change table formats to html
+s.type <- "text"
+change_stargazer_type <- function()
+{  return("html")  }
+s.type <- change_stargazer_type()
+```
+
+
+
+## Week 3 – Descriptive Analysis of Community Change 
+
+
+For this part of the project you will: 
+
+- Calculate change in MHV variable 2000-2010.
+- Describe patterns we see across all tracts – are home values changing? 
+-	Describe gentrification 2000-2010 
+-	Using 2 of your community health indices, report whether communities changed from 2000 to 2010
+- Pick a city and create a dorling cartogram for demo purposes
+
+
+
+## Load Data
+
+See the data steps for the wrangling that occurs during the process of creating our rodeo datasets. 
+
+```{r}
+d1 <- readRDS( "data/rodeo/LTDB-2000.rds" )
+d2 <- readRDS( "data/rodeo/LTDB-2010.rds" )
+md <- readRDS( "data/rodeo/LTDB-META-DATA.rds" )
+
+# check to make sure we are not losing 
+# or gaining observations in the merge
+nrow( d1 ) 
+
+d1 <- select( d1, - year )
+d2 <- select( d2, - year )
+
+d <- merge( d1, d2, by="tractid" )
+d <- merge( d, md, by="tractid" )
+
+nrow( d )
+```
+
+
+
+## Filter Rural Districts 
+
+```{r}
+table( d$urban )
+d <- filter( d, urban == "urban" )
+```
+
+
+## Identify Common Variables
+
+We can create a function to compare variables from the 2000 and 2010 datasets: 
+
+
+
+```{r}
+# find variables that are in both files
+compare_dfs <- function( df1, df2 )
+{
+  # use regular expressions to remove numeric suffixes 
+  var.names.1 <- names( df1 )
+  var.names.1 <- gsub( "[.][xy]$", "", var.names.1 )
+  var.names.1 <- gsub( "[0-9]{2}$", "", var.names.1 )
+  
+  var.names.2 <- names( df2 )
+  var.names.2 <- gsub( "[.][xy]$", "", var.names.2 )
+  var.names.2 <- gsub( "[0-9]{2}$", "", var.names.2 )
+  
+  shared <- intersect( var.names.1, var.names.2 ) %>% sort()
+  print( "SHARED VARIABLES:")
+  print( shared )
+  
+  not.shared <- c( setdiff( var.names.1, var.names.2 ),
+                   setdiff( var.names.2, var.names.1 ) ) %>% sort()
+  
+  print( "NOT SHARED:" )
+  print( not.shared )
+  
+  d.vars1 <- data.frame( type="shared", variables=shared, stringsAsFactors=F )
+  d.vars2 <- data.frame( type="not shared", variables=not.shared, stringsAsFactors=F )
+  dd <- rbind( d.vars1, d.vars2 )
+  
+  return( dd )
+}
+
+vars <- compare_dfs( df1=d1, df2=d2 )
+```
+
+```{r}
+head( vars )
+```
+
+Create subset for the analysis
+
+```{r}
+d.full <- d  # keep so don't have to reload 
+```
+
+
+```{r}
+d <- d.full  # story original in case you need to reset anything
+
+d <- select( d, tractid, mhmval00, mhmval12, hinc00, 
+             hu00, own00, rent00,  
+             empclf00, clf00, unemp00, prof00,  
+             dpov00, npov00,
+             ag25up00, hs00, col00, 
+             pop00.x, nhwht00, nhblk00, hisp00, asian00,
+             cbsa, cbsaname )
+d <- 
+  d %>%
+  mutate( p.white = 100 * nhwht00 / pop00.x,
+          p.black = 100 * nhblk00 / pop00.x,
+          p.hisp = 100 * hisp00 / pop00.x, 
+          p.asian = 100 * asian00 / pop00.x,
+          p.hs = 100 * (hs00+col00) / ag25up00,
+          p.col = 100 * col00 / ag25up00,
+          p.prof = 100 * prof00 / empclf00,
+          p.unemp = 100 * unemp00 / clf00,
+          pov.rate = 100 * npov00 / dpov00 )
+
+```
+
+
+```{r, results="asis"}
+stargazer( d, type=s.type, digits=0,
+           summary.stat = c("min", "p25","median","mean","p75","max"))
+```
+
+
+## Median Home Value
+
+
+Initial conditions 2000:
+
+
+```{r, results="asis"}
+# adjust 2000 home values for inflation 
+mhv.00 <- d$mhmval00 * 1.28855  
+mhv.10 <- d$mhmval12
+
+mhv.change <- mhv.10 - mhv.00
+
+df <- data.frame( MedianHomeValue2000=mhv.00, 
+                  MedianHomeValue2010=mhv.10, 
+                  Change.00.to.10=mhv.change )
+
+stargazer( df, type=s.type, digits=0, 
+           summary.stat = c("min", "p25","median","mean","p75","max") )
+```
+
+```{r, fig.height=6}
+hist( mhv.change/1000, breaks=500, 
+      xlim=c(-100,500), yaxt="n", xaxt="n",
+      xlab="Thousand of US Dollars (adjusted to 2010)", cex.lab=1.5,
+      ylab="", main="Change in Median Home Value 2000 to 2010",
+      col="gray20", border="white" )
+
+axis( side=1, at=seq( from=-100, to=500, by=100 ), 
+      labels=paste0( "$", seq( from=-100, to=500, by=100 ), "k" ) )
+        
+mean.x <- mean( mhv.change/1000, na.rm=T )
+abline( v=mean.x, col="darkorange", lwd=2, lty=2 )
+text( x=200, y=1500, 
+      labels=paste0( "Mean = ", dollar( round(1000*mean.x,0)) ), 
+      col="darkorange", cex=1.8, pos=3 )
+
+median.x <- median( mhv.change/1000, na.rm=T )
+abline( v=median.x, col="dodgerblue", lwd=2, lty=2 )
+text( x=200, y=2000, 
+      labels=paste0( "Median = ", dollar( round(1000*median.x,0)) ), 
+      col="dodgerblue", cex=1.8, pos=3 )
+```
+
+
+
+
+```{r}
+jplot <- function( x1, x2, lab1="", lab2="", draw.line=T, ... )
+{
+
+	plot( x1, x2,
+	      pch=19, 
+	      col=gray(0.6, alpha = 0.2), 
+	      cex=2.5,  
+	      bty = "n",
+	      xlab=lab1, 
+	      ylab=lab2, cex.lab=1.5,
+        ... )
+
+	if( draw.line==T ){ 
+		ok <- is.finite(x1) & is.finite(x2)
+		lines( lowess(x2[ok]~x1[ok]), col="red", lwd=3 ) }
+
+}
+```
+
+
+
+```{r, fig.height=4}
+layout.matrix <- matrix( c( 1,3,
+                            2,3 ), 
+                nrow=2, ncol=2, byrow=T )
+
+layout( mat = layout.matrix,
+        heights = c(2,2), # Heights of the two rows
+        widths =  c(3,4)) # Widths of the two columns
+
+# layout.show(3)
+
+par( mar=c(4,0,0,2) )
+
+hist( mhv.00/1000, breaks=50, 
+      xlim=c(-200,800), yaxt="n", xaxt="n",
+      xlab="", cex.lab=1,
+      ylab="", main="",
+      col="darkslateblue", border="white" )
+
+axis( side=1, at=seq( from=0, to=1000, by=100 ), 
+      labels=paste0( "$", seq( from=0, to=1000, by=100 ), "k" ) )
+
+abline( v=seq(0,1000,100), lty=2, col="gray80" )
+
+text( 550, 4000, labels="Median Home \nValue in 2000", 
+      col="darkslateblue", cex=1.8 )
+
+
+
+hist( mhv.10/1000, breaks=50, 
+      xlim=c(-200,800), yaxt="n", xaxt="n",
+      xlab="", cex.lab=1,
+      ylab="", main="",
+      col="darkslateblue", border="white" )
+
+abline( v=seq(0,1000, 100 ), lty=2, col="gray80" )
+
+text( 550, 3500, labels="Median Home \nValue in 2010", 
+      col="darkslateblue", cex=1.8 )
+
+axis( side=1, at=seq( from=0, to=1000, by=100 ), 
+      labels=paste0( "$", seq( from=0, to=1000, by=100 ), "k" ) )
+
+
+# data reduction - filter 1,000 observations
+
+df <- data.frame( v00=mhv.00/1000, v10=mhv.10/1000 )
+df <- sample_n( df, 1000 )
+
+par( mar=c(4,5,3,2) )
+
+jplot( df$v00, df$v10, 
+       xlim=c(0,1000), ylim=c(0,1000),
+       axes=F )
+
+abline( a=0, b=1, lty=2, col="gray" )
+axis( side=1, at=seq( from=0, to=1000, by=200 ), 
+      labels=paste0( "$", seq( from=0, to=1000, by=200 ), "k" ) )
+axis( side=2, at=seq( from=0, to=1000, by=200 ), 
+      labels=paste0( "$", seq( from=0, to=1000, by=200 ), "k" ) )
+```
+
+
+
+```{r}
+# small initial values are skewing percentages
+#
+# an average home value below $10k is really low -
+# these must be mostly vacant lots?
+
+mhv.00[ mhv.00 < 10000 ] <- NA
+pct.change <- mhv.change / mhv.00
+summary( pct.change )
+```
+
+
+
+```{r, fig.height=6}
+hist( pct.change, breaks=500, 
+      xlim=c(-1,2), yaxt="n", xaxt="n",
+      xlab="", cex.main=1.5,
+      ylab="", main="Growth in Home Value by Census Tract 2000 to 2010",
+      col="gray40", border="white" )
+
+axis( side=1, at=seq( from=-1, to=2, by=0.5 ), 
+      labels=paste0( seq( from=-100, to=200, by=50 ), "%" ) )
+        
+mean.x <- mean( pct.change, na.rm=T )
+abline( v=mean.x, col="darkorange", lwd=2, lty=2 )
+text( x=1, y=5000, 
+      labels=paste0( "Mean = ", round(100*mean.x,0), "%"), 
+      col="darkorange", cex=1.8, pos=4 )
+
+median.x <- median( pct.change, na.rm=T )
+abline( v=median.x, col="dodgerblue", lwd=2, lty=2 )
+text( x=1, y=6000, 
+      labels=paste0( "Median = ", round(100*median.x,0), "%"), 
+      col="dodgerblue", cex=1.8, pos=4 )
+```
+
+```{r}
+# how many cases had increases above 500%
+sum( pct.change > 5, na.rm=T )
+
+# preview tracts with large increases in home values 
+d %>% 
+  filter( pct.change > 5 ) %>% 
+  head() %>% 
+  pander()
+```
+
+
+
+
+## By Metro Area
+
+```{r}
+d$mhv.change <- mhv.change 
+d$pct.change <- pct.change
+d$mhv.10 <- mhv.10
+d$mhv.00 <- mhv.00
+
+d %>%
+  group_by( cbsaname ) %>%
+  summarize( ave.change = median( mhv.change, na.rm=T ),
+             ave.change.d = dollar( round(ave.change,0) ),
+             growth = 100 * median( pct.change, na.rm=T ) ) %>%
+  ungroup() %>%
+  arrange( - growth ) %>%
+  select( - ave.change ) %>% 
+  head( 25 ) %>%
+  pander()
+```
+
+
+
+## Mapping Data
+
+Dust off your GIS skills from CPP 529 so that you can visualize some of your metrics. 
+
+
+You will need to pick one or more cities that you can use as examples in your report. It is strongly recommended that you create a dorling cartogram for reporting since Census tracts introduce visual bias by over-empasizing lower density tracts and hiding a lot of the data where the greatest number of people reside in the city. Recall that Dorling cartograms correct for this by re-sizing administrative units proportion to the size of the population they represent. 
+
+The lab from CPP 528 that covers creating Dorling cartograms is locate here:
+
+https://ds4ps.org/cpp-529-master/labs/lab-04-instructions.html
+
+
+```{r}
+# devtools::install_github( "sjewo/cartogram" )
+# install.packages( "tmap" )
+
+library( geojsonio )
+library( sp )
+library( cartogram )  # spatial maps w/ tract size bias reduction
+library( tmap )       # thematic maps
+library( maptools )   # spatial object manipulation 
+library( sf )         # 'simple features' flavor of shapefiles
+
+
+# we have phoenix already packaged and on GitHub for easy load: 
+
+github.url <- "https://raw.githubusercontent.com/DS4PS/cpp-529-master/master/data/phx_dorling.geojson"
+phx <- geojson_read( x=github.url,  what="sp" )
+plot( phx )
+```
+
+
+
+```{r}
+# create small dataframe
+d$mhv.change <- mhv.change 
+d$pct.change <- pct.change
+d$mhv.10 <- mhv.10
+d$mhv.00 <- 
+
+# create GEOID that matches their format
+df <- data.frame( tractid=d$tractid, mhv.00, mhv.10, mhv.change, pct.change )
+# create a geoID for merging by tract 
+df$GEOID <- substr( df$tractid, 6, 18 )
+df$GEOID <- gsub( "-", "", df$GEOID )
+
+# merge census data with dorling map
+phx <- merge( phx, df, by.x="GEOID", by.y="GEOID" )
+
+```
+
+
+```{r}
+phx <- spTransform( phx, CRS("+init=epsg:3395") )
+
+bb <- st_bbox( c( xmin = -12519146, xmax = -12421368, 
+                 ymax = 3965924, ymin = 3899074 ), 
+               crs = st_crs("+init=epsg:3395")) 
+
+tm_shape( phx, bbox=bb ) + 
+  tm_polygons( col="mhv.00", n=10, style="quantile", palette="Spectral" ) +
+  tm_layout( "Dorling Cartogram", title.position=c("right","top") )
+
+tm_shape( phx, bbox=bb ) + 
+  tm_polygons( col="mhv.change", n=10, style="quantile", palette="Spectral" ) +
+  tm_layout( "Dorling Cartogram", title.position=c("right","top") )
+
+tm_shape( phx, bbox=bb ) + 
+  tm_polygons( col="pct.change", n=10, style="quantile", palette="Spectral" ) +
+  tm_layout( "Dorling Cartogram", title.position=c("right","top") )
+```
+
+
+## Targetted Communities
+
+We need to think about how we can use program eligibility as a way of creating a treatment group in the study. We can visit the website to read more about which Census tracts might be eligible to receive federal block grants for revitalization projects:
+
+https://www.cohnreznick.com/nmtc-map
+
+> Census tract meets at least one of the following two criteria based on 2006- 2010 American Community Survey data:
+> 
+> * Poverty rate of 20% or greater
+> * Median family income of 80% or less of that area’s median family income
+
+Or: 
+
+> Census tract meets at least one of the following two criteria based on 2011- 2015 American Community Survey data:
+> 
+> * Poverty rate of 20% or greater
+> * Median family income of 80% or less of that area’s median family income
+
+
+The first criteria is fairly straight-forward except for selecting a poverty measure (see the data dictionary for the difference between dpov and npov before constructing the variable. 
+
+```{r}
+# urban communities
+nrow( d ) 
+
+# proportion of tracts with poverty rate greater than 20%.
+mean( d$pov.rate > 20, na.rm=T )
+```
+
+
+The second is a little trickier because it is asking not for 80% of the national income (all census tracts), but rather of local poverty rates. This can be operationalized as the metro-level mean instead of the average for the country. Here is where we need the external meta-data on Core Based Statistical Areas (CBSAs), which is how the Census defines cities. 
+
+```{r, eval=F}
+d <- dat
+
+d <-
+  d %>%
+  group_by( cbsaname ) %>%
+  mutate( inc.pctile = percent_rank( hinc00),
+             median.pay = median( hinc00, na.rm=T )  ) %>%
+  ungroup()
+```
+
+
+Meet both criteria:
+
+```{r}
+pov.line <- d$pov.rate > 20
+inc.line <- d$inc.pctile < 0.8
+
+these <- pov.line & inc.line
+
+sum( these, na.rm=T )
+mean( these, na.rm=T )
+```
+
+Overall approximately 19 percent of all census tracts quality for the New Market Tax Credits program.
+
+
+
+<br>
+<br>
+
+<hr>
+
+<br>
+<br>
+
+
+
+
+
+
+<style>
+blockquote {
+    padding: 11px 22px;
+    margin: 0 0 22px;
+    font-size: 18px;
+    border-left: 5px solid lightgray;
+}
+
+</style>
+
