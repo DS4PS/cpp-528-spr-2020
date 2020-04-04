@@ -1401,6 +1401,20 @@ This allows us to isolate errors made in preparing the data (data wrangling) fro
 
 You should not be doing data wrangling in your analytical steps with the exception of variable transformations related to modeling. For example, creating a squared value of a variable X to use in a quadratic model, logging a variable, or dividind by a constant to change the unit of analysis. Since these are steps related directly to the modeling process it is helpful to keep them together. 
 
+**Working with GitHub Desktop***
+
+The following video showcases how to collaborate on GitHub using GitHub Desktop and RStudio. The video shows how to: 
+
+* clone a repository from GitHub;
+* create a new branch from master;
+* commit your changes;
+* push your changes;
+* submit a pull request;
+* add commits to a branch other than master; and 
+* how to pull in changes from master.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nFPPJHmX7Lc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <br> 
 
 
@@ -1499,32 +1513,14 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 
 
 
-*** { @unit = "", @title = "Unit Overview" }
+*** { @unit = "", @title = "Unit Overview", @foldout }
 
 
 <br>
 
+This unit covers the data steps necessary to wrangle the harmonized census data into a meaningful format necessary to conduct descriptive analysis with the data. 
+
 ![](https://raw.githubusercontent.com/DS4PS/cpp-528-spr-2020/master/assets/img/median-home-value-change-2000-to-2010.png)
-
-
-Week 3 – Descriptive Analysis of Community Change 
-
-•	Calculate change in MHV variable 1990-2000, 2000-2010
-o	Describe patterns across all tracts – change in value in $s
-o	Compare patterns across all tracts – change in within-metro percentile 
-
-•	Describe gentrification 2000-2010 
-
-•	Describe community health indices
-o	Compare city averages 
-o	Change 2000-2010
-
-•	Pick a city and create a dorling cartogram 
-o	Create maps 2000, 2010, and change for each var
-o	Include baseline descriptives that are useful 
-
-•	DISCUSSION – people versus places 
-
 
 <br>
 
@@ -1535,6 +1531,23 @@ o	Include baseline descriptives that are useful
 *** { @unit = "MON Apr 6th", @title = "Lab 03", @assignment }
 
 <br>
+
+Week 3 – Descriptive Analysis of Community Change 
+
+For this part of the project you will: 
+
+- Calculate change in MHV variable 2000-2010.
+- Describe patterns we see across all tracts – are home values changing? 
+-	Describe gentrification 2000-2010 
+-	Using 2 of your community health indices, report whether communities changed from 2000 to 2010
+- Pick a city and create a dorling cartogram for demo purposes
+
+ 
+
+[DATA STEPS](https://ds4ps.org/cpp-528-spr-2020/labs/PROJECT-DATA-STEPS.html)
+
+[Lab 03 Tutorial](lab-03-tutorial.html)
+
 <br>
 
 
