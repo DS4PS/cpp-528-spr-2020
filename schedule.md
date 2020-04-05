@@ -1577,12 +1577,14 @@ You will follow the steps that were deployed to accomplish this, build a new dat
 
 
 
-*** { @unit = "MON Apr 6th", @title = "Lab 03", @assignment, @foldout }
+*** { @unit = "MON Apr 13th", @title = "Lab 03", @assignment, @foldout }
 
 <br>
 
 ## Lab Instructions
  
+*NOTE that the due date has been extended a week. Lab 03 and Lab 04 are both due on the same date. Additional code has been provided in the lab to siplify your tasks in order to account for the compressed schedule.*
+
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-528-spr-2020/labs/lab-03-instructions.html">LAB INSTRUCTIONS</a>
 
