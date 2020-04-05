@@ -1704,7 +1704,7 @@ The following code will provide a template for analysis of neighborhood change.
 
 
 
-*** { @unit = "FRI Apr 17thth", @title = "YellowDig Discussion", @assignment }
+*** { @unit = "FRI Apr 17th", @title = "YellowDig Discussion", @assignment }
 
 <br>
 
