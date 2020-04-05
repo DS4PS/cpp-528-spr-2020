@@ -1469,20 +1469,33 @@ As we all know, bad input inevitably leads to bad output. Therefore no matter wh
 
 <br>
 
+## Revisiting Gentrification 
 
-### Subsidies distort incentives 
+The problem with neighborhood revitalization initiatives is it is hard to measure success using readily available census data. We want the neighborhoods to get "better". But what does better look like? And for who? 
 
-US healthcare is so expensive relative to other countries because health insurance distorts incentives. If you have insurance then the marginal cost of selecting premium care over basic or preventative care is very low. If you are a doctor practicing medicine in a system where hospitals are frequently sued then any time you have to make a decision involving a treatment that probably won't help but likely won't hurt you will take the safe option and prescribe more procedures and name-brand drugs to protect yourself. As a result neither patients nor doctors have any incentive to control costs.
+This project emphasizes gentrification for two reasons. One if philosophical and related to the concept of a theory of change. Neighborhood revitalization projects were designed to address the concentrated poverty and blight that has a negative impact on the community that lives there. Conceptually we would like to improve the well-being of peole in the community *through* the neighborhood, not simply give the neighborhood a face lift. The challenge is that if we are not careful about designing programs or measuring outcomes we will end up "improving" the neighborhood by pushing all of the residents out. For example, if we focus on things like income and educational outcomes for children, the easiest way to improve these metrics is to replace poor households that are moving with wealthier and better-educated families. This strategy is anti-thetical to the goal of improving quality of life and social mobility for residents.
 
-Similarly, economic development policy that was designed to help communities can actually hurt them. Development is capital-intensive, which means most poor communities do not have the resources needed to catalyze their own growth. So state and federal programs have been created to cover infrastructure costs and programs to attract or expand companies. But they are problematic in that they pay 
+The second reason why gentrification is important for this project is because it must be measured with data. You will find that if you change the defition of gentrification slightly, you can change the outcome greatly. Forcing you to operationalize gentrification in the study forces you to think critically about the data, and to pay attention to how others are using the same data. 
 
-https://www.strongtowns.org/journal/2018/8/22/the-more-we-grow-the-poorer-we-become-td9nw
+Some [recent studies](https://github.com/DS4PS/cpp-528-spr-2020/blob/master/articles/gentrification/gentrification-in-america-report.pdf) have sounded the alarm that gentrification is accelerating: 20 percent of low-income communities experienced gentrification between 2000 and 2010, almost twice the rate of gentrification in the 1990s. (side note - please keep this statistic in mind for next week's topic on urban renewal)
 
+A recent study turns a lot of the debate on its head by using better data to track movement into and out of neighborhoods by poor families. They find that displacement caused by gentrification is way less than expected, and they call into question the way in which gentrification is measured.
 
-https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.html
+Please [read this short blog](https://www.strongtowns.org/journal/2019/8/1/untangling-gentrification-and-displacement) on the topic. 
 
+The research raises two important questions: (1) how do we measure gentrification? And (2) how prevelant is it? 
 
+In next week's lab on descriptive analysis of census tracts you will be asked to report on the level of gentrification you observe, which requires you to measure it. Note the diversity and nuance of some approached to measurement. For example, [THIS METHODOLOGY](https://github.com/DS4PS/cpp-528-spr-2020/blob/master/articles/gentrification/gentrification-methodology.pdf) by The Urban Displacement Project uses a taxonomy of five stages of gentrification to be more precise about the process. 
 
+For your YellowDig discussion this week propose a method for operationalizing the identification of gentrification in census data using variables in the harmonized census LTDB files. Specify: 
+
+(1) The criteria used to classify a census tract as eligible to be gentrified (a tract that is already wealthy and white cannot be further gentrified). 
+
+(2) The criteria you will use to determine whether the tract experienced gentrification between 2000 and 2010. 
+
+Explain your methodology to your classmates. 
+
+Next week, after you have finished your lab report back on what level of gentrification you found. Was it more or less than you expected? 
 
 **Post your reflection YellowDig:**
 
@@ -1509,7 +1522,7 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 ######################################################
 -->
 
-** Week 3 - Descriptive Analysis of Neighborhood Change
+** Week 3 - Putting Your Data House in Order
 
 
 
@@ -1518,59 +1531,110 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 
 <br>
 
-This unit covers the data steps necessary to wrangle the harmonized census data into a meaningful format necessary to conduct descriptive analysis with the data. 
+## Building a Neighborhood Change Database
+
+In this project we are ultimately interested in building models to explain neighborhood change between 1990 and 2010.
 
 ![](https://raw.githubusercontent.com/DS4PS/cpp-528-spr-2020/master/assets/img/median-home-value-change-2000-to-2010.png)
 
+Census data is central to this analysis. We have begun using the harmonized Longitudinal Tracts Data Base, and by now you understand the challenges of working with the data. 
+
+This unit covers the remaining data steps necessary to wrangle the harmonized census data into a meaningful format necessary to conduct descriptive analysis. 
+
+<br>
+
+## Lessons on Using Open Data
+
+In my experience Census data is ALWAYS way more complicated than it needs to be because it was designed by people whose primary job is to collect the data and build datasets. They are not the primary users of the data. Since they have to publish tables that allow policy-makers to ask and answer thousands of questions about US society in a way that doesn't violate privacy of individuals, the result is a framework with over 40,000 variables to account for myriad combinations of multiple variables that are needed to answer specifc questions. And also the result is an overwhelming amount of information and complixity for the typical user. 
+
+The week's lab demonstrates an important and strategic approach to using open-source administrative datasets. Just because you are using a free data source, you don't have to use their architecture. If the strugure of the data is confusing, find a framing that makes sense for you and your use cases and convert the raw data to that architecture. It is an up-front cost that often pays back the time invested with dividends. 
+
+I learned this lesson speaking with the DataWheel team, a group of programmers from MIT that started a company that creates awesome visualizations and reports using government data, most prominently on the DataUSA.io website. They describe their work in the following way: 
+
+> Our team, comprised of economists, data scientists, designers, researchers and business executives, worked for over a year with input from policymakers, government officials and everyday citizens to develop Data USA, the most comprehensive website and visualization engine of public US Government data. 
+> 
+> Data USA puts public US Government data in your hands. Instead of searching through multiple data sources that are often incomplete and difficult to access, you can simply point to Data USA to answer your questions. Data USA provides an open, easy-to-use platform that turns data into knowledge. It allows millions of people to conduct their own analyses and create their own stories about America – its people, places, industries, skill sets and educational institutions. Ultimately, accelerating society’s ability to learn and better understand itself.
+
+The brilliant thing they have done is taking data that is already *public* and *free* but almost impossible to use because of its complexity, and they redesigned the databases to make it easier to use. The reason their site works so well is they have essentially rebuilt two dozen large government databases, but removed all of the legacy design limitations and added the insight that the data needs to be linked to be valuable. They then built an API so that they can share the data with themselves. Specifically, each time a webpage is loaded for a city or other location it pulls the data on the locality fresh from their datbases and renders all of the website content in real time. 
+
+It's a simple insight, but an important one. When you start a large data project you should always be asking yourself, what would the data need to look like to make my analysis easy to implement? 
+
+
+## Lab Preview 
+
+This lab demonstrates a very minor redesign of the Longitudinal Tracts Database files to make the rest of the project smoother. 
+
+Variable names are standardized, files combined, meta-data on tracts made accessible, and a harmonization file is created to make it much faster and easier to use variables within the ten datasets. 
+
+You will follow the steps that were deployed to accomplish this, build a new data dictionary that has a more intuitive structure, and create a couple of functions to operationalize a more intuitive work flow with the data. 
+
+<br>
 <br>
 
 
 
 
 
-*** { @unit = "MON Apr 6th", @title = "Lab 03", @assignment }
+
+
+*** { @unit = "MON Apr 13th", @title = "Lab 03", @assignment, @foldout }
 
 <br>
 
-Week 3 – Descriptive Analysis of Community Change 
-
-For this part of the project you will: 
-
-- Calculate change in MHV variable 2000-2010.
-- Describe patterns we see across all tracts – are home values changing? 
--	Describe gentrification 2000-2010 
--	Using 2 of your community health indices, report whether communities changed from 2000 to 2010
-- Pick a city and create a dorling cartogram for demo purposes
-
+## Lab Instructions
  
+*NOTE that the due date has been extended a week. Lab 03 and Lab 04 are both due on the same date. Additional code has been provided in the lab to siplify your tasks in order to account for the compressed schedule.*
 
-[DATA STEPS](https://ds4ps.org/cpp-528-spr-2020/labs/PROJECT-DATA-STEPS.html)
 
-[Lab 03 Tutorial](lab-03-tutorial.html)
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-528-spr-2020/labs/lab-03-instructions.html">LAB INSTRUCTIONS</a>
 
+<br>
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">Submit Lab</a>
+
+<br>
 <br>
 
 
 
 
-*** { @unit = "FRI Apr 10th", @title = "YellowDig Discussion", @assignment }
+
+
+
+
+
+
+*** { @unit = "FRI Apr 10th", @title = "YellowDig Discussion", @assignment, @foldout }
 
 <br>
 
+## Revisiting Gentrification 
 
-### Subsidies distort incentives 
+The problem with neighborhood revitalization initiatives is it is hard to measure success using readily available census data. We want the neighborhoods to get "better". But what does better look like? And for who? 
 
-US healthcare is so expensive relative to other countries because health insurance distorts incentives. If you have insurance then the marginal cost of selecting premium care over basic or preventative care is very low. If you are a doctor practicing medicine in a system where hospitals are frequently sued then any time you have to make a decision involving a treatment that probably won't help but likely won't hurt you will take the safe option and prescribe more procedures and name-brand drugs to protect yourself. As a result neither patients nor doctors have any incentive to control costs.
+This project emphasizes gentrification for two reasons. One if philosophical and related to the concept of a theory of change. Neighborhood revitalization projects were designed to address the concentrated poverty and blight that has a negative impact on the community that lives there. Conceptually we would like to improve the well-being of peole in the community *through* the neighborhood, not simply give the neighborhood a face lift. The challenge is that if we are not careful about designing programs or measuring outcomes we will end up "improving" the neighborhood by pushing all of the residents out. For example, if we focus on things like income and educational outcomes for children, the easiest way to improve these metrics is to replace poor households that are moving with wealthier and better-educated families. This strategy is anti-thetical to the goal of improving quality of life and social mobility for residents.
 
-Similarly, economic development policy that was designed to help communities can actually hurt them. Development is capital-intensive, which means most poor communities do not have the resources needed to catalyze their own growth. So state and federal programs have been created to cover infrastructure costs and programs to attract or expand companies. But they are problematic in that they pay 
+The second reason why gentrification is important for this project is because it must be measured with data. You will find that if you change the defition of gentrification slightly, you can change the outcome greatly. Forcing you to operationalize gentrification in the study forces you to think critically about the data, and to pay attention to how others are using the same data. 
 
-https://www.strongtowns.org/journal/2018/8/22/the-more-we-grow-the-poorer-we-become-td9nw
+Some [recent studies](https://github.com/DS4PS/cpp-528-spr-2020/blob/master/articles/gentrification/gentrification-in-america-report.pdf) have sounded the alarm that gentrification is accelerating: 20 percent of low-income communities experienced gentrification between 2000 and 2010, almost twice the rate of gentrification in the 1990s. (side note - please keep this statistic in mind for next week's topic on urban renewal)
 
+A recent study turns a lot of the debate on its head by using better data to track movement into and out of neighborhoods by poor families. They find that displacement caused by gentrification is way less than expected, and they call into question the way in which gentrification is measured.
 
-https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.html
+Please [read this short blog](https://www.strongtowns.org/journal/2019/8/1/untangling-gentrification-and-displacement) on the topic. 
 
+The research raises two important questions: (1) how do we measure gentrification? And (2) how prevelant is it? 
 
+In next week's lab on descriptive analysis of census tracts you will be asked to report on the level of gentrification you observe, which requires you to measure it. Note the diversity and nuance of some approached to measurement. For example, [THIS METHODOLOGY](https://github.com/DS4PS/cpp-528-spr-2020/blob/master/articles/gentrification/gentrification-methodology.pdf) by The Urban Displacement Project uses a taxonomy of five stages of gentrification to be more precise about the process. 
 
+For your YellowDig discussion this week propose a method for operationalizing the identification of gentrification in census data using variables in the harmonized census LTDB files. Specify: 
+
+(1) The criteria used to classify a census tract as eligible to be gentrified (a tract that is already wealthy and white cannot be further gentrified). 
+
+(2) The criteria you will use to determine whether the tract experienced gentrification between 2000 and 2010. 
+
+Explain your methodology to your classmates. 
+
+Next week, after you have finished your lab report back on what level of gentrification you found. Was it more or less than you expected? 
 
 **Post your reflection YellowDig:**
 
@@ -1598,7 +1662,8 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 ######################################################
 -->
 
-** Week 4 - Predictive Analysis of Neighborhood Change  
+
+** Week 4 - Analysis of Neighborhood Change  
 
 
 
@@ -1607,6 +1672,17 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 <br>
 
 <br>
+
+Week 3 – Descriptive Analysis of Community Change 
+
+For this part of the project you will: 
+
+- Calculate change in MHV variable 2000-2010.
+- Describe patterns we see across all tracts – are home values changing? 
+-	Describe gentrification 2000-2010 
+-	Using 2 of your community health indices, report whether communities changed from 2000 to 2010
+- Pick a city and create a dorling cartogram for demo purposes
+
 
 
 *** { @unit = "", @title = "Hedonic Pricing Methodology", @reading, @foldout }
@@ -1644,6 +1720,11 @@ Since we are using the median home value variable which represents an entire cen
 *** { @unit = "FRI Apr 17thth", @title = "YellowDig Discussion", @assignment }
 
 <br>
+
+## Factors Driving Neighborhood Change
+
+Accounting for Central Neighborhood Change, 1980-2010
+
 
 
 ### Subsidies distort incentives 
