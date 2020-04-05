@@ -1667,43 +1667,30 @@ Next week, after you have finished your lab report back on what level of gentrif
 
 
 
-*** { @unit = "", @title = "Unit Overview" }
+*** { @unit = "", @title = "Unit Overview", @foldout }
 
 <br>
 
-<br>
-
-Week 3 – Descriptive Analysis of Community Change 
+## Descriptive Analysis of Community Change 
 
 For this part of the project you will: 
 
-- Calculate change in MHV variable 2000-2010.
-- Describe patterns we see across all tracts – are home values changing? 
--	Describe gentrification 2000-2010 
--	Using 2 of your community health indices, report whether communities changed from 2000 to 2010
-- Pick a city and create a dorling cartogram for demo purposes
+- Using the 2000 to 2010 template, calculate change in the MHV variable between 1990 and 2000.
+-	Measure gentrification that occurs between 2000-2010.
+- Pick a city and create a new dorling cartogram to visualize your data.
+- Prepare descriptive statistics and chloropleth maps describing the MHV change variable, gentrification, and your neighborhood health metrics. 
 
+## Tutorial on Descriptive Analysis
 
+The following code will provide a template for analysis of neighborhood change.
 
-*** { @unit = "", @title = "Hedonic Pricing Methodology", @reading, @foldout }
-
-
-<br>
-
-Introduction to models where the outcome is home value: hedonic pricing models. 
-
-The main insight is that home price is a variable that aggregates a tremendous amount of information about characteristics of houses, neighborhoods, and cities. We can use regression to separate out these difference attributes at different levels, and see they each contributes to the market value of a home. 
-
-Since we are using the median home value variable which represents an entire census tract we focus on how neighborhood attributes and changes in attributes over time impact the average home price in the tract. 
-
-[Hedonic Pricing Models Overview](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/home-value-change/hedonic-pricing-method.pdf)
-
-[Hedonic Pricing Regression Example in R](https://github.com/buruzaemon/hedonic)
-
-[Valuation Using Hedonic Pricing Models](https://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1058&context=crer)
-
+[TUTORIAL ON DESCRIPTIVE ANALYSIS](labs/lab-04-tutorial.html)
 
 <br>
+
+
+
+
 
 
 
@@ -1712,8 +1699,6 @@ Since we are using the median home value variable which represents an entire cen
 <br>
 
 <br>
-
-
 
 
 
@@ -1769,7 +1754,7 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 ######################################################
 -->
 
-** Week 5 - Federal Program Data
+** Week 5 - Predicting Neighborhood Change 
 
 
 *** { @unit = "", @title = "Unit Overview" }
@@ -1779,6 +1764,31 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 
 
 <br>
+
+
+
+*** { @unit = "", @title = "Hedonic Pricing Methodology", @reading, @foldout }
+
+
+<br>
+
+Introduction to models where the outcome is home value: hedonic pricing models. 
+
+The main insight is that home price is a variable that aggregates a tremendous amount of information about characteristics of houses, neighborhoods, and cities. We can use regression to separate out these difference attributes at different levels, and see they each contributes to the market value of a home. 
+
+Since we are using the median home value variable which represents an entire census tract we focus on how neighborhood attributes and changes in attributes over time impact the average home price in the tract. 
+
+[Hedonic Pricing Models Overview](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/home-value-change/hedonic-pricing-method.pdf)
+
+[Hedonic Pricing Regression Example in R](https://github.com/buruzaemon/hedonic)
+
+[Valuation Using Hedonic Pricing Models](https://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1058&context=crer)
+
+
+<br>
+
+
+
 
 *** { @unit = "MON Apr 20th", @title = "Lab 05", @assignment  }
 
@@ -1833,7 +1843,7 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 ######################################################
 -->
 
-** Week 6 - Final Regression Models 
+** Week 6 - Adding Federal Program Data 
 
 
 
