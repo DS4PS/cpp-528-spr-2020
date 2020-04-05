@@ -1,280 +1,212 @@
-root,root2,category,definition,1970.f,1970.s,1980.f,1980.s,1990.f,1990.s,2000.f,2000.s,2010.f,2010.s,,,,,,,,
-state,state,id,,state,state,state,state,state,state,state,state,state,statea,,,,,,,,
-county,county,id,,county,county,county,county,county,county,county,county,county,countya,,,,,,,,
-tract,tract,id,,tract,tract,tract,tract,tract,tract,tract,tract,tract,tracta,,,,,,,,
-trtid,trtid,id,,TRTID10,TRTID10,TRTID10,trtid10,TRTID10,TRTID10,TRTID10,TRTID10,tractid,tractid,,,,,,,,
-cbsa,cbsa,id,,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,,,,,,,,,,
-ccflag,ccflag,id,,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,,,,,,,,,,
-metdiv,metdiv,id,,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,,,,,,,,,,
-placefp,placefp,id,,placefp10,placefp10,placefp10,placefp10,placefp10,placefp10,placefp10,placefp10,,,,,,,,,,
-globd,globd,id,,,,GlobD80,,GlobD90,,GlobD00,,GlobD10,,,,,,,,,
-globg,globg,id,,,,GlobG80,,GlobG90,,GlobG00,,GlobG10,,,,,,,,,
-placefp,,id,,,,placefp10,placefp10,placefp10,placefp10,placefp10,placefp10,,,,,,,,,,
-cbsa,,id,,,,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,,,,,,,,,,
-metdiv,,id,,,,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,,,,,,,,,,
-ccflag,,id,,,,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-a15asn,a15asn,age-race,,,,,a15asn80,A15ASN90,,A15ASN00,,a15asn10,a15asn12,,,,,,,,
-a15blk,a15blk,age-race,,A15BLK70,,,a15blk80,A15BLK90,,A15BLK00,,a15blk10,a15blk12,,,,,,,,
-a15hsp,a15hsp,age-race,,,,,a15hsp80,A15HSP90,,A15HSP00,,a15hsp10,a15hsp12,,,,,,,,
-a15ntv,a15ntv,age-race,,,,,a15ntv80,A15NTV90,,A15NTV00,,a15ntv10,a15ntv12,,,,,,,,
-a15wht,a15wht,age-race,,A15WHT70,,,a15wht80,A15WHT90,,A15WHT00,,a15wht10,a15wht12,,,,,,,,
-a18und,a18und,age,,A18UND70,,A18UND80,,A18UND90,,A18UND00,,a18und10,a18und12,,,,,,,,
-a60asn,a60asn,age-race,,,,,a60asn80,A60ASN90,,A60ASN00,,a60asn10,,,,,,,,,
-a60blk,a60blk,age-race,,A60BLK70,,,a60blk80,A60BLK90,,A60BLK00,,a60blk10,,,,,,,,,
-a60hsp,a60hsp,age-race,,,,,a60hsp80,A60HSP90,,A60HSP00,,a60hsp10,,,,,,,,,
-a60ntv,a60ntv,age-race,,,,,a60ntv80,A60NTV90,,A60NTV00,,a60ntv10,,,,,,,,,
-a60up,a60up,age,,A60UP70,,A60UP80,,A60UP90,,A60UP00,,a60up10,a60up12,,,,,,,,
-a60wht,a60wht,age-race,,A60WHT70,,,a60wht80,A60WHT90,,A60WHT00,,a60wht10,,,,,,,,,
-a65asn,a65asn,age-race,,,,,,,,,,,a65asn12,,,,,,,,
-a65blk,a65blk,age-race,,,,,,,,,,,a65blk12,,,,,,,,
-a65hsp,a65hsp,age-race,,,,,,,,,,,a65hsp12,,,,,,,,
-a65ntv,a65ntv,age-race,,,,,,,,,,,a65ntv12,,,,,,,,
-a65wht,a65wht,age-race,,,,,,,,,,,a65wht12,,,,,,,,
-a75up,a75up,age,,A75UP70,,A75UP80,,A75UP90,,A75UP00,,a75up10,a75up12,,,,,,,,
-ag15up,ag15up,age,,AG15UP70,,AG15UP80,,AG15UP90,,,AG15UP00,,ag15up12,,,,,,,,
-ag16cv,ag16cv,age,civilian population 16 years and over,,AG16CV70,,ag16cv80,,AG16CV90,,,,,,,,,,,,
-ag18cv,ag18cv,age,civilian population 18 years and over,,,,,,,,AG18CV00,,ag18cv12,,,,,,,,
-ag25up,ag25up,age,,,AG25UP70,,ag25up80,,AG25UP90,,AG25UP00,,ag25up12,,,,,,,,
-ag5up,ag5up,age,,,,,ag5up80,,AG5UP90,,AG5UP00,,ag5up12,,,,,,,,
-ageasn,ageasn,age-race,,,,,ageasn80,AGEASN90,,AGEASN00,,ageasn10,ageasn12,,,,,,,,
-ageblk,ageblk,age-race,,AGEBLK70,,,ageblk80,AGEBLK90,,AGEBLK00,,ageblk10,ageblk12,,,,,,,,
-agehsp,agehsp,age-race,,,,,agehsp80,AGEHSP90,,AGEHSP00,,agehsp10,agehsp12,,,,,,,,
-agentv,agentv,age-race,,,,,agentv80,AGENTV90,,AGENTV00,,agentv10,agentv12,,,,,,,,
-agewht,agewht,age-race,,AGEWHT70,,,agewht80,AGEWHT90,,AGEWHT00,,agewht10,agewht12,,,,,,,,
-asian,asian,ethnicity,,ASIAN70,,ASIAN80,,ASIAN90,,ASIAN00,,asian10,asian12,,,,,,,,
-black,black,race,,BLACK70,,,,,,,,,,,,,,,,,
-china,china,ethnicity,,CHINA70,,CHINA80,,CHINA90,,CHINA00,,china10,china12,,,,,,,,
-clf,clf,ses,civilian labor force 16 years and over,,CLF70,,clf80,,CLF90,,CLF00,,clf12,,,,,,,,
-cni16u,cni16u,age,civilian non-institutionalized persons 16-64 years old,,CNI16U70,,cni16u80,,CNI16U90,,CNI16U00,,,,,,,,,,
-col,col,ses,college education,,COL70,,col80,,COL90,,COL00,,col12,,,,,,,,
-cuban,cuban,ethnicity,,,CUBAN70,CUBAN80,,CUBAN90,,CUBAN00,,cuban10,cuban12,,,,,,,,
-dapov,dapov,race-ses,Asians and Pacific Islanders for whom poverty status is determined,,,,dapov80,,DAPOV90,,DAPOV00,,dapov12,,,,,,,,
-dbpov,dbpov,race-ses,black persons for whom poverty status is determined,,DBPOV70,,dbpov80,,DBPOV90,,DBPOV00,,dbpov12,,,,,,,,
-dfb,dfb,,,,,,dfb80,,,,,,,,,,,,,,
-dflabf,dflabf,,,,DFLABF70,,dflabf80,,DFLABF90,,DFLABF00,,dflabf12,,,,,,,,
-dfmpov,dfmpov,,,,DFMPOV70,,dfmpov80,,DFMPOV90,,DFMPOV00,,dfmpov12,,,,,,,,
-dhpov,dhpov,,,,,,dhpov80,,DHPOV90,,DHPOV00,,dhpov12,,,,,,,,
-dis,dis,,,,DIS70,,dis80,,DIS90,,DIS00,,,,,,,,,,
-dmulti,dmulti,,,DMULTI70,,,dmulti80,,DMULTI90,,DMULTI00,,dmulti12,,,,,,,,
-dnapov,dnapov,,,,,,dnapov80,,DNAPOV90,,DNAPOV00,,dnapov12,,,,,,,,
-dpov,dpov,,,,DPOV70,,dpov80,,DPOV90,,DPOV00,,dpov12,,,,,,,,
-dwpov,dwpov,,,,DWPOV70,,dwpov80,,DWPOV90,,DWPOV00,,dwpov12,,,,,,,,
-empclf,empclf,,,,EMPCLF70,,empclf80,,EMPCLF90,,EMPCLF00,,empclf12,,,,,,,,
-family,family,,,,FAMILY70,,family80,,FAMILY90,FAMILY00,,family10,family12,,,,,,,,
-fb,fb,,,,FB70,,fb80,,FB90,,FB00,,fb12,,,,,,,,
-fhh,fhh,,,,FHH70,,fhh80,,FHH90,FHH00,,fhh10,fhh12,,,,,,,,
-filip,filip,,,FILIP70,,FILIP80,,FILIP90,,FILIP00,,filip10,filip12,,,,,,,,
-flabf,flabf,,,,FLABF70,,flabf80,,FLABF90,,FLABF00,,flabf12,,,,,,,,
-geanc,geanc,,,,GEANC70,,geanc80,,GEANC90,,GEANC00,,geanc12,,,,,,,,
-gefb,gefb,,,,GEFB70,,gefb80,,GEFB90,,GEFB00,,gefb12,,,,,,,,
-h10yrs,h10yrs,,,,H10YRS70,,h10yrs80,,H10YRS90,,H10YRS00,,h10yrs12,,,,,,,,
-h30old,h30old,,,,H30OLD70,,h30old80,,H30OLD90,,H30OLD00,,h30old12,,,,,,,,
-haw,haw,,,HAW70,,HAW80,,HAW90,,HAW00,,haw10,haw12,,,,,,,,
-hh,hh,,,,HH70,,hh80,,HH90,,HH00,,hh12,,,,,,,,
-hha,hha,ethnicity,total Asian/Pacific Islander households in sample-based data,,,,hha80,,HHA90,,HHA00,,hha12,,,,,,,,
-hhb,hhb,,,,,,hhb80,,HHB90,,HHB00,,hhb12,,,,,,,,
-hhh,hhh,ethnicity,total hispanic households in sample-based data,,,,hhh80,,HHH90,,HHH00,,hhh12,,,,,,,,
-hhw,hhw,,,,,,hhw80,,HHW90,,HHW00,,hhw12,,,,,,,,
-hinc,hinc,,"Median HH income, total",,HINC70,,hinc80,,HINC90,,HINC00,,hinc12,,,,,,,,
-hinca,hinca,,"Median HH income, Asian/PI",,,,hinca80,,HINCA90,,HINCA00,,hinca12,,,,,,,,
-hincb,hincb,,"Median HH income, blacks",,,,hincb80,,HINCB90,,HINCB00,,hincb12,,,,,,,,
-hinch,hinch,,"Median HH income, Hispanics",,,,hinch80,,HINCH90,,HINCH00,,hinch12,,,,,,,,
-hincw,hincw,,"Median HH income, whites",,,,hincw80,,HINCW90,,HINCW00,,hincw12,,,,,,,,
-hisp,hisp,,,,,HISP80,,HISP90,,HISP00,,hisp10,hisp12,,,,,,,,
-hs,hs,,,,HS70,,hs80,,HS90,,HS00,,hs12,,,,,,,,
-hu,hu,,,HU70,,HU80,,HU90,,HU00,,hu10,hu12,,,,,,,,
-hu00,hu00,,,,,,,,,,HU00SP,,,,,,,,,,
-hu70,hu70,,,,HU70SP,,,,,,,,,,,,,,,,
-hu80,hu80,,,,,,hu80sp,,,,,,,,,,,,,,
-hu90,hu90,,,,,,,,HU90SP,,,,,,,,,,,,
-incpc,incpc,,Per capita income,,INCPC70,,incpc80,,INCPC90,,INCPC00,,incpc12,,,,,,,,
-india,india,,,INDIA70,,INDIA80,,INDIA90,,INDIA00,,india10,india12,,,,,,,,
-iranc,iranc,,,,IRANC70,,iranc80,,IRANC90,,IRANC00,,iranc12,,,,,,,,
-irfb,irfb,,,,IRFB70,,irfb80,,IRFB90,,IRFB00,,irfb12,,,,,,,,
-itanc,itanc,,,,ITANC70,,itanc80,,ITANC90,,ITANC00,,itanc12,,,,,,,,
-itfb,itfb,,,,ITFB70,,itfb80,,ITFB90,,ITFB00,,itfb12,,,,,,,,
-japan,japan,,,JAPAN70,,JAPAN80,,JAPAN90,,JAPAN00,,japan10,japan12,,,,,,,,
-korea,korea,,,KOREA70,,KOREA80,,KOREA90,,KOREA00,,korea10,korea12,,,,,,,,
-lep,lep,,,,,,lep80,,LEP90,,LEP00,,lep12,,,,,,,,
-manuf,manuf,,,,MANUF70,,manuf80,,MANUF90,,MANUF00,,manuf12,,,,,,,,
-mar,mar,,currently married (excluding separated),Mar-70,,Mar-80,,Mar-90,,,,,,,,,,,,,
-mar,mar.,,currently married (excluding separated),,,,,,,,Mar.00,,,,,,,,,,
-mar,x12.m,,currently married (excluding separated),,,,,,,,,,X12.Mar,,,,,,,,
-mex,mex,ethnicity,,,MEX70,MEX80,,MEX90,,MEX00,,mex10,mex12,,,,,,,,
-mhmval,mhmval,,Median home value,,MHMVAL70,MHMVAL80,,MHMVAL90,,,MHMVAL00,,mhmval12,,,,,,,,
-mrent,mrent,,Median rent,,MRENT70,MRENT80,,MRENT90,,,MRENT00,,mrent12,,,,,,,,
-multi,multi,,,MULTI70,,,multi80,,MULTI90,,MULTI00,,multi12,,,,,,,,
-n10imm,n10imm,,,,N10IMM70,,n10imm80,,N10IMM90,,N10IMM00,,n10imm12,,,,,,,,
-n65pov,n65pov,,,,N65POV70,,n65pov80,,N65POV90,,N65POV00,,n65pov12,,,,,,,,
-napov,napov,,,,,,napov80,,NAPOV90,,NAPOV00,,napov12,,,,,,,,
-nat,nat,,,,NAT70,,nat80,,NAT90,,NAT00,,nat12,,,,,,,,
-nbpov,nbpov,,,,NBPOV70,,nbpov80,,NBPOV90,,NBPOV00,,nbpov12,,,,,,,,
-nfmpov,nfmpov,,,,NFMPOV70,,nfmpov80,,NFMPOV90,,NFMPOV00,,nfmpov12,,,,,,,,
-nhblk,nhblk,,,,,NHBLK80,,NHBLK90,,NHBLK00,,nhblk10,nhblk12,,,,,,,,
-nhpov,nhpov,,,,,,nhpov80,,NHPOV90,,NHPOV00,,nhpov12,,,,,,,,
-nhwht,nhwht,,,,,NHWHT80,,NHWHT90,,NHWHT00,,nhwht10,nhwht12,,,,,,,,
-nnapov,nnapov,,,,,,nnapov80,,NNAPOV90,,NNAPOV00,,nnapov12,,,,,,,,
-npov,npov,,,,NPOV70,,npov80,,NPOV90,,NPOV00,,npov12,,,,,,,,
-ntv,ntv,,,,,NTV80,,NTV90,,NTV00,,ntv10,ntv12,,,,,,,,
-nwpov,nwpov,,,,NWPOV70,,nwpov80,,NWPOV90,,NWPOV00,,nwpov12,,,,,,,,
-ohu,ohu,,,OHU70,,OHU80,,OHU90,,OHU00,,ohu10,ohu12,,,,,,,,
-ohu00,ohu00,,,,,,,,,,OHU00SP,,,,,,,,,,
-ohu70,ohu70,,,,OHU70SP,,,,,,,,,,,,,,,,
-ohu80,ohu80,,,,,,ohu80sp,,,,,,,,,,,,,,
-ohu90,ohu90,,,,,,,,OHU90SP,,,,,,,,,,,,
-olang,olang,,,,,,olang80,,OLANG90,,OLANG00,,olang12,,,,,,,,
-own,own,,,OWN70,,OWN80,,OWN90,,OWN00,,own10,own12,,,,,,,,
-p10imm,p10imm,,pct immigrated in past 10 years,,,,,,,,,,p10imm12,,,,,,,,
-p10yrs,p10yrs,,pct HH in neighborhood 10 years or less,,,,,,,,,,p10yrs12,,,,,,,,
-p15asn,p15asn,,"pct 15 and under, Asian/PI",,,,,,,,,,p15asn12,,,,,,,,
-p15blk,p15blk,,"pct 15 and under, non-Hispanic black",,,,,,,,,,p15blk12,,,,,,,,
-p15hsp,p15hsp,,"pct 15 and under, Hispanic",,,,,,,,,,p15hsp12,,,,,,,,
-p15ntv,p15ntv,,"pct 15 and under, Native American",,,,,,,,,,p15ntv12,,,,,,,,
-p15wht,p15wht,,"pct 15 and under, non-Hispanic white",,,,,,,,,,p15wht12,,,,,,,,
-p18und,p18und,,"pct 17 and under, total",,,,,,,,,,p18und12,,,,,,,,
-p30old,p30old,,pct structures more than 30 years old,,,,,,,,,,p30old12,,,,,,,,
-p60up,p60up,,"pct 60 and older, total",,,,,,,,,,p60up12,,,,,,,,
-p65asn,p65asn,,,,,,,,,,,,p65asn12,,,,,,,,
-p65blk,p65blk,,,,,,,,,,,,p65blk12,,,,,,,,
-p65hsp,p65hsp,,,,,,,,,,,,p65hsp12,,,,,,,,
-p65ntv,p65ntv,,,,,,,,,,,,p65ntv12,,,,,,,,
-p65pov,p65pov,,"pct in poverty, 65+",,,,,,,,,,p65pov12,,,,,,,,
-p65wht,p65wht,,,,,,,,,,,,p65wht12,,,,,,,,
-p75up,p75up,,"pct 75 and older, total",,,,,,,,,,p75up12,,,,,,,,
-papov,papov,,"pct in poverty, Asian/PI",,,,,,,,,,papov12,,,,,,,,
-pasian,pasian,,pct Asian and Pacific Islander race,,,,,,,,,,pasian12,,,,,,,,
-pbpov,pbpov,,"pct in poverty, African Americans",,,,,,,,,,pbpov12,,,,,,,,
-pchina,pchina,,pct Chinese birth/race,,,,,,,,,,pchina12,,,,,,,,
-pcol,pcol,,pct with 4-year college degree or more,,,,,,,,,,pcol12,,,,,,,,
-pcuban,pcuban,,pct Cuban birth/ethnicity,,,,,,,,,,pcuban12,,,,,,,,
-pfb,pfb,,pct foreign born,,,,,,,,,,pfb12,,,,,,,,
-pfhh,pfhh,,pct female-headed families with children,,,,,,,,,,pfhh12,,,,,,,,
-pfilip,pfilip,,pct Filipino birth/race,,,,,,,,,,pfilip12,,,,,,,,
-pflabf,pflabf,,pct female labor force participation,,,,,,,,,,pflabf12,,,,,,,,
-pfmpov,pfmpov,,"pct in poverty, families with children",,,,,,,,,,pfmpov12,,,,,,,,
-pgeanc,pgeanc,,pct German parentage/ancestry,,,,,,,,,,pgeanc12,,,,,,,,
-pgefb,pgefb,,pct German birth,,,,,,,,,,pgefb12,,,,,,,,
-phaw,phaw,,pct Hawaiian race,,,,,,,,,,phaw12,,,,,,,,
-phisp,phisp,,pct Hispanic,,,,,,,,,,phisp12,,,,,,,,
-phpov,phpov,,"pct in poverty, Hispanics",,,,,,,,,,phpov12,,,,,,,,
-phs,phs,,pct with high school degree or less,,,,,,,,,,phs12,,,,,,,,
-pindia,pindia,,pct Indian birth/race,,,,,,,,,,pindia12,,,,,,,,
-piranc,piranc,,pct Irish parentage/ancestry,,,,,,,,,,piranc12,,,,,,,,
-pirfb,pirfb,,pct Irish birth,,,,,,,,,,pirfb12,,,,,,,,
-pitanc,pitanc,,pct Italian parentage/ancestry,,,,,,,,,,pitanc12,,,,,,,,
-pitfb,pitfb,,pct Italian birth,,,,,,,,,,pitfb12,,,,,,,,
-pjapan,pjapan,,pct Japanese birth/race,,,,,,,,,,pjapan12,,,,,,,,
-pkorea,pkorea,,pct Korean birth/race,,,,,,,,,,pkorea12,,,,,,,,
-plep,plep,,"pct speaking English not well, age 5+",,,,,,,,,,plep12,,,,,,,,
-pmanuf,pmanuf,,pct manufacturing employees,,,,,,,,,,pmanuf12,,,,,,,,
-pmar,pmar,,"pct currently married, not separated",,,,,,,,,,pmar12,,,,,,,,
-pmex,pmex,,pct Mexican birth/ethnicity,,,,,,,,,,pmex12,,,,,,,,
-pmulti,pmulti,,pct multi-family units,,,,,,,,,,pmulti12,,,,,,,,
-pnapov,pnapov,,"pct in poverty, Native Americans",,,,,,,,,,pnapov12,,,,,,,,
-pnat,pnat,,pct Naturalized,,,,,,,,,,pnat12,,,,,,,,
-pnhblk,pnhblk,race,"percentage of persons of black race, not Hispanic origin",,,,,,,,,,pnhblk12,,,,,,,,
-pnhwht,pnhwht,race,"percentage of persons white, not Hispanic origin",,,,,,,,,,pnhwht12,,,,,,,,
-pntv,pntv,race,pct Native American race,,,,,,,,,,pntv12,,,,,,,,
-polang,polang,ethnicity,"pct speaking other language at home, age 5+",,,,,,,,,,polang12,,,,,,,,
-pop,pop,demographics,,POP70,,POP80,,POP90,,POP00,,pop10,pop12,,,,,,,,
-pop,popsf3,demographics,,,,,pop80sf3,,POP90SF3,,POP00SF3,,,,,,,,,,
-pop,popsf4,demographics,,,,,pop80sf4,,POP90SF4,,,,,,,,,,,,
-pop,popsp1,demographics,,,POP70SP1,,,,,,,,,,,,,,,,
-pop,popsp2,demographics,,,POP70SP2,,,,,,,,,,,,,,,,
-pown,pown,ses,pct owner-occupied units,,,,,,,,,,pown12,,,,,,,,
-ppov,ppov,ses,"pct in poverty, total",,,,,,,,,,ppov12,,,,,,,,
-ppr,ppr,ethnicity,pct Puerto Rican birth/ethnicity,,,,,,,,,,ppr12,,,,,,,,
-pprof,pprof,ses,pct professional employees,,,,,,,,,,pprof12,,,,,,,,
-pr,pr,ethnicity,puerto rican,,PR70,PR80,,PR90,,PR00,,pr10,pr12,,,,,,,,
-prof,prof,ses,count of professional employees,,PROF70,,prof80,,PROF90,,PROF00,,prof12,,,,,,,,
-pruanc,pruanc,,pct Russian/USSR parentage/ancestry,,,,,,,,,,pruanc12,,,,,,,,
-prufb,prufb,,pct Russian/USSR birth,,,,,,,,,,prufb12,,,,,,,,
-pscanc,pscanc,,pct Scandinavian parentage/ancestry,,,,,,,,,,pscanc12,,,,,,,,
-pscfb,pscfb,,pct Scandinavian birth,,,,,,,,,,pscfb12,,,,,,,,
-psemp,psemp,,pct self-employed,,,,,,,,,,psemp12,,,,,,,,
-punemp,punemp,,pct unemployed,,,,,,,,,,punemp12,,,,,,,,
-pvac,pvac,,pct vacant units,,,,,,,,,,pvac12,,,,,,,,
-pvet,pvet,,pct veteran,,,,,,,,,,pvet12,,,,,,,,
-pviet,pviet,,pct Vietnamese race,,,,,,,,,,pviet12,,,,,,,,
-pwds,pwds,,"pct widowed, divorced and separated",,,,,,,,,,pwds12,,,,,,,,
-pwpov,pwpov,,"pct in poverty, whites",,,,,,,,,,pwpov12,,,,,,,,
-rent,rent,,,RENT70,,RENT80,,RENT90,,RENT00,,rent10,rent12,,,,,,,,
-ruanc,ruanc,,,,RUANC70,,ruanc80,,RUANC90,,RUANC00,,ruanc12,,,,,,,,
-rufb,rufb,,,,RUFB70,,rufb80,,RUFB90,,RUFB00,,rufb12,,,,,,,,
-scanc,scanc,,,,SCANC70,,scanc80,,SCANC90,,SCANC00,,scanc12,,,,,,,,
-scfb,scfb,,,,SCFB70,,scfb80,,SCFB90,,SCFB00,,scfb12,,,,,,,,
-semp,semp,,,,SEMP70,,semp80,,SEMP90,,SEMP00,,semp12,,,,,,,,
-unemp,unemp,,,,UNEMP70,,unemp80,,UNEMP90,,UNEMP00,,unemp12,,,,,,,,
-vac,vac,,,VAC70,,VAC80,,VAC90,,VAC00,,vac10,vac12,,,,,,,,
-vet,vet,,,,VET70,,vet80,,VET90,,VET00,,vet12,,,,,,,,
-viet,viet,,,,,VIET80,,VIET90,,VIET00,,viet10,viet12,,,,,,,,
-wds,wds,,,WDS70,,WDS80,,WDS90,,,WDS00,,wds12,,,,,,,,
-white,white,,,WHITE70,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,
+root,root2,category,definition,1970.f,1970.s,1980.f,1980.s,1990.f,1990.s,2000.f,2000.s,2010.f,2010.s
+state,state,id,state fips code,state,state,state,state,state,state,state,state,state,statea
+county,county,id,county fips code,county,county,county,county,county,county,county,county,county,countya
+tract,tract,id,tract fips code,tract,tract,tract,tract,tract,tract,tract,tract,tract,tracta
+trtid,trtid,id,tract id as ss-ccc-tttttt fips,TRTID10,TRTID10,TRTID10,trtid10,TRTID10,TRTID10,TRTID10,TRTID10,tractid,tractid
+cbsa,cbsa,id,the metro area id using core based statistical area codes,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,,
+ccflag,ccflag,id,,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,,
+metdiv,metdiv,id,,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,,
+placefp,placefp,id,,placefp10,placefp10,placefp10,placefp10,placefp10,placefp10,placefp10,placefp10,,
+globd,globd,id,,,,GlobD80,,GlobD90,,GlobD00,,GlobD10,
+globg,globg,id,,,,GlobG80,,GlobG90,,GlobG00,,GlobG10,
+placefp,,id,,,,placefp10,placefp10,placefp10,placefp10,placefp10,placefp10,,
+cbsa,,id,,,,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,cbsa10,,
+metdiv,,id,,,,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,metdiv10,,
+ccflag,,id,,,,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,ccflag10,,
+a15asn,a15asn,age-race,count of asian americans under the age of 15,,,,a15asn80,A15ASN90,,A15ASN00,,a15asn10,a15asn12
+a15blk,a15blk,age-race,count of black americans under the age of 15,A15BLK70,,,a15blk80,A15BLK90,,A15BLK00,,a15blk10,a15blk12
+a15hsp,a15hsp,age-race,count of hispanic americans under the age of 15,,,,a15hsp80,A15HSP90,,A15HSP00,,a15hsp10,a15hsp12
+a15ntv,a15ntv,age-race,,,,,a15ntv80,A15NTV90,,A15NTV00,,a15ntv10,a15ntv12
+a15wht,a15wht,age-race,,A15WHT70,,,a15wht80,A15WHT90,,A15WHT00,,a15wht10,a15wht12
+a18und,a18und,age,,A18UND70,,A18UND80,,A18UND90,,A18UND00,,a18und10,a18und12
+a60asn,a60asn,age-race,,,,,a60asn80,A60ASN90,,A60ASN00,,a60asn10,
+a60blk,a60blk,age-race,,A60BLK70,,,a60blk80,A60BLK90,,A60BLK00,,a60blk10,
+a60hsp,a60hsp,age-race,,,,,a60hsp80,A60HSP90,,A60HSP00,,a60hsp10,
+a60ntv,a60ntv,age-race,,,,,a60ntv80,A60NTV90,,A60NTV00,,a60ntv10,
+a60up,a60up,age,,A60UP70,,A60UP80,,A60UP90,,A60UP00,,a60up10,a60up12
+a60wht,a60wht,age-race,,A60WHT70,,,a60wht80,A60WHT90,,A60WHT00,,a60wht10,
+a65asn,a65asn,age-race,,,,,,,,,,,a65asn12
+a65blk,a65blk,age-race,,,,,,,,,,,a65blk12
+a65hsp,a65hsp,age-race,,,,,,,,,,,a65hsp12
+a65ntv,a65ntv,age-race,,,,,,,,,,,a65ntv12
+a65wht,a65wht,age-race,,,,,,,,,,,a65wht12
+a75up,a75up,age,,A75UP70,,A75UP80,,A75UP90,,A75UP00,,a75up10,a75up12
+ag15up,ag15up,age,,AG15UP70,,AG15UP80,,AG15UP90,,,AG15UP00,,ag15up12
+ag16cv,ag16cv,age,civilian population 16 years and over,,AG16CV70,,ag16cv80,,AG16CV90,,,,
+ag18cv,ag18cv,age,civilian population 18 years and over,,,,,,,,AG18CV00,,ag18cv12
+ag25up,ag25up,age,,,AG25UP70,,ag25up80,,AG25UP90,,AG25UP00,,ag25up12
+ag5up,ag5up,age,,,,,ag5up80,,AG5UP90,,AG5UP00,,ag5up12
+ageasn,ageasn,age-race,,,,,ageasn80,AGEASN90,,AGEASN00,,ageasn10,ageasn12
+ageblk,ageblk,age-race,,AGEBLK70,,,ageblk80,AGEBLK90,,AGEBLK00,,ageblk10,ageblk12
+agehsp,agehsp,age-race,,,,,agehsp80,AGEHSP90,,AGEHSP00,,agehsp10,agehsp12
+agentv,agentv,age-race,,,,,agentv80,AGENTV90,,AGENTV00,,agentv10,agentv12
+agewht,agewht,age-race,,AGEWHT70,,,agewht80,AGEWHT90,,AGEWHT00,,agewht10,agewht12
+asian,asian,ethnicity,,ASIAN70,,ASIAN80,,ASIAN90,,ASIAN00,,asian10,asian12
+black,black,race,,BLACK70,,,,,,,,,
+china,china,ethnicity,,CHINA70,,CHINA80,,CHINA90,,CHINA00,,china10,china12
+clf,clf,ses,civilian labor force 16 years and over,,CLF70,,clf80,,CLF90,,CLF00,,clf12
+cni16u,cni16u,age,civilian non-institutionalized persons 16-64 years old,,CNI16U70,,cni16u80,,CNI16U90,,CNI16U00,,
+col,col,ses,college education,,COL70,,col80,,COL90,,COL00,,col12
+cuban,cuban,ethnicity,,,CUBAN70,CUBAN80,,CUBAN90,,CUBAN00,,cuban10,cuban12
+dapov,dapov,race-ses,Asians and Pacific Islanders for whom poverty status is determined,,,,dapov80,,DAPOV90,,DAPOV00,,dapov12
+dbpov,dbpov,race-ses,black persons for whom poverty status is determined,,DBPOV70,,dbpov80,,DBPOV90,,DBPOV00,,dbpov12
+dfb,dfb,,,,,,dfb80,,,,,,
+dflabf,dflabf,,,,DFLABF70,,dflabf80,,DFLABF90,,DFLABF00,,dflabf12
+dfmpov,dfmpov,,,,DFMPOV70,,dfmpov80,,DFMPOV90,,DFMPOV00,,dfmpov12
+dhpov,dhpov,,,,,,dhpov80,,DHPOV90,,DHPOV00,,dhpov12
+dis,dis,,,,DIS70,,dis80,,DIS90,,DIS00,,
+dmulti,dmulti,,,DMULTI70,,,dmulti80,,DMULTI90,,DMULTI00,,dmulti12
+dnapov,dnapov,,,,,,dnapov80,,DNAPOV90,,DNAPOV00,,dnapov12
+dpov,dpov,,,,DPOV70,,dpov80,,DPOV90,,DPOV00,,dpov12
+dwpov,dwpov,,,,DWPOV70,,dwpov80,,DWPOV90,,DWPOV00,,dwpov12
+empclf,empclf,,,,EMPCLF70,,empclf80,,EMPCLF90,,EMPCLF00,,empclf12
+family,family,,,,FAMILY70,,family80,,FAMILY90,FAMILY00,,family10,family12
+fb,fb,,,,FB70,,fb80,,FB90,,FB00,,fb12
+fhh,fhh,,,,FHH70,,fhh80,,FHH90,FHH00,,fhh10,fhh12
+filip,filip,,,FILIP70,,FILIP80,,FILIP90,,FILIP00,,filip10,filip12
+flabf,flabf,,,,FLABF70,,flabf80,,FLABF90,,FLABF00,,flabf12
+geanc,geanc,,,,GEANC70,,geanc80,,GEANC90,,GEANC00,,geanc12
+gefb,gefb,,,,GEFB70,,gefb80,,GEFB90,,GEFB00,,gefb12
+h10yrs,h10yrs,,,,H10YRS70,,h10yrs80,,H10YRS90,,H10YRS00,,h10yrs12
+h30old,h30old,,,,H30OLD70,,h30old80,,H30OLD90,,H30OLD00,,h30old12
+haw,haw,,,HAW70,,HAW80,,HAW90,,HAW00,,haw10,haw12
+hh,hh,,,,HH70,,hh80,,HH90,,HH00,,hh12
+hha,hha,ethnicity,total Asian/Pacific Islander households in sample-based data,,,,hha80,,HHA90,,HHA00,,hha12
+hhb,hhb,,,,,,hhb80,,HHB90,,HHB00,,hhb12
+hhh,hhh,ethnicity,total hispanic households in sample-based data,,,,hhh80,,HHH90,,HHH00,,hhh12
+hhw,hhw,,,,,,hhw80,,HHW90,,HHW00,,hhw12
+hinc,hinc,,"Median HH income, total",,HINC70,,hinc80,,HINC90,,HINC00,,hinc12
+hinca,hinca,,"Median HH income, Asian/PI",,,,hinca80,,HINCA90,,HINCA00,,hinca12
+hincb,hincb,,"Median HH income, blacks",,,,hincb80,,HINCB90,,HINCB00,,hincb12
+hinch,hinch,,"Median HH income, Hispanics",,,,hinch80,,HINCH90,,HINCH00,,hinch12
+hincw,hincw,,"Median HH income, whites",,,,hincw80,,HINCW90,,HINCW00,,hincw12
+hisp,hisp,,,,,HISP80,,HISP90,,HISP00,,hisp10,hisp12
+hs,hs,,,,HS70,,hs80,,HS90,,HS00,,hs12
+hu,hu,,,HU70,,HU80,,HU90,,HU00,,hu10,hu12
+hu00,hu00,,,,,,,,,,HU00SP,,
+hu70,hu70,,,,HU70SP,,,,,,,,
+hu80,hu80,,,,,,hu80sp,,,,,,
+hu90,hu90,,,,,,,,HU90SP,,,,
+incpc,incpc,,Per capita income,,INCPC70,,incpc80,,INCPC90,,INCPC00,,incpc12
+india,india,,,INDIA70,,INDIA80,,INDIA90,,INDIA00,,india10,india12
+iranc,iranc,,,,IRANC70,,iranc80,,IRANC90,,IRANC00,,iranc12
+irfb,irfb,,,,IRFB70,,irfb80,,IRFB90,,IRFB00,,irfb12
+itanc,itanc,,,,ITANC70,,itanc80,,ITANC90,,ITANC00,,itanc12
+itfb,itfb,,,,ITFB70,,itfb80,,ITFB90,,ITFB00,,itfb12
+japan,japan,,,JAPAN70,,JAPAN80,,JAPAN90,,JAPAN00,,japan10,japan12
+korea,korea,,,KOREA70,,KOREA80,,KOREA90,,KOREA00,,korea10,korea12
+lep,lep,,,,,,lep80,,LEP90,,LEP00,,lep12
+manuf,manuf,,,,MANUF70,,manuf80,,MANUF90,,MANUF00,,manuf12
+mar,mar,,currently married (excluding separated),Mar-70,,Mar-80,,Mar-90,,,,,
+mar,mar.,,currently married (excluding separated),,,,,,,,Mar.00,,
+mar,x12.m,,currently married (excluding separated),,,,,,,,,,X12.Mar
+mex,mex,ethnicity,,,MEX70,MEX80,,MEX90,,MEX00,,mex10,mex12
+mhmval,mhmval,,Median home value,,MHMVAL70,MHMVAL80,,MHMVAL90,,,MHMVAL00,,mhmval12
+mrent,mrent,,Median rent,,MRENT70,MRENT80,,MRENT90,,,MRENT00,,mrent12
+multi,multi,,,MULTI70,,,multi80,,MULTI90,,MULTI00,,multi12
+n10imm,n10imm,,,,N10IMM70,,n10imm80,,N10IMM90,,N10IMM00,,n10imm12
+n65pov,n65pov,,,,N65POV70,,n65pov80,,N65POV90,,N65POV00,,n65pov12
+napov,napov,,,,,,napov80,,NAPOV90,,NAPOV00,,napov12
+nat,nat,,,,NAT70,,nat80,,NAT90,,NAT00,,nat12
+nbpov,nbpov,,,,NBPOV70,,nbpov80,,NBPOV90,,NBPOV00,,nbpov12
+nfmpov,nfmpov,,,,NFMPOV70,,nfmpov80,,NFMPOV90,,NFMPOV00,,nfmpov12
+nhblk,nhblk,,,,,NHBLK80,,NHBLK90,,NHBLK00,,nhblk10,nhblk12
+nhpov,nhpov,,,,,,nhpov80,,NHPOV90,,NHPOV00,,nhpov12
+nhwht,nhwht,,,,,NHWHT80,,NHWHT90,,NHWHT00,,nhwht10,nhwht12
+nnapov,nnapov,,,,,,nnapov80,,NNAPOV90,,NNAPOV00,,nnapov12
+npov,npov,,,,NPOV70,,npov80,,NPOV90,,NPOV00,,npov12
+ntv,ntv,,,,,NTV80,,NTV90,,NTV00,,ntv10,ntv12
+nwpov,nwpov,,,,NWPOV70,,nwpov80,,NWPOV90,,NWPOV00,,nwpov12
+ohu,ohu,,,OHU70,,OHU80,,OHU90,,OHU00,,ohu10,ohu12
+ohu00,ohu00,,,,,,,,,,OHU00SP,,
+ohu70,ohu70,,,,OHU70SP,,,,,,,,
+ohu80,ohu80,,,,,,ohu80sp,,,,,,
+ohu90,ohu90,,,,,,,,OHU90SP,,,,
+olang,olang,,,,,,olang80,,OLANG90,,OLANG00,,olang12
+own,own,,,OWN70,,OWN80,,OWN90,,OWN00,,own10,own12
+p10imm,p10imm,,pct immigrated in past 10 years,,,,,,,,,,p10imm12
+p10yrs,p10yrs,,pct HH in neighborhood 10 years or less,,,,,,,,,,p10yrs12
+p15asn,p15asn,,"pct 15 and under, Asian/PI",,,,,,,,,,p15asn12
+p15blk,p15blk,,"pct 15 and under, non-Hispanic black",,,,,,,,,,p15blk12
+p15hsp,p15hsp,,"pct 15 and under, Hispanic",,,,,,,,,,p15hsp12
+p15ntv,p15ntv,,"pct 15 and under, Native American",,,,,,,,,,p15ntv12
+p15wht,p15wht,,"pct 15 and under, non-Hispanic white",,,,,,,,,,p15wht12
+p18und,p18und,,"pct 17 and under, total",,,,,,,,,,p18und12
+p30old,p30old,,pct structures more than 30 years old,,,,,,,,,,p30old12
+p60up,p60up,,"pct 60 and older, total",,,,,,,,,,p60up12
+p65asn,p65asn,,,,,,,,,,,,p65asn12
+p65blk,p65blk,,,,,,,,,,,,p65blk12
+p65hsp,p65hsp,,,,,,,,,,,,p65hsp12
+p65ntv,p65ntv,,,,,,,,,,,,p65ntv12
+p65pov,p65pov,,"pct in poverty, 65+",,,,,,,,,,p65pov12
+p65wht,p65wht,,,,,,,,,,,,p65wht12
+p75up,p75up,,"pct 75 and older, total",,,,,,,,,,p75up12
+papov,papov,,"pct in poverty, Asian/PI",,,,,,,,,,papov12
+pasian,pasian,,pct Asian and Pacific Islander race,,,,,,,,,,pasian12
+pbpov,pbpov,,"pct in poverty, African Americans",,,,,,,,,,pbpov12
+pchina,pchina,,pct Chinese birth/race,,,,,,,,,,pchina12
+pcol,pcol,,pct with 4-year college degree or more,,,,,,,,,,pcol12
+pcuban,pcuban,,pct Cuban birth/ethnicity,,,,,,,,,,pcuban12
+pfb,pfb,,pct foreign born,,,,,,,,,,pfb12
+pfhh,pfhh,,pct female-headed families with children,,,,,,,,,,pfhh12
+pfilip,pfilip,,pct Filipino birth/race,,,,,,,,,,pfilip12
+pflabf,pflabf,,pct female labor force participation,,,,,,,,,,pflabf12
+pfmpov,pfmpov,,"pct in poverty, families with children",,,,,,,,,,pfmpov12
+pgeanc,pgeanc,,pct German parentage/ancestry,,,,,,,,,,pgeanc12
+pgefb,pgefb,,pct German birth,,,,,,,,,,pgefb12
+phaw,phaw,,pct Hawaiian race,,,,,,,,,,phaw12
+phisp,phisp,,pct Hispanic,,,,,,,,,,phisp12
+phpov,phpov,,"pct in poverty, Hispanics",,,,,,,,,,phpov12
+phs,phs,,pct with high school degree or less,,,,,,,,,,phs12
+pindia,pindia,,pct Indian birth/race,,,,,,,,,,pindia12
+piranc,piranc,,pct Irish parentage/ancestry,,,,,,,,,,piranc12
+pirfb,pirfb,,pct Irish birth,,,,,,,,,,pirfb12
+pitanc,pitanc,,pct Italian parentage/ancestry,,,,,,,,,,pitanc12
+pitfb,pitfb,,pct Italian birth,,,,,,,,,,pitfb12
+pjapan,pjapan,,pct Japanese birth/race,,,,,,,,,,pjapan12
+pkorea,pkorea,,pct Korean birth/race,,,,,,,,,,pkorea12
+plep,plep,,"pct speaking English not well, age 5+",,,,,,,,,,plep12
+pmanuf,pmanuf,,pct manufacturing employees,,,,,,,,,,pmanuf12
+pmar,pmar,,"pct currently married, not separated",,,,,,,,,,pmar12
+pmex,pmex,,pct Mexican birth/ethnicity,,,,,,,,,,pmex12
+pmulti,pmulti,,pct multi-family units,,,,,,,,,,pmulti12
+pnapov,pnapov,,"pct in poverty, Native Americans",,,,,,,,,,pnapov12
+pnat,pnat,,pct Naturalized,,,,,,,,,,pnat12
+pnhblk,pnhblk,race,"percentage of persons of black race, not Hispanic origin",,,,,,,,,,pnhblk12
+pnhwht,pnhwht,race,"percentage of persons white, not Hispanic origin",,,,,,,,,,pnhwht12
+pntv,pntv,race,pct Native American race,,,,,,,,,,pntv12
+polang,polang,ethnicity,"pct speaking other language at home, age 5+",,,,,,,,,,polang12
+pop,pop,demographics,,POP70,,POP80,,POP90,,POP00,,pop10,pop12
+pop,popsf3,demographics,,,,,pop80sf3,,POP90SF3,,POP00SF3,,
+pop,popsf4,demographics,,,,,pop80sf4,,POP90SF4,,,,
+pop,popsp1,demographics,,,POP70SP1,,,,,,,,
+pop,popsp2,demographics,,,POP70SP2,,,,,,,,
+pown,pown,ses,pct owner-occupied units,,,,,,,,,,pown12
+ppov,ppov,ses,"pct in poverty, total",,,,,,,,,,ppov12
+ppr,ppr,ethnicity,pct Puerto Rican birth/ethnicity,,,,,,,,,,ppr12
+pprof,pprof,ses,pct professional employees,,,,,,,,,,pprof12
+pr,pr,ethnicity,puerto rican,,PR70,PR80,,PR90,,PR00,,pr10,pr12
+prof,prof,ses,count of professional employees,,PROF70,,prof80,,PROF90,,PROF00,,prof12
+pruanc,pruanc,,pct Russian/USSR parentage/ancestry,,,,,,,,,,pruanc12
+prufb,prufb,,pct Russian/USSR birth,,,,,,,,,,prufb12
+pscanc,pscanc,,pct Scandinavian parentage/ancestry,,,,,,,,,,pscanc12
+pscfb,pscfb,,pct Scandinavian birth,,,,,,,,,,pscfb12
+psemp,psemp,,pct self-employed,,,,,,,,,,psemp12
+punemp,punemp,,pct unemployed,,,,,,,,,,punemp12
+pvac,pvac,,pct vacant units,,,,,,,,,,pvac12
+pvet,pvet,,pct veteran,,,,,,,,,,pvet12
+pviet,pviet,,pct Vietnamese race,,,,,,,,,,pviet12
+pwds,pwds,,"pct widowed, divorced and separated",,,,,,,,,,pwds12
+pwpov,pwpov,,"pct in poverty, whites",,,,,,,,,,pwpov12
+rent,rent,,,RENT70,,RENT80,,RENT90,,RENT00,,rent10,rent12
+ruanc,ruanc,,,,RUANC70,,ruanc80,,RUANC90,,RUANC00,,ruanc12
+rufb,rufb,,,,RUFB70,,rufb80,,RUFB90,,RUFB00,,rufb12
+scanc,scanc,,,,SCANC70,,scanc80,,SCANC90,,SCANC00,,scanc12
+scfb,scfb,,,,SCFB70,,scfb80,,SCFB90,,SCFB00,,scfb12
+semp,semp,,,,SEMP70,,semp80,,SEMP90,,SEMP00,,semp12
+unemp,unemp,,,,UNEMP70,,unemp80,,UNEMP90,,UNEMP00,,unemp12
+vac,vac,,,VAC70,,VAC80,,VAC90,,VAC00,,vac10,vac12
+vet,vet,,,,VET70,,vet80,,VET90,,VET00,,vet12
+viet,viet,,,,,VIET80,,VIET90,,VIET00,,viet10,viet12
+wds,wds,,,WDS70,,WDS80,,WDS90,,,WDS00,,wds12
+white,white,,,WHITE70,,,,,,,,,

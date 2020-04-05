@@ -619,7 +619,7 @@ We need to add some variables from 2010:
 Recall we created a 2000 to 2010 variable list for reference: 
 
 ```{r}
-head( var )
+head( vars )
 ```
 
 
