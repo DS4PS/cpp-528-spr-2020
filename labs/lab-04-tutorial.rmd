@@ -7,7 +7,7 @@ output:
     highlight: tango
     toc: yes
     toc_float: no
-    css: lab-instructions.css
+    css: 'lab-instructions.css'
 ---
 
 ```{r setup, include=FALSE}
@@ -35,7 +35,7 @@ s.type <- "text"
 
 
 
-```{r, echo=F}
+```{r, echo=T}
 ###################################
 #
 #     STARGAZER SETTINGS
@@ -64,7 +64,7 @@ For this part of the project you will:
 This tutorial demonstrates some of the initial steps of variable creation and data exploration for the project. 
 
 
-## Load Data
+# Data
 
 See the data steps for the wrangling that occurs during the process of creating our rodeo datasets. 
 
@@ -139,6 +139,9 @@ vars <- compare_dfs( df1=d1, df2=d2 )
 head( vars )
 ```
 
+
+## Create Dataset for Analysis
+
 Create subset for the analysis
 
 ```{r}
@@ -170,6 +173,11 @@ d <-
 
 ```
 
+If you call the stargazer() function with a linear model object (a regression model) it will create a nicely-formatted regression table for you. 
+
+If you instead use a data frame object it will create a table of descriptive statistics. 
+
+You can set the statistics you would like reported in the table with the **summary.stat=** argument. 
 
 ```{r, results="asis"}
 stargazer( d, 
@@ -179,10 +187,10 @@ stargazer( d,
 ```
 
 
-## Median Home Value
+#  Exploration of Median Home Value
 
 
-Initial conditions 2000:
+Initial conditions in 2000:
 
 
 ```{r, results="asis"}
@@ -201,6 +209,9 @@ stargazer( df,
            digits=0, 
            summary.stat = c("min", "p25","median","mean","p75","max") )
 ```
+
+
+### Histogram of MHV
 
 ```{r, fig.height=6}
 hist( mhv.change/1000, breaks=500, 
@@ -229,6 +240,7 @@ text( x=200, y=2000,
 
 
 ```{r}
+# function to control plot() formatting 
 jplot <- function( x1, x2, lab1="", lab2="", draw.line=T, ... )
 {
 
@@ -249,6 +261,7 @@ jplot <- function( x1, x2, lab1="", lab2="", draw.line=T, ... )
 ```
 
 
+Compare 2000 to 2010 distributions. 
 
 ```{r, fig.height=4}
 layout.matrix <- matrix( c( 1,3,
@@ -302,6 +315,7 @@ df <- sample_n( df, 1000 )
 par( mar=c(4,5,3,2) )
 
 jplot( df$v00, df$v10, 
+       lab1="MHV in 2000", lab2="MHV in 2010",
        xlim=c(0,1000), ylim=c(0,1000),
        axes=F )
 
@@ -314,21 +328,56 @@ axis( side=2, at=seq( from=0, to=1000, by=200 ),
 
 
 
+## Change in MHV 2000-2010
+
+
+If a home worth \$10 million increased in value by \$100k over ten years it would not be that surprising. If a home worth \$50k increased by \$100k over the same period that is a growth of 200% and is notable. 
+
+The change in value variable only reports absolute change, but does not provide a sense of whether that is a big or small amount for the census tract. 
+
+The percent change variable provides some context for growth rates of value in census tracts. 
+
 ```{r}
 # small initial values are skewing percentages
 #
 # an average home value below $10k is really low -
 # these must be mostly vacant lots?
 
-mhv.00[ mhv.00 < 10000 ] <- NA
+# interpretation is hard if there were no homes in 2000
+# and thus an artificially low MHV. i don't trust cases
+# that go from homes worth $10k to regular value
+# because it is more likely errors in data or noise
+# than meaningful variance 
+#
+# quick filter to remove all of the problematic obs
+# but need to go back and see which cases are problematic
+
+
+mhv.00[ mhv.00 < 1000 ] <- NA
 pct.change <- mhv.change / mhv.00
 summary( pct.change )
 ```
 
 
 
+```{r}
+# how many cases had increases above 500%
+sum( pct.change > 5, na.rm=T )
+
+# preview tracts with large increases in home values 
+# to see if increases make sense 
+
+d %>% 
+  filter( pct.change > 5 ) %>% 
+  head() 
+```
+
+
+Plot the percent change variable:
+
 ```{r, fig.height=6}
-hist( pct.change, breaks=500, 
+hg <-
+hist( pct.change, breaks=2000, 
       xlim=c(-1,2), yaxt="n", xaxt="n",
       xlab="", cex.main=1.5,
       ylab="", main="Growth in Home Value by Census Tract 2000 to 2010",
@@ -336,35 +385,32 @@ hist( pct.change, breaks=500,
 
 axis( side=1, at=seq( from=-1, to=2, by=0.5 ), 
       labels=paste0( seq( from=-100, to=200, by=50 ), "%" ) )
+
+ymax <- max( hg$count )
         
 mean.x <- mean( pct.change, na.rm=T )
 abline( v=mean.x, col="darkorange", lwd=2, lty=2 )
-text( x=1, y=5000, 
+text( x=1, y=(0.5*ymax), 
       labels=paste0( "Mean = ", round(100*mean.x,0), "%"), 
       col="darkorange", cex=1.8, pos=4 )
 
 median.x <- median( pct.change, na.rm=T )
 abline( v=median.x, col="dodgerblue", lwd=2, lty=2 )
-text( x=1, y=6000, 
+text( x=1, y=(0.6*ymax), 
       labels=paste0( "Median = ", round(100*median.x,0), "%"), 
       col="dodgerblue", cex=1.8, pos=4 )
 ```
 
-```{r}
-# how many cases had increases above 500%
-sum( pct.change > 5, na.rm=T )
-
-# preview tracts with large increases in home values 
-d %>% 
-  filter( pct.change > 5 ) %>% 
-  head() %>% 
-  pander()
-```
 
 
 
 
-## By Metro Area
+## Group Growth Rates By Metro Area
+
+We often want to disagregate descriptives by some grouping in the data, such as metro areas. 
+
+dplyr makes this easy by grouping then summarizing the data. 
+
 
 ```{r}
 d$mhv.change <- mhv.change 
@@ -459,7 +505,7 @@ d2 <- select( d2,
              pop00.x, nhwht00, nhblk00, hisp00, asian00,   # race
              pop10, nhwht10, nhblk10, hisp10, asian10
              
-          ) # end mutate
+          ) # end select
 
 
 d2 <- 
