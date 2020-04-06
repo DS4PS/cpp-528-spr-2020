@@ -1696,11 +1696,29 @@ The following code will provide a template for analysis of neighborhood change.
 
 
 
-*** { @unit = "MON Apr 13th", @title = "Lab 04", @assignment }
+*** { @unit = "MON Apr 13th", @title = "Lab 04", @assignment, @foldout }
 
 <br>
 
+## Descriptive Analysis
+
+[TUTORIAL ON DESCRIPTIVE ANALYSIS](labs/lab-04-tutorial.html)
+
+<a class="uk-button uk-button-primary" href="labs/lab-04-instructions.html">Lab Instructions</a>
+
+
+## Submission 
+
 <br>
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">Submit Lab</a>
+
+<br>
+<hr>
+<br>
+
+
+
 
 
 
