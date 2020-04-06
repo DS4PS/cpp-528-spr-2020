@@ -1706,8 +1706,9 @@ The following code will provide a template for analysis of neighborhood change.
 
 [TUTORIAL ON DESCRIPTIVE ANALYSIS](labs/lab-04-tutorial.html)
 
-<a class="uk-button uk-button-default" href="labs/lab-04-instructions.html">Lab Instructions</a>
+<a class="uk-button uk-button-default" href="../labs/lab-04-instructions.html">Lab Instructions</a>
 
+https://ds4ps.org/cpp-528-spr-2020/labs/lab-04-instructions.html
 
 ## Submission 
 
