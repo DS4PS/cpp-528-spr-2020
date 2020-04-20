@@ -1849,7 +1849,7 @@ Assuming data is no issue, what sorts of investments would you want to include a
 ####      WEEK 5
 ####
 ######################################################
--->
+
 
 ** Week 5 - Predicting Neighborhood Change 
 
@@ -1923,7 +1923,7 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 
 <br>
 <br>
-
+-->
 
 <!---
 
@@ -1949,6 +1949,27 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 <br>
 
 <br>
+
+*** { @unit = "MON Apr 27th", @title = "Lab 05", @assignment, @foldout  }
+
+
+<br>
+
+<a class="uk-button uk-button-default" href="../labs/lab-05-tutorial.html">Tutorial</a>
+
+<a class="uk-button uk-button-default" href="../labs/lab-05-instructions.html">Lab Instructions</a>
+
+
+<br>
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
+
+
+<br>
+<br>
+
+
+
 
 
 *** { @unit = "MON Apr 27th", @title = "Lab 06", @assignment  }
