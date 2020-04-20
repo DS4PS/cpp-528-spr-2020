@@ -1845,20 +1845,39 @@ Assuming data is no issue, what sorts of investments would you want to include a
 
 <!--- 
 ######################################################
+######################################################
+######################################################
+######################################################
 ####
-####      WEEK 5
 ####
+####                     WEEK 5
+####
+####
+######################################################
+######################################################
+######################################################
 ######################################################
 
 
 ** Week 5 - Predicting Neighborhood Change 
 
 
-*** { @unit = "", @title = "Unit Overview" }
+*** { @unit = "", @title = "Unit Overview", @foldout }
 
 
 <br>
 
+This week offers an opportunity to analyze real-world policy data to make sense of two large federal programs. 
+
+The first part, Lab 05, asks you to build a model of home value change using census data that describes tracts in 2000 and the community health scales you created. 
+
+Lab 06 then extends this baseline model by adding data on the New Market Tax Credits (NMTC) and Low Income Housing Tax Credit (LIHTC) programs. 
+
+The labs are designed to give you experience working with real-world data and all of its flaws, and to reinforce some of the content from CPP 523, 524, and 525. 
+
+The analysis is complex, so we are looking for modest models with a small number of variables, which gives you a chance to clean up the data if necessary and spend time interpretting results. 
+
+Your final grade is primarily based upon your group's ability to compile all of the steps into a repository that makes this project fully transparent and reproducible (revisit the final project rubric if you have questions). So spend as much time as you can on the models, but be sure to leave time for putting it all together. 
 
 <br>
 
