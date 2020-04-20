@@ -1862,22 +1862,11 @@ Assuming data is no issue, what sorts of investments would you want to include a
 ** Week 5 - Predicting Neighborhood Change 
 
 
-*** { @unit = "", @title = "Unit Overview", @foldout }
+*** { @unit = "", @title = "Unit Overview" }
 
 
 <br>
 
-This week offers an opportunity to analyze real-world policy data to make sense of two large federal programs. 
-
-The first part, Lab 05, asks you to build a model of home value change using census data that describes tracts in 2000 and the community health scales you created. 
-
-Lab 06 then extends this baseline model by adding data on the New Market Tax Credits (NMTC) and Low Income Housing Tax Credit (LIHTC) programs. 
-
-The labs are designed to give you experience working with real-world data and all of its flaws, and to reinforce some of the content from CPP 523, 524, and 525. 
-
-The analysis is complex, so we are looking for modest models with a small number of variables, which gives you a chance to clean up the data if necessary and spend time interpretting results. 
-
-Your final grade is primarily based upon your group's ability to compile all of the steps into a repository that makes this project fully transparent and reproducible (revisit the final project rubric if you have questions). So spend as much time as you can on the models, but be sure to leave time for putting it all together. 
 
 <br>
 
@@ -1967,7 +1956,44 @@ https://www.strongtowns.org/journal/2011/6/13/the-growth-ponzi-scheme-part-1.htm
 
 <br>
 
+This week offers an opportunity to analyze real-world policy data to make sense of two large federal programs. 
+
+The first part, Lab 05, asks you to build a model of home value change using census data that describes tracts in 2000 and the community health scales you created. 
+
+Lab 06 then extends this baseline model by adding data on the New Market Tax Credits (NMTC) and Low Income Housing Tax Credit (LIHTC) programs. 
+
+The labs are designed to give you experience working with real-world data and all of its flaws, and to reinforce some of the content from CPP 523, 524, and 525. 
+
+The analysis is complex, so we are looking for modest models with a small number of variables, which gives you a chance to clean up the data if necessary and spend time interpretting results. 
+
+Your final grade is primarily based upon your group's ability to compile all of the steps into a repository that makes this project fully transparent and reproducible (revisit the final project rubric if you have questions). So spend as much time as you can on the models, but be sure to leave time for putting it all together. 
+
 <br>
+
+
+
+*** { @unit = "", @title = "Hedonic Pricing Methodology", @reading, @foldout }
+
+
+<br>
+
+Introduction to models where the outcome is home value: hedonic pricing models. 
+
+The main insight is that home price is a variable that aggregates a tremendous amount of information about characteristics of houses, neighborhoods, and cities. We can use regression to separate out these difference attributes at different levels, and see they each contributes to the market value of a home. 
+
+Since we are using the median home value variable which represents an entire census tract we focus on how neighborhood attributes and changes in attributes over time impact the average home price in the tract. 
+
+[Hedonic Pricing Models Overview](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/articles/home-value-change/hedonic-pricing-method.pdf)
+
+[Hedonic Pricing Regression Example in R](https://github.com/buruzaemon/hedonic)
+
+[Valuation Using Hedonic Pricing Models](https://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1058&context=crer)
+
+
+<br>
+
+
+
 
 *** { @unit = "MON Apr 27th", @title = "Lab 05", @assignment, @foldout  }
 
