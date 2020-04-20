@@ -210,6 +210,21 @@ stargazer( df,
            summary.stat = c("min", "p25","median","mean","p75","max") )
 ```
 
+A note on inflation calculations. You can google "inflation calculator" and you will find a bunch of sites that give you the conversion. Just select 2010 as the final year, your input year, and use $1 as the starting value. For example: 
+
+[https://westegg.com/inflation/](https://westegg.com/inflation/)
+
+You will get slightly different results by site. 
+
+Otherwise, you can always estimate it if you know the average long-term inflation rate. Since 2000 the rate has averaged about 2.5% in the US, so you can use: 
+
+```r
+# 10 year inflation factor
+(1.025)^10
+[1] 1.280085
+```
+Prior to 2000 the rates were higher and they fluctuated quite a bit through the 70's and 80's so if you are going back in time further it is better to use a calculator. The calculators should use the actual rates by year. 
+
 
 ### Histogram of MHV
 

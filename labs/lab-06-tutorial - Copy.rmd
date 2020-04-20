@@ -25,8 +25,6 @@ library( pander )
 library( stargazer )
 library( scales )
 
-set.seed( 1234 )
-
 # set stargazer type to text for 
 # previewing in RMD docs but
 # convert to type HTML when knitting
@@ -53,60 +51,6 @@ s.type <- "html"
 
 
 
-Helper functions for the **pairs()** correlation table: 
-
-```{r}
-panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
-{
-    usr <- par("usr"); on.exit(par(usr))
-    par(usr = c(0, 1, 0, 1))
-    r <- abs(cor(x, y))
-    txt <- format(c(r, 0.123456789), digits=digits)[1]
-    txt <- paste(prefix, txt, sep="")
-    if(missing(cex.cor)) cex <- 0.8/strwidth(txt)
-    
-    test <- cor.test(x,y)
-    # borrowed from printCoefmat
-    Signif <- symnum(test$p.value, corr = FALSE, na = FALSE,
-                  cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
-                  symbols = c("***", "**", "*", ".", " "))
-    
-    text(0.5, 0.5, txt, cex = 1.5 )
-    text(.7, .8, Signif, cex=cex, col=2)
-}
-
-panel.smooth <- function (x, y, col = par("col"), bg = NA, pch = par("pch"), 
-	cex = 0.5, col.smooth = "red", span = 2/3, iter = 3, ...) 
-{
-	points(x, y, pch = 19, col = gray(0.7,0.2), bg = bg, cex = cex)
-	ok <- is.finite(x) & is.finite(y)
-	if (any(ok)) 
-		lines(stats::lowess(x[ok], y[ok], f = span, iter = iter), 
-			col = col.smooth, lwd=2, ...)
-}
-
-# custom plot
-jplot <- function( x1, x2, lab1="", lab2="", draw.line=T, ... )
-{
-
-	plot( x1, x2,
-	      pch=19, 
-	      col=gray(0.6, alpha = 0.2), 
-	      cex=0.5,  
-	      bty = "n",
-	      xlab=lab1, 
-	      ylab=lab2, cex.lab=1.5,
-        ... )
-
-	if( draw.line==T ){ 
-		ok <- is.finite(x1) & is.finite(x2)
-		lines( lowess(x2[ok]~x1[ok]), col="red", lwd=3 ) }
-
-}
-```
-
-
-
 # Hedonic Housing Models 
 
 The dependent variable in our model is the median home value. The choice draws on a large body of work on "hedonic pricing models" which assert that home values are a good price mechanism to capture the state of a neighborhood because they "price in" all of the characteristics of the house as well as the features of the neighborhood and surrounding city. 
@@ -123,7 +67,7 @@ This fact was established partly by watching people try to guess the weight of a
 
 <hr>
 
-## [Census Documentation on Methodology](https://www.census.gov/quickfacts/fact/note/US/HSG495218)
+### [Census Documentation on Methodology](https://www.census.gov/quickfacts/fact/note/US/HSG495218)
 
 Value is the respondent's estimate of how much the property (house and lot) would sell for if it were for sale.
 
@@ -176,7 +120,7 @@ d <- merge( d, md, by="tractid" )
 
 
 
-**Filter Rural Districts**
+## Filter Rural Districts 
 
 ```{r}
 table( d$urban )
@@ -186,7 +130,7 @@ d <- filter( d, urban == "urban" )
 
 
 
-**Create New Variables**
+## Create New Variables
 
 ```{r}
 # pro tip when getting started
@@ -262,7 +206,7 @@ head( d )
 
 
 
-**Median Home value**
+## Median Home value
 
 
 ```{r}
@@ -286,7 +230,7 @@ abline( v=median( mhv.00, na.rm=T ), col="orange", lwd=3 )
 
 
 
-**Descriptives** 
+##  Descriptives 
 
 
 
@@ -310,7 +254,7 @@ stargazer( df,
 
 
 
-**Change in MHV 2000-2010**
+## Change in MHV 2000-2010
 
 
 If a home worth \$10 million increased in value by \$100k over ten years it would not be that surprising. If a home worth \$50k increased by \$100k over the same period that is a growth of 200% and is notable. 
@@ -341,7 +285,7 @@ text( x=200, y=2000,
 ```
 
 
-**Percent Change in MHV 2000 to 2010**
+## Percent Change in MHV 2000 to 2010
 
 The percent change variable provides some context for growth rates of value in census tracts. 
 
@@ -381,7 +325,7 @@ text( x=100, y=(0.6*ymax),
 
 
 
-**Metro Level Statistics** 
+## Metro Level Statistics 
 
 Both changes within a census tract and changes within a city can affect the price of a home. Since our policy of interest focuses on changes made within a tract (new business and new housing created through NMTC and LIHTC), we want to control for things happening at the metro level to ensure we are not inferring that programs that target the tract are driving outcomes when it is actually broad metro-level trends. 
 
@@ -414,7 +358,7 @@ Typically you will start with a simple model of the relationship of the policy a
 
 
 
-## Variable Selection 
+# Variable Selection 
 
 Variable selection is the process of picking the **variables** and their **functional form** that you will include in the model. 
 
@@ -568,20 +512,20 @@ We will introduce approaches to:
 
 * Variable skew 
 * Multicollinearity 
-* Outliers
-* Group Bias 
+* Outliers 
 
 
 
 
 
-## Variable Skew
+### Variable Skew
 
-It is common to have data that is not normally distributed, especially in the social sciences. Variables that have a high level of skew or kurtosis can cause problems with inferential statistics by biasing slopes or inflating standard errors. 
+It is common to have skewed measures in data 
 
-There are formal tests for skew, but the easiest way to diagnose the problem is by visualizing distributions using histograms or box and whisker plots. 
 
-Let's start by looking at two of the census variables before and after log transformations: 
+
+
+
 
 
 
@@ -600,98 +544,71 @@ hist( log(d$p.vacant+1), breaks=50, col="gray20", border="white",
 ```
 
 
-We know that bell-shaped curves are typically preferable, but it's not clear how that helps when looking at a single variable. The issues are clearer when looking at the relationship between two skewed variables: 
-
-
-```{r, fig.height=4}
-log.p.vacant <- log10( d$p.vacant + 1 )
-log.pov.rate <- log10( d$pov.rate + 1 )
-these <- sample( 1:length(log.pov.rate), 5000 )
-
-par( mfrow=c(1,2) )
-jplot( d$pov.rate[these], d$p.vacant[these], 
-       lab1="Poverty Rate", lab2="Vacant Homes (percent)",
-       main="Raw Measures" )
-jplot( log.pov.rate[these], log.p.vacant[these], 
-       lab1="Poverty Rate", lab2="Vacant Homes (percent)",
-       main="Log Transformed" )
-```
-
-
-We have now greatly strenghtened the relationship between these variables: 
-
-```{r, results="asis"}
-cor( d$p.vacant, d$pov.rate, use="pairwise.complete" )
-cor( log.p.vacant, log.pov.rate, use="pairwise.complete" )
-```
-
-
-
-## Log Transformations 
-
-What exactly does a log transformation do again? Technically, they convert a one-unit change in a variable from a level to a rate of growth. You can read the [more precise technical definition here](https://ds4ps.org/cpp-523-spr-2020/lectures/specification-bias.html#logged-regression-models).
-
-But the real intuition comes from understanding the origins of skew. There are many processes in natural and social systems that are governed by exponential, not linear, growth. As the systems progress and differences compound, each additional unit of time results in larger changes in the system.
-
-
-We can think of another example that originates from diminishing marginal returns. How much does it cost to increase the quality of a bottle of wine? Vinyards can use things like better grapes, better fertilizer, better viticulture, and better land to improve the quality of their product. Producers will do the cheapest things first, maybe buy new equipment to harvest and press grapes. Planting better grapes is expensive because it costs money for the vine stocks and grapes from newly-planted vines are not used in wine-making for at least a year. But they are fixed cost investments that can be amortized over time. Hiring a better vintner to oversee the production of wine will have a big impact on quality, but requires the ongoing cost of paying a large salary to a highly-paid specialist. When all of these options have been exhausted, the last step to improving wine quality is acquiring better land in a region amenable to grapes. This land, however, is very expensive. 
-
-As a result, if you ever pay attention to the price of wine at the store you will see that there are what appear to be several jumps in price. The cheapest table wine you can find costs around \$3. It's not great wine, so if you want to upgrade to a decent table wine the prices cluster around \$6. If you are bringing a bottle to dinner at a friend's house and you want something slightly nicer the price is about \$12. If you want to splurge for a holiday celebration you will find the next step up in class clusters around \$25, and after that $50. 
-
-Do you see the patern here? For each additional unit increase in quality the price doubles. It is an exponential scale. When you are producing cheap wine you can spend a small amount of money to get better equipment to improve quality by one point on this five point scale. The next step up in quality is more costly. And the step after that requires even more capital. 
+These variables are 
 
 ![](images/wine-price-scale.png)
-
-Consequently, if you look at data on wine prices you will find a skewed distribution with the market dominated by inexpensive wine and more limited selection in each additional quality traunch (Source-AC-Nielsen):
-
-![](images/wine-price-distribution.jpg)
-
-
-
-If we wanted to conduct a study on the relationship between wine price and customer satisfaction (spoiler alert, [the relationship is nebulous](https://www.wired.com/2011/04/should-we-buy-expensive-wine/)) we would introduce specification bias by trying to model quality as a linear function of price. 
-
-Alternatively, if we take into account that the relationship between price and quality might not be linear and knowing that price is a skewed variable we can adjust our hypothesis and specification accordingly. It's not that price doesn't matter (as the article in the previous paragraph suggests) but we need a better specification to model the relationship. If we transform price using a log scale the relationship becomes clear.
 
 ![](images/wine-price-scale-logged.png)
 
 
-```{r, echo=F}
-library( scales )
-price <- rep( 3:50, times=50:3 ) 
-price <- price + rnorm( length(price), 0, 0.25 ) %>% round(2)
-quality <- log2( price ) + rnorm( length(price), 0, 0.5 ) 
-quality <- rescale( quality, to=c(0,5) ) %>% round(1)
 
-# sample_n( data.frame( price, quality ), 10 ) %>% pander()
-```
 
-In the regular levels data the relationship between price and satisfaction is very strong up until $20, then it weakens considerably. In the model where price has been converted to a log scale the relationship is a lot cleaner and the model is a better fit, which will results in smaller standard errors and a higher likelihood of finding results that support our theorized relationship between price and quality.  
-
+Helper functions for the **pairs()** correlation table: 
 
 ```{r}
-par( mfrow=c(1,2) )
-jplot( price, quality,
-       lab1="Price of Wine (USD)",
-       lab2="Quality Rating")
-abline( h=3.1, col="steelblue", lty=3 )
-abline( v=20, col="steelblue", lty=3 )
+panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
+{
+    usr <- par("usr"); on.exit(par(usr))
+    par(usr = c(0, 1, 0, 1))
+    r <- abs(cor(x, y))
+    txt <- format(c(r, 0.123456789), digits=digits)[1]
+    txt <- paste(prefix, txt, sep="")
+    if(missing(cex.cor)) cex <- 0.8/strwidth(txt)
+    
+    test <- cor.test(x,y)
+    # borrowed from printCoefmat
+    Signif <- symnum(test$p.value, corr = FALSE, na = FALSE,
+                  cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
+                  symbols = c("***", "**", "*", ".", " "))
+    
+    text(0.5, 0.5, txt, cex = 1.5 )
+    text(.7, .8, Signif, cex=cex, col=2)
+}
 
-jplot( log2(price), quality, xlim=c(1,6),
-       lab1="Price of Wine (log2)",
-       lab2="Quality Rating" )
+panel.smooth <- function (x, y, col = par("col"), bg = NA, pch = par("pch"), 
+	cex = 0.5, col.smooth = "red", span = 2/3, iter = 3, ...) 
+{
+	points(x, y, pch = 19, col = gray(0.7,0.2), bg = bg, cex = cex)
+	ok <- is.finite(x) & is.finite(y)
+	if (any(ok)) 
+		lines(stats::lowess(x[ok], y[ok], f = span, iter = iter), 
+			col = col.smooth, lwd=2, ...)
+}
+
+# custom plot
+jplot <- function( x1, x2, lab1="", lab2="", draw.line=T, ... )
+{
+
+	plot( x1, x2,
+	      pch=19, 
+	      col=gray(0.6, alpha = 0.2), 
+	      cex=0.5,  
+	      bty = "n",
+	      xlab=lab1, 
+	      ylab=lab2, cex.lab=1.5,
+        ... )
+
+	if( draw.line==T ){ 
+		ok <- is.finite(x1) & is.finite(x2)
+		lines( lowess(x2[ok]~x1[ok]), col="red", lwd=3 ) }
+
+}
 ```
-
-
-
-**Addressing Skew in Census Data:**
-
-Returning to our census variables, when we look at the relationship between variables in the scatterplot we see that a lot of the data clusters in the lower left hand corner of the scatterplots, which is a sign of skew:
-
 
 
 ```{r, fig.height=10}
 # create subset to visualize in correlation matrix 
-d2 <- select( d, mhv.growth, p.vacant,  p.prof,  pov.rate, p.unemp )
+d2 <- select( d, mhv.growth, p.vacant, p.white, p.black,  p.prof,  pov.rate, p.unemp )
 
 # reduce data density for visualization
 set.seed( 1234 )
@@ -703,62 +620,48 @@ pairs( d3, upper.panel=panel.cor, lower.panel=panel.smooth )
 
 
 
+```{r}
+log.p.vacant <- log10( d$p.vacant + 1 )
+log.pov.rate <- log10( d$pov.rate + 1 )
+these <- sample( 1:length(log.pov.rate), 5000 )
 
-After applying log transformations note that the bivariate correlations increase except for relationship between MHV and (mhv.growth) vacancy rates (p.vacant):
+par( mfrow=c(1,2) )
+jplot( d2$pov.rate[these], d2$p.vacant[these], 
+       lab1="Poverty Rate", lab2="Vacant Homes (percent)",
+       main="Raw Measures" )
+jplot( log.pov.rate[these], log.p.vacant[these], 
+       lab1="Poverty Rate", 
+       main="Log Transformed" )
+```
+
+
+
+
+
 
 ```{r, fig.height=10}
 set.seed( 1234 )
 
-d2 <- select( d, mhv.growth, p.vacant, p.prof,  pov.rate, p.unemp )
+d2 <- select( d, mhv.growth, p.vacant, p.white, p.black,  p.prof,  pov.rate, p.unemp )
 
 # recode some vars to remove outliers and skew
 d2$mhv.growth[ d2$mhv.growth > 200 ] <- NA
 d2$p.unemp <- log10( d2$p.unemp + 1 )
 d2$p.vacant <- log10( d2$p.vacant + 1 )
+d2$p.black <- log10( d2$p.black + 1 )
 d2$p.prof <- log10( d2$p.prof + 1  )
 d2$pov.rate <- log10( d2$pov.rate + 1 )
 
-d4 <- sample_n( d2, 5000 ) %>% na.omit()
-pairs( d4, upper.panel=panel.cor, lower.panel=panel.smooth )
+d3 <- sample_n( d2, 5000 ) %>% na.omit()
+pairs( d3, upper.panel=panel.cor, lower.panel=panel.smooth )
 ```
-
-
-The correlation between the transformed version of median home value change and vacancy rates falls, but is that a bad thing? The non-transformed version contains a statistically-significant correlation, but take a look at the scatterplot: 
-
-
-```{r}
-jplot( d3$p.vacant, d3$mhv.growth, ylim=c(-50,100),
-       lab1="Vacancy Rates", lab2="MHV Growth" )
-```
-
-
-It is likely an inflated correlation because of the handful of outliers. Does the graph look familiar? Recall the plot on the right from Anscombe's Quartet: 
-
-![](images/spurious-correlations.png)
-
-
-So fixing skew made the correlation weaker, but represents a case of mitigating a spurious correlation that was caused by outliers in the data. 
-
-
-
 
 
 
 ## Multicollinearity
 
-Recall that one way to think about a control variable that serves as a competing hypothesis is a variable that deletes "problematic" variance that might be the true explanation for the program change, reducing the variance available for the policy variable to the components that are independent (uncorrelated) with the controls. 
 
-![](images/control-variable-02.png) 
-
-Multicollinearity occurs when two variables in the model are highly correlated. If both are included in the model at the same time they can essentially cancel each other out. Standard errors will increase and slopes typically shift toward the null. As a result, even if they pair of variables are individually significant and have large effect sizes, they will have small slopes and lack statistical significance when included toghether.
-
-![](images/multicollinearity-consequences.png) 
-
-Multicollinearity is common when there are mutiple variables that represent different measures of the same underlying construct in the same dataset. In studies of firms, for example, revenue, firm expenses, and number of employees are all measures of firm size and thus will be highly correlated. Including them all in the model will results in none of them having large or significant slopes. 
-
-This is important **specifically when you need to interpret a regression coefficient**. In the firm example, perhaps you are interested in whether or not companies that use a specific HR practice are more profitable, controlling for size and industry. In this case including all of the size controls together would not hurt because you are not interpretting the control in your analysis. 
-
-In our case, perhaps we are interested in whether economically distressed tracts are likely to grow faster than tracts that have already gentrified because of rent gap theory (urban core neighborhoods with lots condemned houses and vacant lots are easier to use for large-scale projects since land is cheap, so developers would target these communities instead of stable neighborhoods where land is expensive and zoning more complicated). If we include multiple measures of distress (unemployment rate, poverty rate, high school drop-out rate) and multiple measures of stability (number of people working in professional industries, percentage with college degrees, rates of divorce) then the high correlation between any set of variables can mute the slopes, making it hard to interpret the results. 
+Be careful to not add mutiple variables that are essentially different measures of the same process or phenomenon. If the variables are highly-correlated then adding them together can result in multicollinarity. 
 
 Take this example where we try to include both poverty rate and unemployment. A sign of multicollinarity is when both coefficients get smaller and the standard errors get bigger when the two variables are included in the same model (model 3 here). 
 
@@ -780,7 +683,8 @@ m3 <- lm( mhv.growth ~  pov.rate + p.unemp, data=reg.data )
 
 stargazer( m1, m2, m3, 
            type=s.type, digits=2,
-           omit.stat = c("rsq","f") )
+           omit.stat = c("rsq","f"),
+           omit="cbsa" )
 ```
 
 
@@ -790,282 +694,131 @@ Note that:
 * coefficient sizes are smaller 
 * standard errors are larger 
 * R-square did not increase 
-* The SER did not decrease  
-
-*The standard error of the regression (SER) is the "average distance" of each data point to the regression line, so a measure of how accurate the model is when used for prediction. Similar to R-square, it is a measure of model fit."
-
-![](images/multicollinearity.png)
+* The standard error of the regression did not decrease  
 
 This suggests that these variables contain redundant information and including them both together causes them to cancel each other out. 
 
-If these were simply control variables it would not harm your model, per se. But if these are competing hypotheses and thus you are interpretting the magnitude of effects relative to the policy variable you have now muted part of their effect, making them look less important. If they are highly correlated they can cancel each other out almost completely in your model. 
+If these were simply control variables it would not harm your model, per se. But if these are competing hypotheses and thus you are interpretting the magnitude of effects relative to the policy variable you have now muted part of their effect, making them look less important. 
 
-When you are worried about multicollinearity: 
-
-1. Check your correlation matrix for independent variables that are highly correlated. Ask yourself, are these two distinct constructs, or two measures of the same construct? 
-2. Run the model with each of the suspect variables separately and one with them all together like the example above. This will show you how much the estimate of their impact changes when all are included together.
-
-If you have high multicollinearity and you want to interpret the variables then:
-
-1. Select which variable you believe best captures the theory / hypothesis or the one you belive to be the best measure of the underlying construct. 
-2. Combine the variables into a single scale or index. Use factor analysis (preferred option) or normalize variables and select a set that generates a reliable metric like you have done in a previous lab. 
+If they are highly correlated they can cancel each other out almost completely. 
 
 
 
-## Group Structure
-
-When building models it is important to think about whether there are groups in the data that would influence the outcome. You will cover this topic in the lecture on [Fixed Effect Models](https://ds4ps.org/pe4ps-textbook/docs/p-040-fixed-effects.html) in CPP 525. 
-
-In this domain we know that neighborhoods belong to cities, and cities each have distinctive histories, political structures, economies, geographies and climates. Some cities were thriving over the study period and experienced population growth and strong economic expansion (relatively speaking, all were impacted by the 2001 and 2008 economic crises). Others were in decline, losing population and had shrinking economies. 
-
-These are broad city-level processes that unfold over decades. No individual census tract within a city will be isolated from these trends occuring metro-wide. As a result we would expect the overall health of the city to impact the home values in each tract. 
-
-
-```{r, fig.height=4, fig.width=10}
-d5 <- filter( d, cbsaname %in% 
-                c("Tyler, TX",
-                  "Minneapolis-St. Paul-Bloomington, MN-WI",
-                  "San Francisco-San Mateo-Redwood City,CA") )
-
-d5$cbsaname <- factor( d5$cbsaname, labels=c("MSP-MN","SF-CA","Tyler-TX") )
-
-par( mar=c(4,6,4,6), mfrow=c(1,2) )
-plot( d5$cbsaname,  d5$mhv.00, las=1, frame.plot=F, outline=F,
-      xlab="", ylab="", main="Home Values in 2000" )
-abline( h=seq(0,1200000,100000), lty=3, col=gray(0.5,0.3) )
-axis( side=4, las=1 )
-
-plot( d5$cbsaname,  d5$p.unemp, las=1, frame.plot=F, outline=F,
-      xlab="", ylab="", main="Unemployment Rates in 2000" )
-abline( h=seq(0,15,1), lty=3, col=gray(0.5,0.3) )
-axis( side=4, las=1 )
-
-```
-
-
-We know that the health of the city in 2000 and the changes that occur at the metro level between 2000 and 2010 will impact all census tracts in the city. We can see the metro-level clustering in a plot:
-
-```{r}
-d5 <- filter( d, cbsaname %in%
-                c("Tyler, TX",
-                  "Youngstown-Warren-Boardman, OH-PA",
-                  "Syracuse, NY") )
-
-d5$mhv.growth[ d5$mhv.growth > 200 ] <- NA
-d5$p.unemp <- log10( d5$p.unemp + 1 )
-
-x <- rnorm( nrow(d5), 0, 0.1 ) +
-     as.numeric( d5$cbsaname == "Tyler, TX" ) + 
-     2 * as.numeric( d5$cbsaname == "Youngstown-Warren-Boardman, OH-PA" ) + 
-     3* as.numeric( d5$cbsaname == "Syracuse, NY" ) 
-
-
-par( mfrow=c(1,2) )
-
-plot( x, d5$mhv.growth, 
-      pch=19, cex=1.5, bty = "n",  
-	    col=factor(d5$cbsa),
-      ylim=c(-50,50),
-      xaxt="n", 
-      ylab="", xlab="",
-      main="MHV Growth")
-axis( side=1, at=1:3, labels=c("Tyler","Youngstown","Syracuse"), 
-      tick=F, col.axis="gray60", cex.axis=1.3 )
-
-plot( x, d5$p.unemp, 
-      pch=19, cex=1.5, bty = "n",  
-	    col=factor(d5$cbsa),
-      # ylim=c(0,40),
-      xaxt="n", 
-      ylab="", xlab="",
-      main="Unemployment (logged)")
-axis( side=1, at=1:3, labels=c("Tyler","Youngstown","Syracuse"), 
-      tick=F, col.axis="gray60", cex.axis=1.3 )
-
-
-```
-
-Which would result in different baseline metro-level home value growth rates in a model when each city is given its own intercept. 
-
-```{r}
-# d5 <- filter( d, cbsaname %in% 
-#                 c("Tyler, TX",
-#                   "Youngstown-Warren-Boardman, OH-PA",
-#                   "Syracuse, NY") )
-# 
-# d5$mhv.growth[ d5$mhv.growth > 200 ] <- NA
-# d5$p.unemp <- log10( d5$p.unemp + 1 )
-
-m <- lm( mhv.growth ~ factor(cbsaname) + p.unemp - 1, data=d5 )
-
-b0.syracuse   <- m$coefficients[1] 
-b0.tyler      <- m$coefficients[2] 
-b0.youngston  <- m$coefficients[3] 
-b1            <- m$coefficients[4] 
-
-palette( c( "steelblue", "green3", "darkorange"  ) )
-palette( adjustcolor( palette(), alpha.f = 0.3 ) )
-
-plot( d5$p.unemp, d5$mhv.growth,
-	    pch=19, cex=1.5, bty = "n",  
-	    col=factor(d5$cbsa),
-      ylim=c(-50,50),
-      xlab="Unemployment Rate (logged)",
-      ylab="Median Home Value Growth 2000-2010")
-	      
-abline( b0.syracuse, b1, col="steelblue", lwd=3 )
-abline( b0.tyler, b1, col="green3", lwd=3 )
-abline( b0.youngston, b1, col="darkorange", lwd=3 )
-
-```
-
-
-You probably recognize this approach as a city-level fixed effect. Since the metro area is a salient contextual variable it is extremely important to account for it if you want to remove bias from your estimates. For an in-depth discussion review the [lecture notes](https://ds4ps.org/pe4ps-textbook/docs/p-040-fixed-effects.html), but for a simple example consider the following. 
-
-We want to know whether having more college graduates living in a community will increase MHV growth over the study period. We exame two tracts located in different cities:
-
-|   |   |   | 
-|-----|--------|--------|      
-| Community | A | B |     
-| % Over 25 w College Degree | 50% | 20% |      
-| MHV Growth 2000-2010 |  10%  |  30%  |    
-
-
-
-It looks as though college graduates suppress growth, but if we dig deeper into the data we see that Tract A is located in a city in decline. The average tract in the city saw median home values **decrease** by 5%, so comparatively a growth of 10% was high for the city. Comparatively, Tract B is located in a rapidly-growing city. The average median home value growth is 50% in the metro area, so comparatively 30% in the tract was low for the city. 
-
-Once we account for the census tract context (the overall economic trends in the metro area) then the relationship makes sense again - tracts with more college graduates are growing faster *than other tracts in the same metro area*.
-
-
-We account for context by adding a metro-level fixed effect to the model. Alternatively, we can add the average median home value growth of the metro area as a control variable:
 
 ```{r, results="asis"}
-d.reg <- d
+reg.data <- d
 
-d.reg$mhv.growth[ d.reg$mhv.growth > 200 ] <- NA
-d.reg$p.unemp <- log10( d.reg$p.unemp + 1 )
 
-# average growth in median home value for the city
-d.reg <- 
-  d.reg %>%
-  group_by( cbsaname ) %>%
-  mutate( metro.mhv.growth = 100 * median( mhv.growth, na.rm=T ) ) %>%
-  ungroup() 
+reg.data$p.vacant <- log10( reg.data$p.vacant + 1 )
+reg.data$p.unemp <- log10( reg.data$p.unemp + 1 )
+reg.data$pov.rate <- log10( reg.data$pov.rate + 1 )
 
-m1 <- lm( mhv.growth ~ p.unemp, data=d.reg )
-m2 <- lm( mhv.growth ~ p.unemp + metro.mhv.growth, data=d.reg )
-m3 <- lm( mhv.growth ~ p.unemp + cbsa, data=d.reg )
+reg.data$poor <- ( reg.data$p.unemp + reg.data$pov.rate ) / 2
+  
+m1 <- lm( mhv.growth ~ p.vacant + p.white + p.prof + p.unemp, data=reg.data )
 
-stargazer( m1, m2, m3, 
+stargazer( m1,  
            type=s.type, digits=2,
            omit.stat = c("rsq","f"),
-           omit="cbsa",
-           add.lines = list(c("Metro Fixed Effects:", "NO", "NO","YES")) )
+           omit="cbsa" )
 ```
 
 
-Note that model 2 and model 3 produce similar slopes for unemployment, similar R-squares, and similar standard error of the regression (labeled Residual Std. Error here). Recall that we can run a fixed-effect model by demeaning our data using group-level means. Adding a metro-level control will achieve a similar result.
-
-The metro-level fixed effect is preferable because it will anchor the dependent variable as well. But when not possible adding a group-level mean of the dependent variable is a feasible alternative. 
 
 
+## Model Fit
+
+```{r, fig.height=8, fig.width=8, eval=F}
+# regression model drops rows with NAs:
+# na.action lists row numbers that were dropped
+d2 <- reg.data[ - m5$na.action , ]
+
+plot( d2$mhv.growth, m5$fitted.values, bty="n",
+      xlim=c(-100,200), ylim=c(-100,200),
+      pch=19, cex=0.5, col=gray(0.5,0.3),
+      xlab="Actual MHV % Change", 
+      ylab="Predicted MHV % Change" )
+
+abline( h=seq(-100,300,50), lty=2, col="gray" )
+abline( v=seq(-100,300,50), lty=2, col="gray" )
+abline( a=0, b=1, col="red", lwd=2 )
+```
+
+
+
+## Diagnostic Statistics 
 
 
 
 
 
-```{r, results="asis", eval=F, echo=F}
-d.reg <- d
+```{r, eval=F}
+reg.data$log.change <- 100*( log(reg.data$mhv.10+1) - log(reg.data$mhv.00+1))
 
-d.reg$mhv.growth[ d.reg$mhv.growth > 200 ] <- NA
-d.reg$p.unemp <- log10( d.reg$p.unemp + 1 )
 
-# average growth in median home value for the city
-d.reg <- 
-  d.reg %>%
-  group_by( cbsaname ) %>%
-  mutate( metro.mhv.growth = 100 * median( mhv.growth, na.rm=T ) ) %>%
-  ungroup() 
+m5 <- lm( mhv.growth ~ p.vacant + p.white + p.black + 
+            p.col + pov.rate + p.unemp + factor(cbsa), data=reg.data )
+m6 <- lm( log.change ~ p.vacant + p.white + p.black + 
+            p.col + pov.rate + p.unemp + factor(cbsa), data=reg.data )
 
-m1 <- lm( mhv.growth ~ p.unemp, data=d.reg )
-m2 <- lm( mhv.growth ~ p.unemp + metro.mhv.growth, data=d.reg )
-m3 <- lm( mhv.growth ~ p.unemp + cbsa, data=d.reg )
 
-stargazer( m1, m2, m3, 
+stargazer( m5, m6,
            type=s.type, digits=2,
            omit.stat = c("rsq","f"),
-           omit="cbsa",
-           add.lines = list(c("Metro Fixed Effects:", "NO", "NO","YES")) )
+           omit="cbsa" )
 ```
 
 
 
-```{r, eval=F, echo=F}
-d2 <- select( d.full, 
-             
-             tractid, cbsa, cbsaname,            # ids / units of analysis
-             
-             mhv.00, mhv.10, mhv.change, pct.change,    # home value 
-             
-             hinc00, hu00, own00, rent00,        # ses
-             hinc12, hu10, own10, rent10,
-             
-             empclf00, clf00, unemp00, prof00,   # employment 
-             empclf12, clf12, unemp12, prof12,
-             
-             dpov00, npov00,                     # poverty
-             dpov12, npov12,
-             
-             ag25up00, hs00, col00,              # education 
-             ag25up12, hs12, col12,
-             
-             pop00.x, nhwht00, nhblk00, hisp00, asian00,   # race
-             pop10, nhwht10, nhblk10, hisp10, asian10
-             
-          ) # end select
-
-
-d2 <- 
-  d2 %>%
-  mutate( 
-          # 2000 variables
-          p.white.00 = 100 * nhwht00 / pop00.x,
-          p.black.00 = 100 * nhblk00 / pop00.x,
-          p.hisp.00 = 100 * hisp00 / pop00.x, 
-          p.asian.00 = 100 * asian00 / pop00.x,
-          p.hs.edu.00 = 100 * (hs00+col00) / ag25up00,
-          p.col.edu.00 = 100 * col00 / ag25up00,
-          p.prof.00 = 100 * prof00 / empclf00,
-          p.unemp.00 = 100 * unemp00 / clf00,
-          pov.rate.00 = 100 * npov00 / dpov00,
-          
-          # 2010 variables
-          p.white.10 = 100 * nhwht10 / pop10,
-          p.black.10 = 100 * nhblk10 / pop10,
-          p.hisp.10 = 100 * hisp10 / pop10, 
-          p.asian.10 = 100 * asian10 / pop10,
-          p.hs.edu.10 = 100 * (hs12+col12) / ag25up12,
-          p.col.edu.10 = 100 * col12 / ag25up12,
-          p.prof.10 = 100 * prof12 / empclf12,
-          p.unemp.10 = 100 * unemp12 / clf12,
-          pov.rate.10 = 100 * npov12 / dpov12 )
-
-d2 <-
-  d2 %>%
-  group_by( cbsaname ) %>%
-  mutate( metro.mhv.pct.00 = ntile( mhv.00, 100 ),
-          metro.mhv.pct.10 = ntile( mhv.10, 100 ),
-          metro.median.pay.00 = median( hinc00, na.rm=T ),
-          metro.median.pay.10 = median( hinc12, na.rm=T ),
-          metro.race.rank.00 = ntile( (100-p.white.00), 100 ) ) %>%
-  ungroup() %>%
-  mutate( metro.mhv.pct.change = metro.mhv.pct.10 - metro.mhv.pct.00,
-          pay.change = metro.median.pay.10 - metro.median.pay.00,
-          race.change = p.white.10 - p.white.00,
-          mhv.change = mhv.10 - mhv.00 )
-
-
+```{r, eval=F}
+plot( m5 )
 ```
+
+
+
+```{r, fig.height=8, fig.width=8, eval=F}
+# regression model drops rows with NAs:
+# na.action lists row numbers that were dropped
+d2 <- reg.data[ - m6$na.action , ]
+
+plot( d2$log.change, m6$fitted.values, bty="n",
+      xlim=c(-100,200), ylim=c(-100,200),
+      pch=19, cex=0.5, col=gray(0.5,0.3),
+      xlab="Actual MHV % Change", 
+      ylab="Predicted MHV % Change" )
+
+abline( h=seq(-100,300,50), lty=2, col="gray" )
+abline( v=seq(-100,300,50), lty=2, col="gray" )
+abline( a=0, b=1, col="red", lwd=2 )
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Part 1 - Communty 
+
+Which community health indicator in 2000 is the best predictor of a neighborhood (tract) 
+
+
+
+
+# Predicting Change
+
+
+
+
+
+# Gentrification 
+
 
 
 

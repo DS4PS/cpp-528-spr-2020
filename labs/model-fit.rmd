@@ -123,7 +123,7 @@ This fact was established partly by watching people try to guess the weight of a
 
 <hr>
 
-## [Census Documentation on Methodology](https://www.census.gov/quickfacts/fact/note/US/HSG495218)
+### [Census Documentation on Methodology](https://www.census.gov/quickfacts/fact/note/US/HSG495218)
 
 Value is the respondent's estimate of how much the property (house and lot) would sell for if it were for sale.
 
@@ -176,7 +176,7 @@ d <- merge( d, md, by="tractid" )
 
 
 
-**Filter Rural Districts**
+## Filter Rural Districts 
 
 ```{r}
 table( d$urban )
@@ -186,7 +186,7 @@ d <- filter( d, urban == "urban" )
 
 
 
-**Create New Variables**
+## Create New Variables
 
 ```{r}
 # pro tip when getting started
@@ -262,7 +262,7 @@ head( d )
 
 
 
-**Median Home value**
+## Median Home value
 
 
 ```{r}
@@ -286,7 +286,7 @@ abline( v=median( mhv.00, na.rm=T ), col="orange", lwd=3 )
 
 
 
-**Descriptives** 
+##  Descriptives 
 
 
 
@@ -310,7 +310,7 @@ stargazer( df,
 
 
 
-**Change in MHV 2000-2010**
+## Change in MHV 2000-2010
 
 
 If a home worth \$10 million increased in value by \$100k over ten years it would not be that surprising. If a home worth \$50k increased by \$100k over the same period that is a growth of 200% and is notable. 
@@ -341,7 +341,7 @@ text( x=200, y=2000,
 ```
 
 
-**Percent Change in MHV 2000 to 2010**
+## Percent Change in MHV 2000 to 2010
 
 The percent change variable provides some context for growth rates of value in census tracts. 
 
@@ -381,7 +381,7 @@ text( x=100, y=(0.6*ymax),
 
 
 
-**Metro Level Statistics** 
+## Metro Level Statistics 
 
 Both changes within a census tract and changes within a city can affect the price of a home. Since our policy of interest focuses on changes made within a tract (new business and new housing created through NMTC and LIHTC), we want to control for things happening at the metro level to ensure we are not inferring that programs that target the tract are driving outcomes when it is actually broad metro-level trends. 
 
@@ -414,7 +414,7 @@ Typically you will start with a simple model of the relationship of the policy a
 
 
 
-## Variable Selection 
+# Variable Selection 
 
 Variable selection is the process of picking the **variables** and their **functional form** that you will include in the model. 
 
@@ -575,7 +575,7 @@ We will introduce approaches to:
 
 
 
-## Variable Skew
+### Variable Skew
 
 It is common to have data that is not normally distributed, especially in the social sciences. Variables that have a high level of skew or kurtosis can cause problems with inferential statistics by biasing slopes or inflating standard errors. 
 
@@ -627,7 +627,7 @@ cor( log.p.vacant, log.pov.rate, use="pairwise.complete" )
 
 
 
-## Log Transformations 
+### Log Transformations 
 
 What exactly does a log transformation do again? Technically, they convert a one-unit change in a variable from a level to a rate of growth. You can read the [more precise technical definition here](https://ds4ps.org/cpp-523-spr-2020/lectures/specification-bias.html#logged-regression-models).
 
@@ -968,13 +968,12 @@ Note that model 2 and model 3 produce similar slopes for unemployment, similar R
 
 The metro-level fixed effect is preferable because it will anchor the dependent variable as well. But when not possible adding a group-level mean of the dependent variable is a feasible alternative. 
 
+Recall that fixed effects will automatically control for **any** time-invariant characteristics of the city, such as geography, culture, climate, type of city government, etc. Any variable that would not change between 2000 and 2010 does not need to be included in the model after the metro level fixed effect is added. 
+
+HOWEVER, it does not control for time-varying factors at the metro level. For example, it would be wise to control for the growth rate of the city since that will drive demand for houses, and should impact prices. There are lots of 
 
 
-
-
-
-
-```{r, results="asis", eval=F, echo=F}
+```{r, results="asis"}
 d.reg <- d
 
 d.reg$mhv.growth[ d.reg$mhv.growth > 200 ] <- NA
@@ -1000,7 +999,7 @@ stargazer( m1, m2, m3,
 
 
 
-```{r, eval=F, echo=F}
+```{r}
 d2 <- select( d.full, 
              
              tractid, cbsa, cbsaname,            # ids / units of analysis
@@ -1066,6 +1065,159 @@ d2 <-
 
 
 ```
+
+
+<hr>
+<hr>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##
+
+
+
+## Model Fit
+
+
+
+```{r, results="asis"}
+d2 <- select( d, mhv.growth, p.vacant, p.prof,  pov.rate, p.unemp, p.white, own00, col00, cbsa )
+
+# recode some vars to remove outliers and skew
+d2$mhv.growth[ d2$mhv.growth > 200 ] <- NA
+d2$p.unemp.log <- log10( d2$p.unemp + 1 )
+d2$p.vacant.log <- log10( d2$p.vacant + 1 )
+d2$p.prof.log <- log10( d2$p.prof + 1  )
+d2$pov.rate.log <- log10( d2$pov.rate + 1 )
+
+# drop rows with missing values 
+d2 <- na.omit( d2 )
+
+m <- lm( mhv.growth ~ 
+           p.vacant + own00 + 
+           p.prof + col00 + 
+           p.unemp + pov.rate + 
+           p.white, 
+           data=d2 )
+
+
+stargazer( m,
+           type=s.type, digits=2,
+           omit.stat = c("rsq","f"),
+           omit="cbsa" )
+```
+
+
+```{r, fig.height=8, fig.width=8, eval=F}
+# regression model drops rows with NAs:
+# na.action lists row numbers that were dropped
+# d2 <- reg.data[ - m$na.action , ]
+
+coefficients(m)
+
+plot( d2$mhv.growth, m$fitted.values, bty="n",
+      xlim=c(-100,200), ylim=c(-100,200),
+      pch=19, cex=0.5, col=gray(0.5,0.3),
+      xlab="Actual MHV % Change", 
+      ylab="Predicted MHV % Change" )
+
+abline( h=seq(-100,300,50), lty=2, col="gray" )
+abline( v=seq(-100,300,50), lty=2, col="gray" )
+abline( a=0, b=1, col="red", lwd=2 )
+```
+
+
+
+## Diagnostic Statistics 
+
+
+
+
+
+```{r, eval=F}
+reg.data$log.change <- 100*( log(reg.data$mhv.10+1) - log(reg.data$mhv.00+1))
+
+
+m5 <- lm( mhv.growth ~ p.vacant + p.white + p.black + 
+            p.col + pov.rate + p.unemp + factor(cbsa), data=reg.data )
+m6 <- lm( log.change ~ p.vacant + p.white + p.black + 
+            p.col + pov.rate + p.unemp + factor(cbsa), data=reg.data )
+
+
+stargazer( m5, m6,
+           type=s.type, digits=2,
+           omit.stat = c("rsq","f"),
+           omit="cbsa" )
+```
+
+
+
+```{r, eval=F}
+plot( m5 )
+```
+
+
+
+```{r, fig.height=8, fig.width=8, eval=F}
+# regression model drops rows with NAs:
+# na.action lists row numbers that were dropped
+d2 <- reg.data[ - m6$na.action , ]
+
+plot( d2$log.change, m6$fitted.values, bty="n",
+      xlim=c(-100,200), ylim=c(-100,200),
+      pch=19, cex=0.5, col=gray(0.5,0.3),
+      xlab="Actual MHV % Change", 
+      ylab="Predicted MHV % Change" )
+
+abline( h=seq(-100,300,50), lty=2, col="gray" )
+abline( v=seq(-100,300,50), lty=2, col="gray" )
+abline( a=0, b=1, col="red", lwd=2 )
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Part 1 - Communty 
+
+Which community health indicator in 2000 is the best predictor of a neighborhood (tract) 
+
+
+
+
+# Predicting Change
+
+
+
+
+
+# Gentrification 
+
 
 
 
