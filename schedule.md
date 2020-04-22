@@ -2026,9 +2026,15 @@ Since we are using the median home value variable which represents an entire cen
 
 
 
-*** { @unit = "MON Apr 27th", @title = "Lab 06", @assignment  }
+*** { @unit = "MON Apr 27th", @title = "Lab 06", @assignment, @foldout  }
 
 <br>
+
+<a class="uk-button uk-button-default" href="../labs/lab-06-tutorial.html">Tutorial</a>
+
+
+<br>
+
 
 
 ## Submit Solutions to Canvas:
