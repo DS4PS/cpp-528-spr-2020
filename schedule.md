@@ -2002,6 +2002,16 @@ Since we are using the median home value variable which represents an entire cen
 <br>
 
 
+*** { @unit = "", @title = "Summary of Tax Credit Programs", @reading, @foldout }
+
+
+<br>
+
+[Background Info on NMTC & LIHTC](../lectures/NMTC-and-LIHTC-overview.pdf)
+
+<br>
+<br>
+
 
 
 *** { @unit = "MON Apr 27th", @title = "Lab 05", @assignment, @foldout  }
