@@ -1,5 +1,5 @@
 ---
-title: 'Adding Federal Programs'
+title: 'Adding Federal Program Data'
 output:
   html_document:
     theme: readable
@@ -830,13 +830,21 @@ Since the main issue is a non-equivalent control group we can construct a new on
 
 If matching is able to achieve balance, then it removes (in theory) the pre-treatment differences and allows us to go back to a post-test only dummy variable regression.  
 
+This is a feasible approach and one worth exploring. It is beyond this lab, however.
+
+
+
 **Panel Models - Fixed Effects:**
 
 If we only have two points in a time then the fixed-effect model operates similarly to the difference-in-difference model. Either can be used, but both will have the challenge of levels versus growth rates when only two time periods are available. 
 
-**Difference-in-Difference Model
+**Difference-in-Difference Model:**
 
 Back to the diff-in-diff option. It turns out there is a relatively easy fix to the challenge of estimating growth from two points in time. It is possible because of the magic of log functions. 
+
+In the regression context, logs change our interpretation of slopes from a one-unit change in X being associated with a B-unit change in Y, to a one-unit change in X being associated with a growth rate of B for Y. 
+
+We can see this by looking at the exponential growth of two investments, one for \$100 and one for \$1,000. The two stocks have the same rate of return at 10% per year, but because of how compound interest works the larger investment will increase in value faster.  
 
 ```{r}
 stock1 <- 1000
@@ -856,8 +864,15 @@ text( 5, roi.2[5]+100, "Stock 2", pos=3, cex=1.5 )
 ```
 
 
+If we want to compare the rates of return, or growth rates of the two investments, we can change our model from:
 
-Logs turn differences in levels to growth rates: 
+Y = b0+ b1(time) 
+
+To:
+
+log(Y) = b0 + b1(time) 
+
+This log-linear model will turn slopes in the previous model to growth rates: 
 
 
 ```{r}
@@ -872,6 +887,27 @@ text( 5, log.roi.1[5], "Stock 1", pos=3, cex=1.5 )
 text( 5, log.roi.2[5], "Stock 2", pos=3, cex=1.5 )
 ```
 
+The stocks had the same growth rate in each period, so there is no curve to either slope. More importantly, we can now see that although Stock1 was increasing in value at a much faster rate, it was only because of the inidial differences in value. The parallel lines shows us that the performance or the growth rate of the two investments is the same. 
+
+We can approximate the growth rate between two periods by looking at the difference of logs. 
+
+
+```{r}
+data.frame( time=1:10, value=roi.1, log.value=log.roi.1 ) %>% pander()
+
+y1 <- roi.1[1]
+y2 <- roi.1[2]
+
+# true growth rate
+( y2 - y1 ) / y1
+
+log.y1 <- log.roi.1[1]
+log.y2 <- log.roi.1[2]
+
+# growth rate approximation
+log.y2 - log.y1
+
+```
 
 So back to the home value problem. A is worth \$200k and B \$100k. They both grow at the same rate. Home A increases in value by \$20k, and home B by \$10k. 
 
@@ -881,9 +917,9 @@ log( A[t=2] ) - log( A[t=1] ) is approximately equal to ( (A2-A1)/A1 ) or the gr
 
 So if we log the home value in the diff-in-diff models then we can calculate growth rates as:
 
-log(C2) - log(C1) = default growth rate / secular market trend 
+log(C2) - log(C1) = growth rate of comparison / secular market trend 
 
-log(T1) - log(T1) = actual growth rate
+log(T2) - log(T1) = growth rate of treatment
 
 log(C1) = B0
 
@@ -893,7 +929,7 @@ secular growth rate = log(C2) - log(C1) = (B0 + B1) - B0 = B1
 
 B1 represents the defaul growht rate of home values for the comparison group. 
 
-The important coefficient, B3, would then represent the growth rate of the treatment group above the secular growth rate. 
+The important coefficient, B3, would then represent the growth rate of the treatment group above the secular growth rate, or the growth rate necessary to generate a home value of T2 if we start from a value of T1.
 
 
 
@@ -939,7 +975,11 @@ exp( b0+b1+b2+b3 )
 ```
 
 
-Recall that you can still add control variable to the model. They just have to be measured over both time periods. 
+Recall that you can still add control variable to the model. 
+
+For static variables like gender they would be repeated in both time periods. 
+
+For changing variables you would stack X1 and X2 similar to Y1 and Y2 above. 
 
 
 
@@ -952,9 +992,13 @@ Use this script to add federal program data to your models.
 Use the difference-in-difference framework introduced here to estimate the impact of each program. 
 
 * Use your baseline model predicting tract change from Lab 05 as the starting point. 
-* Add those variables as controls in your diff-in-diff model. 
+* Create a log-linear diff-in-diff model following these steps and add your control variables from Lab 05. 
 
-Report and interpret the main results from the models. 
+Report and interpret the main results from the models. **Are the programs effective at catalyzing neighborhood improvement?** We are assuming median home value captures the increased market demand that reflects the desirability of improvements.
+
+REFLECTION: 
+
+How can we test the parallel lines assumption in this model? We know that growth rates change significantly between periods. The market for urban homes from 1990-2000 looks very different from the market in 2000 to 2010. 
 
 
 
