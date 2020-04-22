@@ -229,7 +229,7 @@ head( nmtc.dollars )
 ```
 
 
-Merge the three datasets: 
+## Merge Census and Tax Policy Data
 
 ```{r}
 d <- merge( d, nmtc.dollars, by.x="id2", by.y="X2010.Census.Tract", all.x=T )
@@ -248,9 +248,7 @@ d$lihtc.total[ is.na(d$lihtc.total) ] <- 0
 
 
 
-
-
-## Remove Rural Districts**
+## Remove Rural Districts
 
 ```{r}
 table( d$urban )
@@ -407,27 +405,86 @@ d <-
 
 
 
+ 
+## Rodeo Dataset
+
+Now that you have merged all of your datasets, this is a good place to save your **rodeo dataset** - the version you will use in your models. 
+
+It is helpful because you will often spend a lot of time on model specification and it's super helpful to bypass all of the data steps and load a version that is ready for analysis. 
+
+As you organize the project, try to keep the data steps and analysis separate. We have combined them in these labs for continuity, but in practice it should be something like: 
+
+```
+data steps 
+|
+|--clean and merge data 
+|--create new variables
+|--save as research (rodeo) database
+    |
+    |--load for descriptive analysis (first chapter in analysis)
+    |--load for inferential analysis (second chapter in analysis)
+```
+
+You might have multiple sections or "chapters" depending upon how complex your analysis is and how much sensitivity analysis you do. But all of them would start by loading the rodeo dataset. 
+
+Variable transformations are a little tricky. If they are nuanced variables, like aggregating change at multiple levels, I would do it once as part of the data steps. Especially if they are operations that might be easy to screw up, thus introducing error into your dataset. Keeping them as a distinct step let's you run sanity checks like changes in sample size, descriptive stats before and after variable transformations, and printed previews of datasets. That makes it possible for you to save the file, put it away for a couple of days, then review it before sending the final report with fresh eyes. Or else have a team member review your work. 
+
+For other variable transformations like log transformations, scaling units (multiply proportions by 100, dividing GDP by millions, etc.), or recoding factor levels can happen as part of modeling. When creating models you will try hundreds of iterations, so you want to keep records in your analysis files. It is a pain to have to go back to the data steps, recompile, save a new rodeo dataset, then reload. 
+
+So you can include some variable transformations in your analysis files, but try to be judicious so that it is easy to find data steps when you need them. Ask yourself, if someone asked a question about how I created the variable, would I be able to quickly find the code for that step? Do I know where to look? 
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+## Data Manifest
+
+
+It is not common practice, but it is best practice, to keep track of every observation in your dataset so you know exactly how the sample has been altered between your raw data and the final models. 
+
+You can see through the script that we have already dropped 20,000 tracts that are located in rural districts and tracts that have 2000 home values below \$10,000.
+
+Cases can fall out during merges, can be dropped as outliers, or can disappear mysteriously from your dataset. 
+
+
+This is not a perfect example because it is documenting how specific addresses are geocoded in a database (we had to use different methods for different kinds of addresses), but the main point still stands - if we failed to accurately locate a large proportion of addresses, or if we had to code a lot using assumptions (matching to zip code centroids instead of address locations because of missing info) it could change the nature of our data. Having a record of the process allows you and your audience to understand how the data is created:
+
+<br>
+<hr>
+<br>
+
+![](images/data-manifest.png)
+
+<br>
+<hr>
+<br>
+
+I find that if I am reading a report that does not clearly describe the process used to create the final model, the authors are often not paying attention to the process. Which often suggests that they were not careful in constructing the sample used in the model from the raw sample. Which means there is a good chance that they have introduced bias into the analysis through the process. 
+
+When creating your data manifest I recommend starting with the raw dataset (how many Census tracts do we have in 2010 in the US?), then write down the sample size in your final model, then build to table to describe how you got from A to B. 
+
+This table is also extremely useful when you need to run sensitivity analysis on your models. Can you justify each step as something that improves the internal validity of your model? Or does it simply increase the chances of finding significant results (p-value hacking)? How sensitive is your model to each step? If you include outliers, for example, are your results consistent? Are there any assumptions we are making about the data that need to be tested? 
+
+Note that outliers often represent a small proportion of cases but can account for a large proportion of the outcome. If we decide to omit millionaires and billionaires from our tax dataset because they are outliers, then calibrate our tax policy, we might be missing the obvious fact that wealthy individuals might be a minority of citizens but contribute a large proportion of tax revenues (maybe not, they are pretty good at tax evasion, but you get the idea). 
+
+
+
+
+<br>
+<hr>
+<br>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Descriptives 
 
 
 
