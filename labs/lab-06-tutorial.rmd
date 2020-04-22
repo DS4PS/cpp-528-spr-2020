@@ -148,10 +148,12 @@ d <- merge( d, md, by="tractid" )
 
 
 ```{r}
-nmtc <- read.csv( "data/raw/NMTC/nmtc-sheet-01.csv", stringsAsFactors=F )
+URL1 <- "https://raw.githubusercontent.com/DS4PS/cpp-528-spr-2020/master/labs/data/raw/NMTC/nmtc-sheet-01.csv"
+nmtc <- read.csv( URL1, stringsAsFactors=F )
 head( nmtc ) 
 
-lihtc <- read.csv( "data/raw/LIHTC/LIHTCPUB.csv", stringsAsFactors=F )
+URL <- "https://raw.githubusercontent.com/DS4PS/cpp-528-spr-2020/master/labs/data/raw/LIHTC/LIHTCPUB.csv"
+lihtc <- read.csv( URL, stringsAsFactors=F )
 head( lihtc )
 
 # remove anything not a number from the string
@@ -948,6 +950,9 @@ Recall that you can still add control variable to the model. They just have to b
 Use this script to add federal program data to your models.
 
 Use the difference-in-difference framework introduced here to estimate the impact of each program. 
+
+* Use your baseline model predicting tract change from Lab 05 as the starting point. 
+* Add those variables as controls in your diff-in-diff model. 
 
 Report and interpret the main results from the models. 
 
