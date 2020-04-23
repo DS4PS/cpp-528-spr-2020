@@ -70,6 +70,11 @@ Through the first 15 application rounds of the NMTC Program, the CDFI Fund has m
 [data download website](https://www.cdfifund.gov/news-events/news/Pages/news-detail.aspx?NewsID=364&Category=Press%20Releases)
 
 
+**About the LIHTC Program**
+
+The Low-Income Housing Tax Credit (LIHTC) is the most important resource for creating affordable housing in the United States today. The LIHTC database, created by HUD and available to the public since 1997, contains information on 47,511 projects and 3.13 million housing units placed in service between 1987 and 2017.
+
+[data download website](https://lihtc.huduser.gov/)
 
 
 
