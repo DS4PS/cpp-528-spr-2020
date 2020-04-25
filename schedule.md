@@ -2036,6 +2036,8 @@ Since we are using the median home value variable which represents an entire cen
 
 
 
+
+
 *** { @unit = "MON Apr 27th", @title = "Lab 06", @assignment, @foldout  }
 
 <br>
@@ -2053,6 +2055,37 @@ Since we are using the median home value variable which represents an entire cen
 
 <br>
 <br>
+
+
+
+
+
+*** { @unit = "MON Apr 27th", @title = "YellowDig - Models", @assignment, @foldout }
+
+<br>
+
+### Models
+
+Share your final models and insights on the outcome. 
+
+Which control variables did you find to best predict the revitalization in your model? 
+
+Do Low Income Tax Credits seem to have an impact on home values? 
+
+Do New Market Tax Credits impact home values? 
+
+
+**Post your reflection YellowDig:**
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+
+<br>
+<br>
+
+
+
+
+
 
 
 
@@ -2077,6 +2110,18 @@ Since we are using the median home value variable which represents an entire cen
 ** Week 7 - Finalizing Deliverables 
 
 
+*** { @unit = "", @title = "Unit Overview", @foldout }
+
+<br>
+
+Your final week will be spent finalizing all of your project files, models, documentation, and report using GitHub sites. 
+
+There is no final presentation, so the YellowDig posts give you a chance to share your work and reflect on key components of the course. 
+
+The weekly YellowDig point restrictions have been lifted this week, so all of your activities contribute toward your final YellowDig score. Point requirements will be adjusted to account for the week without a topic. 
+
+<br>
+<br>
 
 
 
@@ -2091,8 +2136,105 @@ Since we are using the median home value variable which represents an entire cen
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT CODE-THROUGH</a>
 
 <br>
+<br>
 
 
+
+
+
+
+
+
+*** { @unit = "FRI May 1st", @title = "YellowDig - Project Management", @assignment, @foldout }
+
+<br>
+
+### Collaboration Tools  
+
+Which aspects of the collaboration tools have you found useful? 
+
+Which parts have been awkward or challenging? 
+
+Do you believe the project was easier or harder using the tools? 
+
+--- 
+
+If you were managing a large project with many waves of data, your recommendations have real consequences for how resources will be allocated through a federal program, you are the lead for a team of 7 analysts, and analysis that is complex enough that no one team member has all of the skills needed to generate the deliverables. 
+
+Does the usefulness of the project management tools change with the complexity of the project? 
+
+
+**Post your reflection YellowDig:**
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+
+<br>
+<br>
+
+
+
+
+
+
+*** { @unit = "FRI May 1st", @title = "YellowDig - Open Science", @assignment, @foldout }
+
+<br>
+
+### How Confident Are You in Your Recommendations?   
+
+Consider all of the steps that are necessary to conduct analysis of a policy or program and make conclusions about effectiveness or recommendations on implementation:
+
+* Developing domain expertise 
+* Identifying and collecting data 
+* Wrangling data (cleaning, aggregating, reshaping, merging) 
+* Operationalizing your research questions and developing appropriate measures of your key latent constructs 
+* Exploring and describing your data 
+* Selecting a model that leverages a feasible identification strategy appropriate for your data and question 
+* Interpretting results in a way that policy-makers can understand them 
+* Conducting sensitivity analysis to ensure you are confident with your recommendations 
+
+In your YellowDig post reflect on the following: 
+
+Where do you feel like you are most likely to introduce bias into the process? 
+
+Do you feel like the benefits of peer review (all work is reviewed by team members) outweigh the costs? 
+
+What was the hardest part of reviewing someone else's code? 
+
+
+**Post your reflection YellowDig:**
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+
+<br>
+<br>
+
+
+
+
+
+
+
+*** { @unit = "SUN May 3rd", @title = "YellowDig - Deliverables", @assignment, @foldout }
+
+<br>
+
+### Final Deliverables   
+
+Share a link to your project website and highlight specific sections when you answer the following: 
+
+What is one aspect of the project you are proud of and that you think works well? 
+
+What is one aspect of the final product that you hope to improve upon next time? 
+
+Each team member should answer individually. 
+
+**Post your reflection YellowDig:**
+
+<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
+
+<br>
+<br>
 
 
 
