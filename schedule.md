@@ -2125,15 +2125,20 @@ The weekly YellowDig point restrictions have been lifted this week, so all of yo
 
 
 
-*** { @unit = "FRI May 1st", @title = "Final Products Due", @assignment }
+*** { @unit = "FRI May 1st", @title = "Final Products Due", @assignment, @foldout }
 
 <br>
 
+## Final Deliverables 
+
+Make sure to review the project rubric to ensure you have included all of the necessary components: 
+
+[Grading Rubric](https://github.com/DS4PS/cpp-528-spr-2020/raw/master/project/project-rubric.pdf)
 
 
 ## Submit to Canvas:
 
-<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT CODE-THROUGH</a>
+<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT FINAL DELIVERABLES</a>
 
 <br>
 <br>
